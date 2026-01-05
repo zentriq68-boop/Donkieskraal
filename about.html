@@ -58,7 +58,7 @@
             <div
                 class="pointer-events-auto bg-surface-dark/80 dark:bg-[#181611]/80 backdrop-blur-md border border-white/10 shadow-2xl rounded-full px-4 md:px-6 py-3 flex items-center gap-2 md:gap-6 max-w-5xl w-full justify-between transition-all duration-300 hover:bg-[#181611]/95">
                 <!-- Logo Area -->
-                <a href="index.html" class="flex items-center gap-2 md:gap-3 group shrink-0">
+                <a href="/" class="flex items-center gap-2 md:gap-3 group shrink-0">
                     <div
                         class="size-8 text-primary flex items-center justify-center bg-white/5 rounded-full p-1.5 transition-colors group-hover:bg-primary group-hover:text-background-dark">
                         <span class="material-symbols-outlined text-lg">landscape</span>
@@ -70,17 +70,17 @@
                 <!-- Links -->
                 <div class="hidden lg:flex items-center gap-6 xl:gap-8">
                     <a class="text-sm font-medium text-white/80 hover:text-primary transition-colors whitespace-nowrap"
-                        href="about.html">Our Story</a>
+                        href="/about">Our Story</a>
                     <a class="text-sm font-medium text-white/80 hover:text-primary transition-colors whitespace-nowrap"
-                        href="accommodation.html">The Lodge</a>
+                        href="/accommodation">The Lodge</a>
                     <a class="text-sm font-medium text-white/80 hover:text-primary transition-colors whitespace-nowrap"
-                        href="activities.html">Experiences</a>
+                        href="/activities">Experiences</a>
                     <a class="text-sm font-medium text-white/80 hover:text-primary transition-colors whitespace-nowrap"
-                        href="events.html">Weddings</a>
+                        href="/events">Weddings</a>
                     <a class="text-sm font-medium text-white/80 hover:text-primary transition-colors whitespace-nowrap"
-                        href="shop.html">Shop</a>
+                        href="/shop">Shop</a>
                     <a class="text-sm font-medium text-white/80 hover:text-primary transition-colors whitespace-nowrap"
-                        href="contact.html">Contact</a>
+                        href="/contact">Contact</a>
                 </div>
                 <!-- Actions -->
                 <div class="flex items-center gap-2 md:gap-3">
@@ -90,7 +90,7 @@
                         <span id="cart-count"
                             class="absolute top-0 right-0 flex size-4 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-background-dark opacity-0 transition-opacity">0</span>
                     </button>
-                    <a href="bookings.html"
+                    <a href="/bookings"
                         class="bg-primary hover:bg-primary/90 text-background-dark text-sm font-bold px-4 md:px-5 py-2.5 rounded-full transition-transform hover:scale-105 active:scale-95 flex items-center gap-2">
                         <span class="hidden sm:inline">Book Now</span>
                         <span class="material-symbols-outlined text-[18px]">calendar_today</span>
@@ -360,13 +360,13 @@
                     <div>
                         <h4 class="text-white font-bold mb-6">Explore</h4>
                         <ul class="space-y-4 text-white/60 text-sm">
-                            <li><a class="hover:text-primary transition-colors" href="about.html">Our Story</a></li>
-                            <li><a class="hover:text-primary transition-colors" href="accommodation.html">The Lodge</a>
+                            <li><a class="hover:text-primary transition-colors" href="/about">Our Story</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="/accommodation">The Lodge</a>
                             </li>
-                            <li><a class="hover:text-primary transition-colors" href="activities.html">Experiences</a>
+                            <li><a class="hover:text-primary transition-colors" href="/activities">Experiences</a>
                             </li>
-                            <li><a class="hover:text-primary transition-colors" href="shop.html">Shop</a></li>
-                            <li><a class="hover:text-primary transition-colors" href="bookings.html">Bookings</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="/shop">Shop</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="/bookings">Bookings</a></li>
                         </ul>
                     </div>
                     <!-- Contact -->
@@ -414,19 +414,20 @@
         <button id="close-menu-btn" class="absolute top-8 right-8 text-white hover:text-primary">
             <span class="material-symbols-outlined text-4xl">close</span>
         </button>
-        <a class="text-2xl font-bold text-white hover:text-primary" href="index.html">Home</a>
-        <a class="text-2xl font-bold text-white hover:text-primary" href="about.html">Our Story</a>
-        <a class="text-2xl font-bold text-white hover:text-primary" href="accommodation.html">The Lodge</a>
-        <a class="text-2xl font-bold text-white hover:text-primary" href="activities.html">Experiences</a>
-        <a class="text-2xl font-bold text-white hover:text-primary" href="events.html">Weddings</a>
-        <a class="text-2xl font-bold text-white hover:text-primary" href="shop.html">Shop</a>
-        <a class="text-2xl font-bold text-white hover:text-primary" href="contact.html">Contact</a>
-        <a class="text-2xl font-bold text-white hover:text-primary" href="bookings.html">Book Now</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="/">Home</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="/about">Our Story</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="/accommodation">The Lodge</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="/activities">Experiences</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="/events">Weddings</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="/shop">Shop</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="/contact">Contact</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="/bookings">Book Now</a>
     </div>
 
     <!-- Scripts -->
-    <script src="assets/js/cart.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script type="module" src="assets/js/cart.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
 </body>
 
 </html>
+
