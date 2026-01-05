@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Donkieskraal Lodge - Accommodation</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eebd2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#181611", // Keeping consistent with provided component background
+                        "surface-dark": "#27241c",
+                        "surface-darker": "#221d10",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "2xl": "2rem",
+                        "3xl": "2.5rem", // Extra rounded for the specific request
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Plus Jakarta Sans", sans-serif;
+        }
+        /* Custom scrollbar for horizontal chips */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white overflow-x-hidden selection:bg-primary selection:text-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-50 w-full border-b border-solid border-[#393528] bg-background-dark/80 backdrop-blur-md px-4 py-3 lg:px-10">
+<div class="mx-auto flex max-w-7xl items-center justify-between">
+<div class="flex items-center gap-4 text-white">
+<div class="size-8 text-primary">
+<span class="material-symbols-outlined text-3xl">nature_people</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] hidden sm:block">Donkieskraal Lodge</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="hidden items-center gap-9 lg:flex">
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Accommodation</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Experiences</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Gallery</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<button class="group flex cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-primary text-[#181611] text-sm font-bold leading-normal tracking-[0.015em] transition-transform hover:scale-105">
+<span class="truncate">Check Availability</span>
+</button>
+<!-- Mobile Menu Icon -->
+<div class="flex items-center lg:hidden">
+<span class="material-symbols-outlined text-white cursor-pointer">menu</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Wrapper -->
+<main class="flex-1 flex flex-col items-center w-full px-4 py-6 md:px-8 lg:px-12">
+<div class="w-full max-w-7xl flex flex-col gap-8">
+<!-- Hero Section -->
+<div class="w-full relative rounded-3xl overflow-hidden min-h-[560px] flex items-center justify-center group">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Luxury lodge deck overlooking a vast african reserve at sunset" style='background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDDulKsu3Ah1mBwepQZ6AsCruzkZp_Jx0b1MVB_TyMxbVuCeydbskaWNQvmEGPzQmu_6kdpxX08w6yv90oyS6viDhQVwTAfAvM9nbEBcLWizH5S7QbeY5dTtQBiLHOCaQjKHb_Tnl_UrOd5kMmTge_LaPsNyx_hzhR4PmYg0Yx7hpEWphIy2Ctn3CKuMgZCCTNwUyooJX0u_jhRF-9Rd5Llp3gk04TSQ2XEsv-_0AqZwnOJBIj-91-ZhMxfjToWTf6ySPPEM9CAWcmi");'>
+</div>
+<div class="relative z-10 flex flex-col gap-4 text-center max-w-3xl px-4 animate-fade-in-up">
+<h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] md:text-6xl drop-shadow-lg">
+                            Rest in the Heart <br/> of the Reserve
+                        </h1>
+<h2 class="text-gray-200 text-base font-medium leading-relaxed md:text-xl drop-shadow-md">
+                            From luxury caves carved into stone to starry camping nights. <br class="hidden md:block"/>Experience nature in absolute comfort.
+                        </h2>
+<div class="mt-4 flex justify-center">
+<button class="flex items-center justify-center rounded-full h-12 px-8 bg-primary text-[#181611] text-base font-bold transition-all hover:bg-white hover:scale-105 shadow-[0_0_20px_rgba(238,189,43,0.3)]">
+                                View Accommodations
+                            </button>
+</div>
+</div>
+</div>
+<!-- Sticky Filter/Chips Navigation -->
+<div class="sticky top-[70px] z-40 -mx-4 px-4 py-4 md:mx-0 md:px-0 bg-gradient-to-b from-background-dark via-background-dark to-transparent md:bg-none">
+<div class="flex gap-3 overflow-x-auto hide-scrollbar pb-2 md:justify-center">
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-6 transition-colors shadow-lg shadow-primary/10">
+<p class="text-[#181611] text-sm font-bold leading-normal">All Stays</p>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-dark border border-[#393528] px-6 transition-all hover:bg-[#393528] hover:border-primary/50 group">
+<span class="material-symbols-outlined text-[18px] text-gray-400 group-hover:text-primary">diamond</span>
+<p class="text-white text-sm font-medium leading-normal">Luxury</p>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-dark border border-[#393528] px-6 transition-all hover:bg-[#393528] hover:border-primary/50 group">
+<span class="material-symbols-outlined text-[18px] text-gray-400 group-hover:text-primary">cottage</span>
+<p class="text-white text-sm font-medium leading-normal">Chalets</p>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-dark border border-[#393528] px-6 transition-all hover:bg-[#393528] hover:border-primary/50 group">
+<span class="material-symbols-outlined text-[18px] text-gray-400 group-hover:text-primary">camping</span>
+<p class="text-white text-sm font-medium leading-normal">Glamping</p>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-dark border border-[#393528] px-6 transition-all hover:bg-[#393528] hover:border-primary/50 group">
+<span class="material-symbols-outlined text-[18px] text-gray-400 group-hover:text-primary">forest</span>
+<p class="text-white text-sm font-medium leading-normal">Camping</p>
+</button>
+</div>
+</div>
+<!-- Section Header -->
+<div class="flex flex-col gap-2 pt-4">
+<h2 class="text-white text-3xl font-bold leading-tight tracking-tight">Diverse Stays</h2>
+<p class="text-[#b9b29d] text-lg">Choose your level of immersion in the wild.</p>
+</div>
+<!-- Accommodation Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1: Guest Lodge -->
+<article class="group relative flex flex-col rounded-3xl bg-surface-dark overflow-hidden shadow-lg transition-all hover:-translate-y-1 hover:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] border border-transparent hover:border-primary/20">
+<div class="aspect-[4/3] w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Luxurious guest lodge interior with large king bed and warm lighting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBNGbAgpe_8OH591JjoHQPZClriDjDoBDXcdPKKEH9Q-wVLe3kaHi8gn3irYOxM7NWErWzH1AYd0vodxNWmfSLK8Vy3hUpvMqNfQNKilTV3udPLbKF1pVrz98mLwh_rwrmZDjUed22pwV6N10Rrb9KDYLrg3dlM6NsEMtNumydKGrWyA9N8swiupE89UuYO0Is60aKjStjzt0j15_TzOvEDc14JeTmCzK2m-TL0EXICy66zt5zhea-8Uj_PLW7rMj_KZQaYE2sKKQMT");'>
+<div class="absolute top-4 right-4 bg-black/50 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
+<span class="text-xs font-bold text-primary tracking-wider uppercase">Luxury</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-white text-xl font-bold">The Guest Lodge</h3>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="text-sm font-bold">5.0</span>
+</div>
+</div>
+<p class="text-[#b9b29d] text-sm leading-relaxed mb-6 line-clamp-2">
+                                Communal luxury with panoramic views. Features king-sized beds, en-suite bathrooms, and a shared infinity pool.
+                            </p>
+<!-- Amenities -->
+<div class="flex gap-3 mb-6 border-t border-[#393528] pt-4">
+<div class="flex items-center gap-1 text-gray-400" title="Wifi">
+<span class="material-symbols-outlined text-lg">wifi</span>
+</div>
+<div class="flex items-center gap-1 text-gray-400" title="King Bed">
+<span class="material-symbols-outlined text-lg">bed</span>
+</div>
+<div class="flex items-center gap-1 text-gray-400" title="Pool">
+<span class="material-symbols-outlined text-lg">pool</span>
+</div>
+<div class="flex items-center gap-1 text-gray-400" title="Air Conditioning">
+<span class="material-symbols-outlined text-lg">ac_unit</span>
+</div>
+</div>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-xs text-gray-400">From</span>
+<span class="text-white font-bold">$350<span class="text-xs font-normal text-gray-400">/night</span></span>
+</div>
+<button class="rounded-full bg-primary px-5 py-2 text-[#181611] text-sm font-bold hover:bg-white transition-colors">
+                                    View Details
+                                </button>
+</div>
+</div>
+</article>
+<!-- Card 2: Cave Retreat -->
+<article class="group relative flex flex-col rounded-3xl bg-surface-dark overflow-hidden shadow-lg transition-all hover:-translate-y-1 hover:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] border border-transparent hover:border-primary/20">
+<div class="aspect-[4/3] w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Bedroom built inside a natural rock cave with ambient lighting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCtldgnA-Esa0xoNentbvoyEwHY8nwaz63kGCl-gXtOBPg21NsIbu5JosXQFmPyZ84E9vz7StojaobHW_kuwnW2ilW3gWdF9ONRo9sfLrPHtW-34yjo-2o9pw1phHO8eFdloMXbpYfCRTDs5Od4blzR6HKF7Edk6yYcwtGcvB6gWDqJiIBo-HCVIGgHSpioXsczQg5kpbRAlNVWduGjgiLezc_lFaviHBjtOFgI4mBgqu706QUrGijcBu8kL_jYgDvxk1dimkVQXeoX");'>
+<div class="absolute top-4 right-4 bg-black/50 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
+<span class="text-xs font-bold text-primary tracking-wider uppercase">Unique</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-white text-xl font-bold">Cave Retreat</h3>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="text-sm font-bold">4.9</span>
+</div>
+</div>
+<p class="text-[#b9b29d] text-sm leading-relaxed mb-6 line-clamp-2">
+                                A unique stay built into natural rock formations. Experience silence, solitude, and raw nature without sacrificing comfort.
+                            </p>
+<!-- Amenities -->
+<div class="flex gap-3 mb-6 border-t border-[#393528] pt-4">
+<div class="flex items-center gap-1 text-gray-400" title="Fireplace">
+<span class="material-symbols-outlined text-lg">fireplace</span>
+</div>
+<div class="flex items-center gap-1 text-gray-400" title="Private Bath">
+<span class="material-symbols-outlined text-lg">bathtub</span>
+</div>
+<div class="flex items-center gap-1 text-gray-400" title="Nature View">
+<span class="material-symbols-outlined text-lg">landscape</span>
+</div>
+</div>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-xs text-gray-400">From</span>
+<span class="text-white font-bold">$420<span class="text-xs font-normal text-gray-400">/night</span></span>
+</div>
+<button class="rounded-full bg-primary px-5 py-2 text-[#181611] text-sm font-bold hover:bg-white transition-colors">
+                                    View Details
+                                </button>
+</div>
+</div>
+</article>
+<!-- Card 3: Self-Catering Houses -->
+<article class="group relative flex flex-col rounded-3xl bg-surface-dark overflow-hidden shadow-lg transition-all hover:-translate-y-1 hover:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] border border-transparent hover:border-primary/20">
+<div class="aspect-[4/3] w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Modern house exterior with large glass windows in a nature reserve" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDDQcbvWWc6FgrQv3ALwuzsBZ2JHLyDU-8xBHXFuRm9Qw9LDIdGed9pd4JIxqagEw-t0waUNzI205bMUouSZwZeCpwcwdqH_tB90ISFOrBFGmtApN5_wfMywkDnwFzWJ8Q8E25s3uah-Z7gtDRkLSyRWHAQO-KXp0Y1eZXf3F7WuF9qCbFwxEEb8qDfnHEZjca6EwFPLruT1kQMgHivd5LpVcNrXB2RXeAB5tgG2v68Io7TMtAEL6zqkg8NEPNkfh376sEwPGIhcL_G");'>
+<div class="absolute top-4 right-4 bg-black/50 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
+<span class="text-xs font-bold text-white tracking-wider uppercase">Family</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-white text-xl font-bold">Self-Catering Houses</h3>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="text-sm font-bold">4.8</span>
+</div>
+</div>
+<p class="text-[#b9b29d] text-sm leading-relaxed mb-6 line-clamp-2">
+                                Privacy and comfort for the whole family. Fully equipped kitchens, large living areas, and private braai facilities.
+                            </p>
+<!-- Amenities -->
+<div class="flex gap-3 mb-6 border-t border-[#393528] pt-4">
+<div class="flex items-center gap-1 text-gray-400" title="Kitchen">
+<span class="material-symbols-outlined text-lg">kitchen</span>
+</div>
+<div class="flex items-center gap-1 text-gray-400" title="Multiple Beds">
+<span class="material-symbols-outlined text-lg">bedroom_parent</span>
+</div>
+<div class="flex items-center gap-1 text-gray-400" title="BBQ">
+<span class="material-symbols-outlined text-lg">outdoor_grill</span>
+</div>
+</div>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-xs text-gray-400">From</span>
+<span class="text-white font-bold">$280<span class="text-xs font-normal text-gray-400">/night</span></span>
+</div>
+<button class="rounded-full bg-primary px-5 py-2 text-[#181611] text-sm font-bold hover:bg-white transition-colors">
+                                    View Details
+                                </button>
+</div>
+</div>
+</article>
+<!-- Card 4: Safari Tents -->
+<article class="group relative flex flex-col rounded-3xl bg-surface-dark overflow-hidden shadow-lg transition-all hover:-translate-y-1 hover:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] border border-transparent hover:border-primary/20">
+<div class="aspect-[4/3] w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Large canvas safari tent on a wooden deck surrounded by trees" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBnpNauj4IyTaMxzcIJXWhq0tJRQ4Z0p3NFYvW9MOKu-vA8VOtiJpTZ7Vw5PGE4q7Peihs297ZndbuyAAng1rdY3sayjGLgpzfC1SJGrEs8kshbhjreTqJxzq5SvaccEZWkzcxwgo-IO2dV0XZVkayTIvA3-ObOh0aIs5nO0LTIB8goNjfvKVXCI6phe_lw71hVAj_qqY39kC9qmAuV1ItcIOpwmXIUnKLdYH0oNh36i-5_DCmuRzoKTrL4KbpPsy0hF2H8e8JGXbc7");'>
+<div class="absolute top-4 right-4 bg-black/50 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
+<span class="text-xs font-bold text-primary tracking-wider uppercase">Glamping</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-white text-xl font-bold">Safari Tents</h3>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="text-sm font-bold">4.7</span>
+</div>
+</div>
+<p class="text-[#b9b29d] text-sm leading-relaxed mb-6 line-clamp-2">
+                                Immersive glamping experiences. Hear the sounds of the bush while resting in a real bed under canvas.
+                            </p>
+<!-- Amenities -->
+<div class="flex gap-3 mb-6 border-t border-[#393528] pt-4">
+<div class="flex items-center gap-1 text-gray-400" title="Deck">
+<span class="material-symbols-outlined text-lg">deck</span>
+</div>
+<div class="flex items-center gap-1 text-gray-400" title="Double Bed">
+<span class="material-symbols-outlined text-lg">single_bed</span>
+</div>
+<div class="flex items-center gap-1 text-gray-400" title="Shower">
+<span class="material-symbols-outlined text-lg">shower</span>
+</div>
+</div>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-xs text-gray-400">From</span>
+<span class="text-white font-bold">$190<span class="text-xs font-normal text-gray-400">/night</span></span>
+</div>
+<button class="rounded-full bg-primary px-5 py-2 text-[#181611] text-sm font-bold hover:bg-white transition-colors">
+                                    View Details
+                                </button>
+</div>
+</div>
+</article>
+<!-- Card 5: Rock Chalets -->
+<article class="group relative flex flex-col rounded-3xl bg-surface-dark overflow-hidden shadow-lg transition-all hover:-translate-y-1 hover:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] border border-transparent hover:border-primary/20">
+<div class="aspect-[4/3] w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Stone chalet cottage nestled against large boulders" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBZ_fvoICpEjUPuEGtIKqTiA4MNyfCV2HwnlgBE0nzJABseKt4nFQ5xj0Nrar3U5RBczA46Dwi34ca0Q-FETkkwez6SuHAVoMvXcmZm_9h38Np4LHHKzH_1BTdXRG5ogqGdGZGijw2C5YHw0h2vNgDQd02dJ0MOX5lI8qnDtxIk4wmLLkRO12VWp73o6cFiJA4ecwTVb3T3fiqRONliTZDZPWBdXvEgoIm6r-qNBj0qAq_KmIs9WZD4Ykn4y5i483fvZAvUefb79sUM");'>
+<div class="absolute top-4 right-4 bg-black/50 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
+<span class="text-xs font-bold text-white tracking-wider uppercase">Rustic</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-white text-xl font-bold">Rock Chalets</h3>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="text-sm font-bold">4.6</span>
+</div>
+</div>
+<p class="text-[#b9b29d] text-sm leading-relaxed mb-6 line-clamp-2">
+                                Rustic charm meets modern comfort. Stone walls, thatched roofs, and a cozy atmosphere perfect for couples.
+                            </p>
+<!-- Amenities -->
+<div class="flex gap-3 mb-6 border-t border-[#393528] pt-4">
+<div class="flex items-center gap-1 text-gray-400" title="Cozy">
+<span class="material-symbols-outlined text-lg">chair</span>
+</div>
+<div class="flex items-center gap-1 text-gray-400" title="Heating">
+<span class="material-symbols-outlined text-lg">thermostat</span>
+</div>
+<div class="flex items-center gap-1 text-gray-400" title="Views">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</div>
+</div>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-xs text-gray-400">From</span>
+<span class="text-white font-bold">$220<span class="text-xs font-normal text-gray-400">/night</span></span>
+</div>
+<button class="rounded-full bg-primary px-5 py-2 text-[#181611] text-sm font-bold hover:bg-white transition-colors">
+                                    View Details
+                                </button>
+</div>
+</div>
+</article>
+<!-- Card 6: Camping -->
+<article class="group relative flex flex-col rounded-3xl bg-surface-dark overflow-hidden shadow-lg transition-all hover:-translate-y-1 hover:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] border border-transparent hover:border-primary/20">
+<div class="aspect-[4/3] w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Camping tent set up under a starry sky with a campfire" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDRteazkgfZUYYAJXWK2OOUQQZ3tvYfVuvOzs8CXH4wbK14mH3WIdhwFDYmM3cm2Qja33vXEnIwUvOuO8n95aA4vifqLqwPKEao5iU4wvt7nR_JQ8oWB_eMbUuIfZGWoUoBboeP1PU_GekwRxOSi_JFgoVgw01Aml19TZ4yT2kdgYKLLbYZkexya8Asj1-v6sy_V9VisFsnY__IrNwnRen5GVqO-yETG73oTjeukJ7-sZQqCbeeny40wOjyQgxF4ZmgTd0Rhe3l1cSG");'>
+<div class="absolute top-4 right-4 bg-black/50 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
+<span class="text-xs font-bold text-white tracking-wider uppercase">Nature</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-white text-xl font-bold">Campsites</h3>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="text-sm font-bold">4.9</span>
+</div>
+</div>
+<p class="text-[#b9b29d] text-sm leading-relaxed mb-6 line-clamp-2">
+                                Back to basics under the African sky. Spacious stands with shared ablution facilities and electricity points.
+                            </p>
+<!-- Amenities -->
+<div class="flex gap-3 mb-6 border-t border-[#393528] pt-4">
+<div class="flex items-center gap-1 text-gray-400" title="Electricity">
+<span class="material-symbols-outlined text-lg">electrical_services</span>
+</div>
+<div class="flex items-center gap-1 text-gray-400" title="Shared Bath">
+<span class="material-symbols-outlined text-lg">wc</span>
+</div>
+<div class="flex items-center gap-1 text-gray-400" title="Fire Pit">
+<span class="material-symbols-outlined text-lg">local_fire_department</span>
+</div>
+</div>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-xs text-gray-400">From</span>
+<span class="text-white font-bold">$40<span class="text-xs font-normal text-gray-400">/night</span></span>
+</div>
+<button class="rounded-full bg-primary px-5 py-2 text-[#181611] text-sm font-bold hover:bg-white transition-colors">
+                                    View Details
+                                </button>
+</div>
+</div>
+</article>
+</div>
+<!-- Bottom CTA -->
+<div class="relative w-full overflow-hidden rounded-3xl bg-surface-dark py-12 px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-[#393528]">
+<!-- Abstract gradient background for texture -->
+<div class="absolute inset-0 opacity-20" style="background: radial-gradient(circle at top right, #eebd2b 0%, transparent 40%);"></div>
+<div class="relative z-10 flex flex-col gap-2 max-w-xl">
+<h2 class="text-white text-3xl font-bold leading-tight">Ready to book your stay?</h2>
+<p class="text-[#b9b29d] text-lg">Check real-time availability for all our accommodation options instantly.</p>
+</div>
+<div class="relative z-10 shrink-0">
+<button class="flex h-14 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-primary px-10 text-[#181611] text-lg font-bold shadow-[0_4px_20px_rgba(238,189,43,0.4)] transition-all hover:scale-105 hover:bg-white">
+                            Check Availability
+                        </button>
+</div>
+</div>
+<!-- Footer Simple -->
+<footer class="w-full pt-8 pb-4 text-center">
+<div class="flex justify-center gap-6 mb-4">
+<a class="text-[#b9b29d] hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+<a class="text-[#b9b29d] hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">call</span></a>
+<a class="text-[#b9b29d] hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">location_on</span></a>
+</div>
+<p class="text-[#b9b29d] text-sm">© 2024 Donkieskraal Lodge. All rights reserved.</p>
+</footer>
+</div>
+</main>
+</div>
+</body></html>

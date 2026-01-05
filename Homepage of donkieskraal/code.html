@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Donkieskraal Lodge - Where Wonder Meets Wilderness</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eebd2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#181611", /* Matched closer to example #181611 */
+                        "surface-dark": "#221d10",
+                        "surface-lighter": "#2a261a",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "lg": "1rem", 
+                        "xl": "1.5rem", 
+                        "2xl": "2rem",
+                        "3xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom Utilities for Rounded Design */
+        .rounded-super {
+            border-radius: 2rem;
+        }
+        .text-shadow {
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased selection:bg-primary selection:text-background-dark overflow-x-hidden">
+<!-- Floating Navigation (Pill Shape) -->
+<nav class="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
+<div class="pointer-events-auto bg-surface-dark/80 dark:bg-[#181611]/80 backdrop-blur-md border border-white/10 shadow-2xl rounded-full px-6 py-3 flex items-center gap-6 max-w-4xl w-full justify-between transition-all duration-300 hover:bg-[#181611]/95">
+<!-- Logo Area -->
+<div class="flex items-center gap-3">
+<div class="size-8 text-primary flex items-center justify-center bg-white/5 rounded-full p-1.5">
+<span class="material-symbols-outlined text-lg">landscape</span>
+</div>
+<h2 class="text-white text-lg font-bold tracking-tight hidden md:block">Donkieskraal</h2>
+</div>
+<!-- Links -->
+<div class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-white/80 hover:text-primary transition-colors" href="#">Our Story</a>
+<a class="text-sm font-medium text-white/80 hover:text-primary transition-colors" href="#">The Lodge</a>
+<a class="text-sm font-medium text-white/80 hover:text-primary transition-colors" href="#">Experiences</a>
+<a class="text-sm font-medium text-white/80 hover:text-primary transition-colors" href="#">Gallery</a>
+</div>
+<!-- CTA -->
+<button class="bg-primary hover:bg-primary/90 text-background-dark text-sm font-bold px-5 py-2.5 rounded-full transition-transform hover:scale-105 active:scale-95 flex items-center gap-2">
+<span>Book Now</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-white hover:text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen w-full flex flex-col justify-center items-center overflow-hidden">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat" data-alt="Wide landscape view of African savannah with warm golden sunset light" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBwo0qHzZ4JEk_6tlJOnrAc5Z_XTxqEppc4p7EJRSd9KctV4q_rz_RpIrO7cx5LzqUa9Jvo0B65ZdvkzGIILJo2gASmBS6dSXWWSVxTVcsngmcBIzNpIuFoJ33OX_tTtaLgoVRE8-SnYWpLJ1B1PBp-lHLx0tTw1ofaUqTxtss2GK-FTYnevI5RAA10imdNCdLRAYodSNkUqNdQe_r325K8ShoizfHdhBpt6Np5X8pjDNtkEJiQ2hpNe9j1Y_qdJ1sR3p-wahYf5w0y');">
+<div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-background-dark"></div>
+</div>
+<div class="relative z-10 container mx-auto px-6 text-center pt-20">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 mb-6 animate-fade-in-up">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-xs font-medium tracking-wider uppercase text-white/90">Private Game Reserve</span>
+</div>
+<h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-tight tracking-tight mb-6 text-shadow max-w-5xl mx-auto">
+                Where Wonder <br/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-yellow-200">Meets Wilderness</span>
+</h1>
+<p class="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+                Experience the soul of the Karoo in refined luxury. A sanctuary of tranquility, adventure, and authentic African hospitality awaits.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+<button class="h-14 px-8 bg-primary hover:bg-white text-background-dark font-bold text-base rounded-full transition-all duration-300 transform hover:-translate-y-1 shadow-lg shadow-primary/20 flex items-center gap-2">
+                    Check Availability
+                    <span class="material-symbols-outlined">calendar_month</span>
+</button>
+<button class="h-14 px-8 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-bold text-base rounded-full transition-all duration-300 flex items-center gap-2">
+                    Watch Film
+                    <span class="material-symbols-outlined">play_circle</span>
+</button>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/50 animate-bounce">
+<span class="text-xs uppercase tracking-widest">Explore</span>
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</section>
+<!-- Intro / Story Section -->
+<section class="py-24 bg-background-dark relative overflow-hidden">
+<div class="container mx-auto px-6 md:px-12">
+<div class="flex flex-col lg:flex-row items-center gap-16">
+<!-- Text Content -->
+<div class="flex-1 space-y-8">
+<h2 class="text-4xl md:text-5xl font-bold text-white leading-tight">
+                        The Spirit of <span class="text-primary">Donkieskraal</span>
+</h2>
+<div class="space-y-6 text-lg text-white/70 font-light">
+<p>
+                            Immerse yourself in a landscape that whispers ancient stories. Our lodge offers a sanctuary where the silence is as profound as the starlit skies.
+                        </p>
+<p>
+                            Here, luxury isn't just about fine linens; it's about the luxury of time, space, and connection with the untamed world.
+                        </p>
+</div>
+<div class="grid grid-cols-2 gap-6 pt-4">
+<div class="flex flex-col gap-2 p-4 rounded-2xl bg-surface-lighter/50 border border-white/5">
+<span class="material-symbols-outlined text-primary text-3xl">spa</span>
+<span class="font-bold text-white">Holistic Wellness</span>
+<span class="text-sm text-white/50">Recharge your soul</span>
+</div>
+<div class="flex flex-col gap-2 p-4 rounded-2xl bg-surface-lighter/50 border border-white/5">
+<span class="material-symbols-outlined text-primary text-3xl">restaurant</span>
+<span class="font-bold text-white">Local Cuisine</span>
+<span class="text-sm text-white/50">Flavors of the Karoo</span>
+</div>
+</div>
+<a class="inline-flex items-center text-primary font-bold hover:text-white transition-colors gap-2 mt-4 group" href="#">
+                        Read Our Full Story
+                        <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_right_alt</span>
+</a>
+</div>
+<!-- Image Grid -->
+<div class="flex-1 grid grid-cols-2 gap-4 w-full h-[500px]">
+<div class="col-span-1 row-span-2 rounded-3xl overflow-hidden relative group">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Close up of a lion resting in the grass" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCTSR4615Oo4pD0KR_54tf1nG8gPbw9VCyCviD4jT_N0NZcwdLSMsP9bsFnztzA-dLUJgxosA5_PTdKin8Sa_XLJpiSVsDGgje-uHKqFKqhI1jJeWAvDtVO6atR-3uQsc-W7hDXpifPSwGXhUuOXyl5oI1PlEhGxm_xcmzRUMoxByPoHAuuXSLBfQX1hHiYZdNQZcPOtaEDlsfWfJHbWMk3vr8hXRMIQHHltQNrssntu6tTewyBNyBdyqZjJEpCZ59Yc4pUQE4vxV_K');"></div>
+</div>
+<div class="col-span-1 row-span-1 rounded-3xl overflow-hidden relative group">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Interior of a luxury lodge bedroom with warm lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAI4wkCsKugnf3a0lRoWGS2JdIOacszVLH_FBMPCQ5gKpkq_AaakW7PYJ5j4jUSrVWMSDwklkxeaSikjsx3_utHaSNLzDMdarncrGJk2o3pJ4slwHvZlNcaU6DVeOoHaxNVsjgMYoIi4Vq6iGAj_m4Nzwk17sNpY3E38WMz5t06bUBI9UqRzw_4zwm0hA_-xHsFPVmguC7c6dqo1DfJPQ-aQERCrtSom3gVdUz4nnnEVYcBT4wGYNgdHQ_JeS2bHjFxO6VD5J2Rd7Xq');"></div>
+</div>
+<div class="col-span-1 row-span-1 rounded-3xl overflow-hidden relative group">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Outdoor dining setup under a starry night sky" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC2OKfuOa_yGCJjZreY4jAr9PF_u_T3AsrhXMuzpxxG3wQsxSsJtHBLaGuTarGNCG6WhDiYw8XGE9QoOkBWfPBpgQSSYITXt4d9PyL_VVq6ru1re5OX71ylwTFPEKq4BSQjc7-F7EyNHQJ0qqMB-8Pj6ixG9rv0c2pDA3pKtlZ-imrBvTQzRyc0zID2Xj0TFISSorzO-SPEumR9QC62ytyiHRmGJK8hTtQfU1VyI7czmBhhlVXfHzW1-A6f4ZexlQiFxO6PheDFpl09');"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Experiences Cards -->
+<section class="py-24 bg-[#12100c]">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<h2 class="text-3xl md:text-4xl font-bold text-white mb-2">Curated Experiences</h2>
+<p class="text-white/60">Discover the magic waiting for you.</p>
+</div>
+<div class="flex gap-2">
+<button class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-primary hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-primary hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="group relative h-[500px] rounded-3xl overflow-hidden cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Safari jeep driving through grassy plains during sunset" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDXrY6iogvfnpDUlRxIBFB_8emLYLswtkQtsH9m4h-vB2yf0WFB90WcKZGcy8hHVFHkQnh_3P81WMCeJQekFv9HdOFya6nRxvhS6QTrsrDhQT4nlooxec2-FijMZ3VhSV0zufYIFfS_1ouiXUQrMfp25DcCyrdfXqwzsvMLIKez0Av7GT4wdzibO_vJa2OuXDvDDoS7U6tTmWmafs09pVOjHGO5ksy0KtOhmgP6AqCkeLV_g3pXWW6V54lR1jvMBJQwapXoAGQof2z7');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+<div class="mb-2 w-12 h-12 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center text-primary border border-white/10">
+<span class="material-symbols-outlined">explore</span>
+</div>
+<h3 class="text-2xl font-bold text-white mb-2">Game Drives</h3>
+<p class="text-white/70 line-clamp-2 mb-4 group-hover:line-clamp-none transition-all">
+                            Encounter the wild up close with our expert guides in open vehicles.
+                        </p>
+<span class="text-primary text-sm font-bold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-2">
+                            Explore More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative h-[500px] rounded-3xl overflow-hidden cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Luxury hotel room interior with view of nature" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBjRSL8Y_agOkVceuV5TTSOg_s335qfU06qNJpIxy76_fPHliw9PCP4cm92mEiHQGQs93HnytIAD1FNBe9vNIscmSJ4jMrF6sHzeHWc_Oa_7u3Pcf8cNFexkpWAq5aCFkkRg04iw44ovgeJc4Oei6AVQOqrgHs8VbQeA0SnNev54_G7-OMJDM4SXYeqHHzZae5vlFwc6-eDoSthwIFxlHNN3TpJ5qzV30E0BqCFzF1f4j_mfGNdsPS17Xyj0YHKTvanSwI_2Bq1Gfe8');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+<div class="mb-2 w-12 h-12 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center text-primary border border-white/10">
+<span class="material-symbols-outlined">king_bed</span>
+</div>
+<h3 class="text-2xl font-bold text-white mb-2">Luxury Suites</h3>
+<p class="text-white/70 line-clamp-2 mb-4 group-hover:line-clamp-none transition-all">
+                            Rest in elegantly designed suites that blend seamlessly with nature.
+                        </p>
+<span class="text-primary text-sm font-bold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-2">
+                            View Suites <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative h-[500px] rounded-3xl overflow-hidden cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Gourmet plated food on a wooden table" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDOIgwCwWh3z5U4zLcaLU78L_RElakHta7pn6ZPPv0tQ_UrSvjjRxaxDZB0DwPT_ghQ1dbRZ-EnL5c46XktQ0_VcTXM930Oe2lQ0vxsz-6cUrlYRZpIKe5MO5EVqykjG6MAQMutrd9O7m4dgtTTxNjyjzGulBcCeQur0BY5GU4UwhdsKxL-3Hs_RKu0QP5mlhrYQyhpOWgEeGvnWA__FJM_Fb68LuBy02N08UrrJTyd5nJ4FnbGpqiiBo19Icj4GxV6uWJT3ww2mFDh');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+<div class="mb-2 w-12 h-12 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center text-primary border border-white/10">
+<span class="material-symbols-outlined">restaurant_menu</span>
+</div>
+<h3 class="text-2xl font-bold text-white mb-2">Culinary Journey</h3>
+<p class="text-white/70 line-clamp-2 mb-4 group-hover:line-clamp-none transition-all">
+                            Savor local flavors prepared with passion and fresh ingredients.
+                        </p>
+<span class="text-primary text-sm font-bold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-2">
+                            See Menu <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Carousel Section -->
+<section class="py-24 bg-surface-dark relative overflow-hidden">
+<!-- Abstract Background Shapes -->
+<div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#2a261a] to-transparent pointer-events-none"></div>
+<div class="container mx-auto px-6 relative z-10">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-primary font-medium tracking-widest uppercase text-sm mb-2 block">Guest Diaries</span>
+<h2 class="text-3xl md:text-5xl font-bold text-white">Stories from the Campfire</h2>
+</div>
+<div class="flex overflow-x-auto pb-8 gap-6 snap-x snap-mandatory [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<!-- Testimonial 1 -->
+<div class="min-w-[320px] md:min-w-[400px] bg-[#181611] border border-[#393528] rounded-3xl p-8 snap-center flex flex-col justify-between">
+<div>
+<div class="text-primary mb-4 text-3xl font-serif">"</div>
+<p class="text-white/80 text-lg leading-relaxed mb-6 italic">
+                            An unforgettable escape. The silence of the Karoo at night is something I will cherish forever. The staff made us feel like family.
+                        </p>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-cover bg-center border-2 border-primary" data-alt="Portrait of a smiling woman" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD5HH2-b99KC41F_EcXretCK1fx1tLCM9eOzvBPrcQaT3cemsdckhDbkVeK-6gGg3iJycBtShhc8cj6op5cQBneWirhrslRuTL3qA_MsqgBeje2ssNxbuv0_Yz2CnmzNplRzlIaMiTdm9OcmwVDEBEz_0lCEntPiCyiZBVdE0_aG8trJpLpslVHuEhVlKYx4Mx5mlrvx5yvSRc6LSPhIuxGNAfDkEIE1P96zWBZHeK1KToR6BG7rAx48WtWJgf7W9bxMyrZTQ4Qbnpn');"></div>
+<div>
+<h4 class="text-white font-bold text-sm">Sarah Jenkins</h4>
+<span class="text-white/40 text-xs">Cape Town, South Africa</span>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="min-w-[320px] md:min-w-[400px] bg-[#181611] border border-[#393528] rounded-3xl p-8 snap-center flex flex-col justify-between">
+<div>
+<div class="text-primary mb-4 text-3xl font-serif">"</div>
+<p class="text-white/80 text-lg leading-relaxed mb-6 italic">
+                            The game drive was spectacular. We saw giraffe, zebra, and the most beautiful sunset. Highly recommended for nature lovers.
+                        </p>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-cover bg-center border-2 border-primary" data-alt="Portrait of a smiling man with glasses" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBD1HbVpYeIoQ74nC5QVcTfjTQjMl99cBd5kYIFeKI6jBBvmqQxrz8ox8C2xB84-MOzespAQedUIlp7_vTsBXRrssLUpI_-jzJNSCaFfCrY4AQbB4nfyYKq3yi1-XCP2D9IS2a3MVufYuoF0v4-KenofPQHmSRYNFzmG5dJM90Zc_R0A6QMT-phiutpLK9vV42HVEtnd0lg51c8QNn_LiK6KJH5DEGUal6q8280zi1LrtG_aHSg9AQ3T0SYJO3yUzst5CSGqxV7Rp3e');"></div>
+<div>
+<h4 class="text-white font-bold text-sm">David Chen</h4>
+<span class="text-white/40 text-xs">London, UK</span>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="min-w-[320px] md:min-w-[400px] bg-[#181611] border border-[#393528] rounded-3xl p-8 snap-center flex flex-col justify-between">
+<div>
+<div class="text-primary mb-4 text-3xl font-serif">"</div>
+<p class="text-white/80 text-lg leading-relaxed mb-6 italic">
+                            Luxury in the middle of nowhere. The food was exquisite, and the accommodation was top-tier. A perfect recharge.
+                        </p>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-cover bg-center border-2 border-primary" data-alt="Portrait of a young woman" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDmvUnI2AUSwhfK37LSCCfCPN87ZTa2DVemitjnVEug-2_DwFylnKAvXsfidskDyLavAjM8VcZB6lkp1QxsxxcvghP5IjZKsSYCpmLnEmf-mwwFbhYUtoI4Wa05Nox6w8Kt8qfjj18nCnzA45PgZ0MckMw_j3m0lHt0gQZyT-DscJlYslIIUVGJkbut39NCX82rjRhnF1j7TqkfAOPa7rS_bSCF0m5DYrLuavo3Q0NzXjkKfbB7DKBvE_8rGcvggIVHyvc8aDvJFyD9');"></div>
+<div>
+<h4 class="text-white font-bold text-sm">Elena Rodriguez</h4>
+<span class="text-white/40 text-xs">Madrid, Spain</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Location / Map Teaser -->
+<section class="py-12 bg-background-dark">
+<div class="container mx-auto px-6">
+<div class="rounded-[2.5rem] overflow-hidden relative h-[400px] md:h-[500px] border border-white/10 group">
+<!-- Map Image Placeholder -->
+<div class="absolute inset-0 bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-700" data-location="Aerial view of South African landscape" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBGRlKBHzorYSbGlxpaXGvq83XrXAG9R31pDwj4r18oUGc2_oHTQfOAxiz6PCaIN_8ZDnrhnUMnIf3kKMPOkhu5dQVUv6H6h6eS97oAbbBT-L5YnSwpVjW79pNOA-NHLrysZYqTBAtNgpwzU12hxsO4w5RCDDJh8n5CnPbWFlwuocteH1PZj0AacZcwvw3nFinipPfV0k07uTrioWmE4AGB6IZlVStLzvg3q06lRAViCE1KPq7frv3ZJvMLMwGX3wVfNNMSp_0hg69a');"></div>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
+<div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-background-dark mb-6 shadow-lg shadow-primary/30 animate-bounce">
+<span class="material-symbols-outlined text-3xl">location_on</span>
+</div>
+<h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Lost in the Right Direction</h2>
+<p class="text-white/90 text-lg max-w-md mb-8">Located in the heart of the Western Cape, a hidden gem waiting to be discovered.</p>
+<button class="px-8 py-3 bg-white text-background-dark font-bold rounded-full hover:bg-gray-200 transition-colors flex items-center gap-2">
+                        Get Directions
+                        <span class="material-symbols-outlined text-lg">near_me</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter -->
+<section class="py-24 bg-background-dark border-t border-white/5">
+<div class="container mx-auto px-6 text-center">
+<h2 class="text-3xl font-bold text-white mb-4">Join the Pride</h2>
+<p class="text-white/60 mb-8 max-w-lg mx-auto">Subscribe to our newsletter for exclusive offers, stories from the reserve, and seasonal updates.</p>
+<form class="max-w-md mx-auto relative group">
+<input class="w-full h-16 bg-[#2a261a] border border-white/10 rounded-full px-8 text-white placeholder-white/30 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all pr-16" placeholder="Your email address" type="email"/>
+<button class="absolute right-2 top-2 h-12 w-12 bg-primary rounded-full flex items-center justify-center text-background-dark hover:bg-white transition-colors shadow-lg" type="button">
+<span class="material-symbols-outlined">send</span>
+</button>
+</form>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#0a0907] pt-20 pb-10 border-t border-white/5">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<!-- Brand -->
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 text-white mb-6">
+<span class="material-symbols-outlined text-primary">landscape</span>
+<span class="font-bold text-xl">Donkieskraal</span>
+</div>
+<p class="text-white/50 text-sm leading-relaxed mb-6">
+                        Where the horizon meets heritage. Experience the untamed beauty of Africa with unparalleled comfort.
+                    </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-primary hover:text-background-dark transition-all" href="#">
+<!-- Facebook Icon Placeholder using Material Icon for demo -->
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-primary hover:text-background-dark transition-all" href="#">
+<!-- Instagram Icon Placeholder using Material Icon for demo -->
+<span class="material-symbols-outlined text-sm">photo_camera</span>
+</a>
+</div>
+</div>
+<!-- Quick Links -->
+<div>
+<h4 class="text-white font-bold mb-6">Explore</h4>
+<ul class="space-y-4 text-white/60 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Our Story</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">The Lodge</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Experiences</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Gallery</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Rates &amp; Specials</a></li>
+</ul>
+</div>
+<!-- Contact -->
+<div>
+<h4 class="text-white font-bold mb-6">Contact</h4>
+<ul class="space-y-4 text-white/60 text-sm">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-lg">location_on</span>
+<span>Western Cape, South Africa</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg">call</span>
+<span>+27 (0) 21 123 4567</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg">mail</span>
+<span>stay@donkieskraal.co.za</span>
+</li>
+</ul>
+</div>
+<!-- Legal -->
+<div>
+<h4 class="text-white font-bold mb-6">Legal</h4>
+<ul class="space-y-4 text-white/60 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms &amp; Conditions</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cookie Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Sitemap</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-white/30 text-xs">© 2023 Donkieskraal Lodge. All rights reserved.</p>
+<div class="flex gap-6">
+<span class="text-white/30 text-xs uppercase tracking-widest">Designed with <span class="text-primary">♥</span> in Africa</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

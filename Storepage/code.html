@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Donkieskraal Lodge Store</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eebd2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#181611", 
+                        "surface-dark": "#232018",
+                        "surface-highlight": "#2d2920",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                        "3xl": "2rem",
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-dark text-white font-display overflow-x-hidden selection:bg-primary selection:text-background-dark">
+<div class="flex flex-col min-h-screen">
+<!-- Header -->
+<header class="sticky top-0 z-50 w-full border-b border-[#393528]/50 bg-background-dark/80 backdrop-blur-md">
+<div class="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
+<div class="flex h-20 items-center justify-between gap-4">
+<!-- Logo Area -->
+<div class="flex items-center gap-4 text-white">
+<div class="flex size-10 items-center justify-center rounded-full bg-surface-highlight text-primary">
+<svg class="size-6" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold tracking-tight hidden sm:block">Donkieskraal Lodge</h2>
+</div>
+<!-- Navigation -->
+<nav class="hidden md:flex items-center gap-1 rounded-full bg-surface-dark p-1.5 px-2 border border-[#393528]">
+<a class="px-5 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors rounded-full hover:bg-[#393528]" href="#">Home</a>
+<a class="px-5 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors rounded-full hover:bg-[#393528]" href="#">Stay</a>
+<a class="px-5 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors rounded-full hover:bg-[#393528]" href="#">Activities</a>
+<a class="px-5 py-2 text-sm font-bold text-background-dark bg-primary shadow-sm rounded-full" href="#">Shop</a>
+<a class="px-5 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors rounded-full hover:bg-[#393528]" href="#">Contact</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-3">
+<button class="flex items-center justify-center gap-2 rounded-full bg-surface-highlight hover:bg-[#393528] border border-[#393528] h-10 px-4 text-sm font-bold transition-all group">
+<span class="material-symbols-outlined text-[20px] group-hover:text-primary transition-colors">shopping_cart</span>
+<span class="hidden sm:inline">Cart (0)</span>
+</button>
+<button class="md:hidden flex items-center justify-center size-10 rounded-full bg-surface-highlight border border-[#393528]">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="py-6 sm:py-10 px-4 sm:px-6 lg:px-8">
+<div class="mx-auto max-w-[1280px]">
+<div class="relative overflow-hidden rounded-[2.5rem] bg-surface-dark min-h-[500px] flex flex-col items-center justify-center text-center p-8 sm:p-12 group">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Luxury lodge interior with warm lighting and wooden furniture" style='background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDyTHRMheFSS_sezxT4Xjq-OBiOxtobfdeXXsGSubCjYn5vak5sHvqaNok5pk6UvY6p4TfoszvlXgqZqUJnme3GqpmOsHLcdGQd8v3wH-MhckbYk3ouzUpdINeJVX9dSBS1pWdsC8t2UQx5h2rLUcrkFT4VZn2UOQyZCNDY78tKoG67qseJGtT6z58hmdDjSyPAR0WgVZQo9gaGdBqqSnICXpRN3ak-Pk9_pqq-7Z39lOPdXVzzkTwr3vaFhMLrCSEqYviuL_tnZDFM");'>
+</div>
+<!-- Content -->
+<div class="relative z-10 max-w-2xl flex flex-col items-center gap-6">
+<div class="inline-flex items-center gap-2 rounded-full bg-black/40 backdrop-blur-sm border border-white/10 px-4 py-1.5">
+<span class="size-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-xs font-semibold tracking-wide uppercase text-white/90">New Arrivals</span>
+</div>
+<h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1]">
+                                Bring the Donkieskraal <span class="text-primary">Experience</span> Home
+                            </h1>
+<p class="text-lg text-gray-200 max-w-lg">
+                                Exclusive lodge merchandise, handcrafted local curios, and premium outdoor gear for your next adventure.
+                            </p>
+<button class="mt-4 flex h-14 items-center justify-center gap-2 rounded-full bg-primary px-8 text-base font-bold text-background-dark transition-transform hover:scale-105 hover:bg-white active:scale-95 shadow-[0_0_20px_rgba(238,189,43,0.3)]">
+<span>Shop the Collection</span>
+<span class="material-symbols-outlined">arrow_downward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Filters & Sorting -->
+<div class="sticky top-20 z-40 px-4 sm:px-6 lg:px-8 pointer-events-none">
+<div class="mx-auto max-w-[1280px] flex justify-center">
+<div class="pointer-events-auto inline-flex flex-wrap gap-2 p-2 rounded-full bg-surface-highlight/80 backdrop-blur-md border border-[#393528] shadow-xl overflow-x-auto max-w-full">
+<button class="flex h-10 shrink-0 items-center gap-2 rounded-full bg-primary px-5 text-sm font-bold text-background-dark shadow-sm">
+                            All Products
+                        </button>
+<button class="flex h-10 shrink-0 items-center gap-2 rounded-full bg-transparent hover:bg-[#393528] px-5 text-sm font-medium text-white transition-colors">
+                            Apparel
+                        </button>
+<button class="flex h-10 shrink-0 items-center gap-2 rounded-full bg-transparent hover:bg-[#393528] px-5 text-sm font-medium text-white transition-colors">
+                            Curios
+                        </button>
+<button class="flex h-10 shrink-0 items-center gap-2 rounded-full bg-transparent hover:bg-[#393528] px-5 text-sm font-medium text-white transition-colors">
+                            Vouchers
+                        </button>
+<div class="w-px h-6 bg-[#393528] mx-1 self-center hidden sm:block"></div>
+<button class="flex h-10 shrink-0 items-center gap-1.5 rounded-full bg-transparent hover:bg-[#393528] pl-5 pr-3 text-sm font-medium text-gray-300 transition-colors">
+<span>Sort: Price Low to High</span>
+<span class="material-symbols-outlined text-lg">expand_more</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Grid Section -->
+<section class="py-12 px-4 sm:px-6 lg:px-8">
+<div class="mx-auto max-w-[1280px]">
+<div class="flex items-end justify-between mb-8 px-2">
+<div>
+<span class="text-primary text-sm font-bold uppercase tracking-wider">Featured Items</span>
+<h2 class="text-3xl font-bold mt-1">Handcrafted Curios</h2>
+</div>
+<a class="hidden sm:flex items-center gap-1 text-sm font-bold text-primary hover:text-white transition-colors" href="#">
+                            View all
+                            <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Product Card 1 -->
+<div class="group relative flex flex-col gap-4 rounded-3xl bg-surface-dark p-4 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] border border-transparent hover:border-primary/20">
+<div class="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-[#1a1814]">
+<div class="absolute top-3 right-3 z-20 flex gap-2">
+<button class="flex size-8 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-md hover:bg-primary hover:text-black transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Brown leather weekend bag on a wooden table" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCgyifL_InF9vykdBf2WzBPnTiCWjRw96vzAOB1gnArEsLWomuEd7Q_6Jg3NvFpCH6uOaI6gvniBAUIvKAM67oEORJnitftihRDk3egK7DoAgoS_C0Lh1yyJow7Sz1KLxdTCmGXWmWtMopYJniyYTq3yFGVmw0EYM3cPDeViVJMBf-bmsMw_tCGuG_SCyFlzBk8dgMSdZo6Ah42ve7N_CekSxHKZ7wP1uf3KGys47jMbWh0Ts5O6laMQjN8pL3_B9fT0Z1rj_WoU55y");'>
+</div>
+<!-- Quick Add Overlay Button -->
+<button class="absolute bottom-4 right-4 translate-y-16 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 flex size-12 items-center justify-center rounded-full bg-primary text-background-dark shadow-lg hover:scale-110">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+<div class="flex flex-col gap-1 px-1 pb-1">
+<div class="flex justify-between items-start">
+<h3 class="text-lg font-bold leading-tight text-white">Leather Weekend Bag</h3>
+</div>
+<p class="text-sm font-medium text-primary">R 2,500.00</p>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group relative flex flex-col gap-4 rounded-3xl bg-surface-dark p-4 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] border border-transparent hover:border-primary/20">
+<div class="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-[#1a1814]">
+<div class="absolute top-3 right-3 z-20 flex gap-2">
+<button class="flex size-8 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-md hover:bg-primary hover:text-black transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Green canvas cap with wildlife embroidery" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuANTygDZqZ2UyBhsdhjWpD0NytOByp3ReN7aXiMJZpaXNbiAYkWQxc1VXDwFlwb-C58mVPXAfkahqcaYCGqew59QUmwu3uemEs6gIk9aeeB8epMEWd677kPHlllPbExwgyAgzUSPD3aUK8C8EK8JmcdYUCO32SB_QcxOnkiShTt-75qC4MHawgCex2e5-LGSosgznVg9ZcKwteCR-Qfqsh42-jeetd4iE18pNXaZjqiD4ceHcKlvg825zuxDqqhxQqx4T3f8pCGyMvi");'>
+</div>
+<button class="absolute bottom-4 right-4 translate-y-16 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 flex size-12 items-center justify-center rounded-full bg-primary text-background-dark shadow-lg hover:scale-110">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+<div class="flex flex-col gap-1 px-1 pb-1">
+<div class="flex justify-between items-start">
+<h3 class="text-lg font-bold leading-tight text-white">Game Reserve Cap</h3>
+</div>
+<p class="text-sm font-medium text-primary">R 350.00</p>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group relative flex flex-col gap-4 rounded-3xl bg-surface-dark p-4 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] border border-transparent hover:border-primary/20">
+<div class="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-[#1a1814]">
+<div class="absolute top-3 left-3 z-20">
+<span class="inline-flex items-center rounded-full bg-red-500/90 px-2.5 py-1 text-xs font-bold text-white backdrop-blur-sm">Sale</span>
+</div>
+<div class="absolute top-3 right-3 z-20 flex gap-2">
+<button class="flex size-8 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-md hover:bg-primary hover:text-black transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Golden honey jar with wooden dipper" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuACErBjePLECF-2biO1zbYrcBqRKQS5lVstuv64NM32iGYRaoTL3H3DlM09PaV_RTA7hwGLX0lC5GGsxcqOPyimSapQjp7trWqzPHE28k7ptKDfJ5Qk0skb4BZkmwYUTTfZhXUWM_F9JEU-AFAqe-avREPbXeO5wSy4Nrkr2jSlJWiheetQi8EjzRrhJiTtkmeA5KOResvAFtyH2GTySU56hwdnTKaPaaliAbMs9cPUik1HTCWH8h77aY3x_izxps-TVpzlOxFxwQA2");'>
+</div>
+<button class="absolute bottom-4 right-4 translate-y-16 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 flex size-12 items-center justify-center rounded-full bg-primary text-background-dark shadow-lg hover:scale-110">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+<div class="flex flex-col gap-1 px-1 pb-1">
+<div class="flex justify-between items-start">
+<h3 class="text-lg font-bold leading-tight text-white">Local Honey Jar</h3>
+</div>
+<div class="flex items-center gap-2">
+<p class="text-sm font-medium text-primary">R 120.00</p>
+<p class="text-xs font-medium text-gray-500 line-through">R 150.00</p>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group relative flex flex-col gap-4 rounded-3xl bg-surface-dark p-4 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] border border-transparent hover:border-primary/20">
+<div class="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-[#1a1814]">
+<div class="absolute top-3 right-3 z-20 flex gap-2">
+<button class="flex size-8 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-md hover:bg-primary hover:text-black transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Scenic sunset view over African savannah" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDlmvdbBlJMYQ22TJuicRaU_ojMQ5RBqnGYZf8wijDrIbFdPMFJSUxOiqLeChogq4z_Yi-dz0okQLxtssSSis8nKaIb2hdLhJeEf5InBwuB7y2H1vM2Qkq0HYpBsJyLSyQUGuZTkcg6CSPUpaY325SgId_FZxq-lspFgegSHoxIDqLqA6GRn_04gv-LxGHvvEzkobBBWZNWipLaWfxFtqGeuEi3tw4GUpmZ9orHxB2ZRLmGyYHEiXsk3jQhBK1vxyDbkmqWdkwlLxgz");'>
+</div>
+<button class="absolute bottom-4 right-4 translate-y-16 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 flex size-12 items-center justify-center rounded-full bg-primary text-background-dark shadow-lg hover:scale-110">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+<div class="flex flex-col gap-1 px-1 pb-1">
+<div class="flex justify-between items-start">
+<h3 class="text-lg font-bold leading-tight text-white">Sunset Drive Voucher</h3>
+</div>
+<p class="text-sm font-medium text-primary">R 500.00</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Secondary Section (Apparel) -->
+<section class="py-12 px-4 sm:px-6 lg:px-8 bg-surface-highlight/30 rounded-t-[3rem]">
+<div class="mx-auto max-w-[1280px]">
+<div class="flex items-end justify-between mb-8 px-2">
+<div>
+<span class="text-primary text-sm font-bold uppercase tracking-wider">Lodge Gear</span>
+<h2 class="text-3xl font-bold mt-1">Authentic Apparel</h2>
+</div>
+<a class="hidden sm:flex items-center gap-1 text-sm font-bold text-primary hover:text-white transition-colors" href="#">
+                            View all
+                            <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Product Card 5 -->
+<div class="group relative flex flex-col gap-4 rounded-3xl bg-surface-dark p-4 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] border border-transparent hover:border-primary/20">
+<div class="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-[#1a1814]">
+<div class="absolute top-3 right-3 z-20 flex gap-2">
+<button class="flex size-8 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-md hover:bg-primary hover:text-black transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Khaki safari jacket on a hanger" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBRYbVTJMwB05nAfwrzU1lE4sXJuZ3U0reSbS9hzFtPf6AnYlnCFnNzrZusgz5mtaxbg3ykP8XCDgLuwfTQw0640zsK8lbSjdQSFEbRzmPfDaL7fEAfDaOdYcEcs-rwzQ61QviW9W4b9y_BGqPY3mg3sfxLWG2IQdufi2ubsao8dQ-_ZMJ9A4YI_8la65g1j0t3Mc9yph21If64174MSgKYagy3QTjP_qacgXjwSiW5zpicnOLRX7deNc6LHK9gwC3sZWyuTjUAVWqN");'>
+</div>
+<button class="absolute bottom-4 right-4 translate-y-16 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 flex size-12 items-center justify-center rounded-full bg-primary text-background-dark shadow-lg hover:scale-110">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+<div class="flex flex-col gap-1 px-1 pb-1">
+<h3 class="text-lg font-bold leading-tight text-white">Safari Jacket</h3>
+<p class="text-sm font-medium text-primary">R 1,850.00</p>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="group relative flex flex-col gap-4 rounded-3xl bg-surface-dark p-4 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] border border-transparent hover:border-primary/20">
+<div class="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-[#1a1814]">
+<div class="absolute top-3 right-3 z-20 flex gap-2">
+<button class="flex size-8 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-md hover:bg-primary hover:text-black transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Durable leather hiking boots" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAqgdwFVZ9c_Gbr9Ygq1fzezwo8exeoidOJm2jxFW04RqPLs6DmPslxyBilFAwjoeDaFITB9Zghz0j_5U6vsgs1uBORV5yVErXLl5Vch0ZI6DRJegrGf2oQp7ACPycSnwMXlQ_VcL92HKrdXI-J2kDS8FciAlArS393m1npMFKz1aol8-oM6YwX5XtWAhhVgXjYKy0zxylDIjgOF0vukdiT1wL0q35a05VDVi4rZ-d-GVcMy4LeCoSSX3pjJUBG52Sswj7Xv7S_zB2L");'>
+</div>
+<button class="absolute bottom-4 right-4 translate-y-16 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 flex size-12 items-center justify-center rounded-full bg-primary text-background-dark shadow-lg hover:scale-110">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+<div class="flex flex-col gap-1 px-1 pb-1">
+<h3 class="text-lg font-bold leading-tight text-white">Ranger Boots</h3>
+<p class="text-sm font-medium text-primary">R 2,100.00</p>
+</div>
+</div>
+<!-- CTA Card -->
+<div class="group relative flex flex-col items-center justify-center gap-6 rounded-3xl bg-primary p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(238,189,43,0.4)] text-background-dark sm:col-span-2">
+<div class="text-center">
+<h3 class="text-3xl font-black mb-2">Join the Herd</h3>
+<p class="font-medium opacity-80 mb-6">Sign up for exclusive deals and updates from the lodge.</p>
+<form class="flex w-full max-w-sm gap-2">
+<input class="w-full rounded-full border-0 bg-white/20 px-4 py-3 placeholder:text-black/50 focus:ring-2 focus:ring-white text-black font-medium outline-none" placeholder="Email Address" type="email"/>
+<button class="flex items-center justify-center size-12 rounded-full bg-black text-white hover:bg-white hover:text-black transition-colors shrink-0" type="button">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="mt-auto bg-surface-dark border-t border-[#393528]">
+<div class="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8 py-10">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-3">
+<div class="flex size-8 items-center justify-center rounded-full bg-surface-highlight text-primary">
+<svg class="size-5" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<p class="text-sm font-semibold text-gray-400">© 2024 Donkieskraal Lodge. All rights reserved.</p>
+</div>
+<div class="flex gap-6">
+<a class="text-gray-400 hover:text-primary transition-colors text-sm font-medium" href="#">Terms</a>
+<a class="text-gray-400 hover:text-primary transition-colors text-sm font-medium" href="#">Privacy</a>
+<a class="text-gray-400 hover:text-primary transition-colors text-sm font-medium" href="#">Returns</a>
+</div>
+<div class="flex gap-4">
+<a class="flex size-10 items-center justify-center rounded-full bg-surface-highlight hover:bg-[#393528] text-white transition-colors" href="#">
+<!-- Simple representation of social icon -->
+<span class="font-bold text-xs">IG</span>
+</a>
+<a class="flex size-10 items-center justify-center rounded-full bg-surface-highlight hover:bg-[#393528] text-white transition-colors" href="#">
+<span class="font-bold text-xs">FB</span>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

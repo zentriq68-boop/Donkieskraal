@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Donkieskraal Lodge - Product Detail</title>
+    <!-- Resource Hinting -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eebd2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#181611",
+                        "surface-dark": "#27241c",
+                        "surface-highlight": "#2d2920",
+                        "surface-light": "#ffffff",
+                        "border-dark": "#393528",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "2xl": "2rem",
+                        "3xl": "3rem",
+                        "full": "9999px"
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .pill-nav {
+            background: rgba(39, 36, 28, 0.82);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .dark .pill-nav {
+            background: rgba(39, 36, 28, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100 font-display antialiased overflow-x-hidden selection:bg-primary selection:text-background-dark">
+    <div class="flex flex-col min-h-screen">
+        <!-- Header -->
+        <!-- Floating Navigation (Pill Shape) -->
+        <nav class="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
+            <div
+                class="pointer-events-auto bg-surface-dark/80 dark:bg-[#181611]/80 backdrop-blur-md border border-white/10 shadow-2xl rounded-full px-6 py-3 flex items-center gap-6 max-w-5xl w-full justify-between transition-all duration-300 hover:bg-[#181611]/95">
+                <!-- Logo Area -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div
+                        class="size-8 text-primary flex items-center justify-center bg-white/5 rounded-full p-1.5 transition-colors group-hover:bg-primary group-hover:text-background-dark">
+                        <span class="material-symbols-outlined text-lg">landscape</span>
+                    </div>
+                    <h2
+                        class="text-white text-lg font-bold tracking-tight hidden md:block group-hover:text-primary transition-colors">
+                        Donkieskraal</h2>
+                </a>
+                <!-- Links -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-medium text-white/80 hover:text-primary transition-colors"
+                        href="about.html">Our Story</a>
+                    <a class="text-sm font-medium text-white/80 hover:text-primary transition-colors"
+                        href="accommodation.html">The Lodge</a>
+                    <a class="text-sm font-medium text-white/80 hover:text-primary transition-colors"
+                        href="activities.html">Experiences</a>
+                    <a class="text-sm font-medium text-white/80 hover:text-primary transition-colors"
+                        href="events.html">Weddings</a>
+                    <a class="text-sm font-medium text-white/80 hover:text-primary transition-colors"
+                        href="shop.html">Shop</a>
+                    <a class="text-sm font-medium text-white/80 hover:text-primary transition-colors"
+                        href="contact.html">Contact</a>
+                </div>
+                <!-- Actions -->
+                <div class="flex items-center gap-3">
+                    <!-- Cart Icon -->
+                    <button id="cart-btn" class="relative group text-white hover:text-primary transition-colors p-2">
+                        <span class="material-symbols-outlined">shopping_bag</span>
+                        <span id="cart-count"
+                            class="absolute top-0 right-0 flex size-4 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-background-dark opacity-0 transition-opacity">0</span>
+                    </button>
+                    <a href="bookings.html"
+                        class="bg-primary hover:bg-primary/90 text-background-dark text-sm font-bold px-5 py-2.5 rounded-full transition-transform hover:scale-105 active:scale-95 flex items-center gap-2">
+                        <span>Book Now</span>
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
+                    <!-- Mobile Menu Toggle -->
+                    <button id="mobile-menu-btn" class="md:hidden text-white hover:text-primary p-2">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <main class="flex-1 layout-container flex flex-col items-center py-24 px-4 md:px-10 lg:px-40">
+            <div class="layout-content-container flex flex-col max-w-[1200px] w-full gap-8">
+                <!-- Breadcrumbs -->
+                <div class="flex flex-wrap items-center gap-2">
+                    <a class="text-gray-500 dark:text-[#b9b29d] hover:text-primary text-sm font-medium leading-normal transition-colors"
+                        href="index.html">Home</a>
+                    <span
+                        class="material-symbols-outlined text-gray-500 dark:text-[#b9b29d] text-sm">chevron_right</span>
+                    <a class="text-gray-500 dark:text-[#b9b29d] hover:text-primary text-sm font-medium leading-normal transition-colors"
+                        href="shop.html">Shop</a>
+                    <span
+                        class="material-symbols-outlined text-gray-500 dark:text-[#b9b29d] text-sm">chevron_right</span>
+                    <a class="text-gray-500 dark:text-[#b9b29d] hover:text-primary text-sm font-medium leading-normal transition-colors"
+                        href="#">Apparel</a>
+                    <span
+                        class="material-symbols-outlined text-gray-500 dark:text-[#b9b29d] text-sm">chevron_right</span>
+                    <span class="text-primary text-sm font-medium leading-normal">Artisan Leather Weekender</span>
+                </div>
+                <!-- Product Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                    <!-- Left Column: Gallery (7 cols) -->
+                    <div class="lg:col-span-7 flex flex-col gap-4">
+                        <!-- Main Image -->
+                        <div class="relative w-full aspect-[4/3] rounded-3xl overflow-hidden group">
+                            <div class="absolute inset-0 bg-center bg-no-repeat bg-cover transition-transform duration-700 group-hover:scale-105"
+                                data-alt="Large leather artisan bag sitting on a rustic wooden table in soft lighting"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAJllrzk0pFZWaOsNZkRd6y2uM4pph5hfap-b2s7OVqLY42j-fB_jL37ZkgSv9x9Frkhqx2W3d2vELmSHYyowixfhLq1cZfdUpwxB-0F_Z6_XKLNPd2lCvIL1nC8GLVPPLmVAdvdFvBOd2zkBERfoMrk6heJYH6Z_bNIAJiEHNh2u8hOWfklhjSdpaDlENxrjXtNjmlR2aFjve1zwaatA1XaD-0alRhHTc0rq7DlS0CwBO7vnO651dIHPx7zUHrHclxzooodreM_NH4");'>
+                            </div>
+                            <div
+                                class="absolute top-4 left-4 bg-primary text-background-dark px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                                Best Seller</div>
+                        </div>
+                        <!-- Thumbnails -->
+                        <div class="grid grid-cols-4 gap-4">
+                            <button
+                                class="aspect-square rounded-2xl overflow-hidden border-2 border-primary cursor-pointer hover:opacity-80 transition-opacity">
+                                <div class="w-full h-full bg-center bg-no-repeat bg-cover"
+                                    data-alt="Close up of leather stitching detail"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAr3ckfE6a3b2qh9KB3YkdjdnPbgTKOM6EI8va_g4JgMTGBeWiOfcwABLO0YwMwtXwNtOnlL7FXN4y1ot67-DycO9YbTtC4XDY78tcO5GEnrjsaiFvem0ypllNO6cUZsmpMRKLYChGkjNGiHpNuisCss5KEDWQTjoPjqjjTYN8C77prKVU_XOutOzLGYjjE4iKqBK44Zb4L-PwkVyYGsp9ij1cBZ-Sz6LMAcRdDr19Kq8fofnT88K3XFfSjWdfkyfMUYI3zntRDNugc");'>
+                                </div>
+                            </button>
+                            <button
+                                class="aspect-square rounded-2xl overflow-hidden border-2 border-transparent hover:border-primary/50 cursor-pointer hover:opacity-80 transition-all">
+                                <div class="w-full h-full bg-center bg-no-repeat bg-cover"
+                                    data-alt="Leather bag hanging on a hook against a stone wall"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB1rWGqao72Lf_YNnWz46TVWmJkLY0IAg3a33p8cY2CS87bNcUgK7uff67MUN8JgoHRlRVGvFqTCK5lvEvqgtoOVWKrNMUV6D6489CF7TDXmVJcdXPLsc0hY_dl8Khu8W5HSW8Lmg8kHvpbBE6ohdJzkq9qYSBsHfVUiwFOGKiRfYbF-SnEQ391iMIa8D09Gh5zgz56uGw0E6XA5qzmb8_wqrNiDKJcth0EDXOC6_Mu_r52eJEftOKhXG-rUZHf-DkuEaAABFfQ5n2R");'>
+                                </div>
+                            </button>
+                            <button
+                                class="aspect-square rounded-2xl overflow-hidden border-2 border-transparent hover:border-primary/50 cursor-pointer hover:opacity-80 transition-all">
+                                <div class="w-full h-full bg-center bg-no-repeat bg-cover"
+                                    data-alt="Interior view of the leather bag showing pockets"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBJVZr5WlRQx_dRRVBxjHkb8WACyRy4VRRyEbir33s7PC-tnupraG7upnnilKNyrWT-hYV-Z0ygv6BH0XT4q_1V299_ZFrDYUL8hguWBunPfFF6O4znktO3uFiUz50Q6bjiI5nkosS_82uNtcpPCCOALK3QhAJmF5ImSMDwF6UIB2aiAMuRal79unjB9o_VuoVs3IyVK7p39ijTFrLNpnH1HzN3Wjy58RcqduPBunwm9Ih0D7MRvCytLPSwl9EKm80oJkdVOqiq1HmR");'>
+                                </div>
+                            </button>
+                            <button
+                                class="aspect-square rounded-2xl overflow-hidden border-2 border-transparent hover:border-primary/50 cursor-pointer hover:opacity-80 transition-all">
+                                <div class="w-full h-full bg-center bg-no-repeat bg-cover"
+                                    data-alt="Model carrying the leather weekender bag outdoors"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAqDF0VfLYrp5KICHjdWzhZJYCR5mFFYdmzAYbojNNdX-8c8JDBeCHduo85QufT3R6z0ZeEMqfJeYXF1XSAupVWzYQgmV2x5e3-Jp7lcg3NYlb1_PR6pztBU_eLsGfTHj0UJU20RWokbnc3sFMrSXW8G3XSzl38MDRm-WZiW3FZbxwwVcRqV2MA5l2frlCnE7vIRyYSQG8LDN11Jv0KNIZ672269R2CiSMS7yYHPs_mnelT7nSub6vLzn2HOET9n5DOHcVBMF0Mhqcd");'>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Right Column: Details (5 cols) -->
+                    <div class="lg:col-span-5 flex flex-col gap-8 sticky top-24 self-start">
+                        <!-- Title & Rating -->
+                        <div class="flex flex-col gap-3">
+                            <div class="flex items-center gap-2 text-primary">
+                                <span class="material-symbols-outlined text-[20px] fill-current">star</span>
+                                <span class="material-symbols-outlined text-[20px] fill-current">star</span>
+                                <span class="material-symbols-outlined text-[20px] fill-current">star</span>
+                                <span class="material-symbols-outlined text-[20px] fill-current">star</span>
+                                <span class="material-symbols-outlined text-[20px]">star_half</span>
+                                <span class="text-sm text-gray-500 dark:text-[#b9b29d] ml-1">(42 Reviews)</span>
+                            </div>
+                            <h1 class="text-gray-900 dark:text-white text-4xl font-bold leading-tight tracking-tight">
+                                Artisan Leather Weekender</h1>
+                            <p class="text-primary text-3xl font-bold">R 3,500.00</p>
+                        </div>
+                        <!-- Description -->
+                        <p class="text-gray-600 dark:text-[#b9b29d] text-lg leading-relaxed font-body">
+                            Hand-stitched by local artisans using ethically sourced Kudu leather from the Western Cape.
+                            This rugged yet elegant weekender bag features solid brass hardware and a durable canvas
+                            lining, perfect for your next getaway to the reserve.
+                        </p>
+                        <!-- Color Selection -->
+                        <div class="flex flex-col gap-3">
+                            <span
+                                class="text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white">Color:
+                                <span class="text-gray-500 dark:text-[#b9b29d] font-normal capitalize">Classic
+                                    Brown</span></span>
+                            <div class="flex gap-3">
+                                <button
+                                    class="w-10 h-10 rounded-full bg-[#5D4037] ring-2 ring-primary ring-offset-2 ring-offset-background-light dark:ring-offset-background-dark cursor-pointer"></button>
+                                <button
+                                    class="w-10 h-10 rounded-full bg-[#263238] hover:ring-2 hover:ring-primary/50 hover:ring-offset-2 hover:ring-offset-background-light dark:ring-offset-background-dark transition-all cursor-pointer"></button>
+                                <button
+                                    class="w-10 h-10 rounded-full bg-[#8D6E63] hover:ring-2 hover:ring-primary/50 hover:ring-offset-2 hover:ring-offset-background-light dark:ring-offset-background-dark transition-all cursor-pointer"></button>
+                            </div>
+                        </div>
+                        <!-- Actions -->
+                        <div class="flex flex-col gap-4 pt-4 border-t border-border-dark">
+                            <div class="flex gap-4">
+                                <!-- Quantity -->
+                                <div
+                                    class="flex items-center justify-between dark:bg-surface-dark rounded-full h-14 w-32 px-4 border border-gray-200 dark:border-border-dark">
+                                    <button
+                                        class="text-gray-500 dark:text-[#b9b29d] hover:text-primary transition-colors"><span
+                                            class="material-symbols-outlined text-sm">remove</span></button>
+                                    <span class="font-bold text-gray-900 dark:text-white">1</span>
+                                    <button
+                                        class="text-gray-500 dark:text-[#b9b29d] hover:text-primary transition-colors"><span
+                                            class="material-symbols-outlined text-sm">add</span></button>
+                                </div>
+                                <!-- Add to Cart -->
+                                <button onclick="addToCart('bag-detail-001', 'Artisan Leather Weekender', 3500)"
+                                    class="flex-1 bg-primary hover:bg-white hover:text-black text-background-dark h-14 rounded-full font-bold text-lg transition-all flex items-center justify-center gap-2 group">
+                                    <span
+                                        class="material-symbols-outlined group-hover:scale-110 transition-transform">shopping_bag</span>
+                                    Add to Cart
+                                </button>
+                            </div>
+                            <!-- Buy Now -->
+                            <button
+                                class="w-full h-12 rounded-full border border-gray-200 dark:border-border-dark text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-surface-dark font-medium transition-colors">
+                                Buy Now
+                            </button>
+                        </div>
+                        <!-- Details Table / Accordion Look -->
+                        <div
+                            class="rounded-2xl border border-gray-200 dark:border-border-dark bg-white dark:bg-surface-dark overflow-hidden mt-2">
+                            <!-- Item 1 -->
+                            <div class="border-b border-gray-100 dark:border-border-dark">
+                                <div class="flex items-center gap-4 px-6 py-4">
+                                    <div class="bg-gray-50 dark:bg-background-dark/50 rounded-full p-2 text-primary">
+                                        <span class="material-symbols-outlined text-[20px]">straighten</span>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <span class="text-gray-900 dark:text-white text-sm font-bold">Dimensions</span>
+                                        <span class="text-gray-500 dark:text-[#b9b29d] text-xs">55cm x 30cm x
+                                            28cm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="border-b border-gray-100 dark:border-border-dark">
+                                <div class="flex items-center gap-4 px-6 py-4">
+                                    <div class="bg-gray-50 dark:bg-background-dark/50 rounded-full p-2 text-primary">
+                                        <span class="material-symbols-outlined text-[20px]">diamond</span>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <span class="text-gray-900 dark:text-white text-sm font-bold">Materials</span>
+                                        <span class="text-gray-500 dark:text-[#b9b29d] text-xs">Full-grain Kudu Leather,
+                                            Brass</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item 3 -->
+                            <div>
+                                <div class="flex items-center gap-4 px-6 py-4">
+                                    <div class="bg-gray-50 dark:bg-background-dark/50 rounded-full p-2 text-primary">
+                                        <span class="material-symbols-outlined text-[20px]">local_shipping</span>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <span class="text-gray-900 dark:text-white text-sm font-bold">Shipping</span>
+                                        <span class="text-gray-500 dark:text-[#b9b29d] text-xs">Free delivery within
+                                            South Africa</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Related Products Section -->
+                <div class="mt-20 flex flex-col gap-8">
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-gray-900 dark:text-white text-3xl font-bold tracking-tight">Complete the Look
+                        </h2>
+                        <a class="text-primary font-medium hover:text-white transition-colors flex items-center gap-1"
+                            href="shop.html">
+                            View All <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6">
+                        <!-- Product Card 1 -->
+                        <div class="group flex flex-col gap-4 cursor-pointer"
+                            onclick="window.location.href='product.html'">
+                            <div class="w-full aspect-square rounded-3xl overflow-hidden relative">
+                                <div class="absolute inset-0 bg-center bg-no-repeat bg-cover transition-transform duration-500 group-hover:scale-110"
+                                    data-alt="Leather toiletry bag on a stone surface"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDPD-Baex3ebCIGYgjUh5fRU0UoA50miN6X004cxllV8jXtz_Xin3JVmkQRTeeEayLqKwNkiLPW329bji8SfoCX2hrGIguAsIK-epxUMIra28c2cQ6InlA7DLbbCPNWvNsHhJql4A0ahpqWZZxZHrzkHJlLQymvb8hlc7Y4_YPNNzD3IWUEHylad2FC88yJuGilOf-P6YK_gTQgj3GnKlpzlRL5RhU2VItFGkmo4i_lOfCAM7OTKytKPtAfWp1g6Os_KFYW69JwDcuD");'>
+                                </div>
+                                <button onclick="event.stopPropagation(); addToCart('kit-001', 'Dopp Kit', 850)"
+                                    class="absolute bottom-4 right-4 bg-white text-black p-3 rounded-full opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all shadow-lg hover:bg-primary">
+                                    <span class="material-symbols-outlined block text-[20px]">add_shopping_cart</span>
+                                </button>
+                            </div>
+                            <div>
+                                <h3
+                                    class="text-gray-900 dark:text-white font-bold text-lg group-hover:text-primary transition-colors">
+                                    Dopp Kit</h3>
+                                <p class="text-gray-500 dark:text-[#b9b29d] mt-1">R 850.00</p>
+                            </div>
+                        </div>
+                        <!-- Product Card 2 -->
+                        <div class="group flex flex-col gap-4 cursor-pointer"
+                            onclick="window.location.href='product.html'">
+                            <div class="w-full aspect-square rounded-3xl overflow-hidden relative">
+                                <div class="absolute inset-0 bg-center bg-no-repeat bg-cover transition-transform duration-500 group-hover:scale-110"
+                                    data-alt="Handcrafted leather passport holder"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAUm9buWYKIa0ywTXCfkJznOlk5vqZg6rKYTV7N0K1YG79wDV6zeR5B04x86vfKn9bAOSPfK3l0wKzuaBaXycXEooSUbBu7I17N73RBh50Dx0MpkIoGSmfghCiQ0Z0qvngv-fcYou6-EDQ34soyQcPAI2Z456ez2KriHzSXxuq5n0vsgwsqa26wfdE2UGfAKytjXeG6tZJc_SM64qGxP4q-eb5dViyoNJDJFtFPIs5W-HOMhxokvT1LX8X9WLj9gonlLjsDq-yIJ_f0");'>
+                                </div>
+                                <button onclick="event.stopPropagation(); addToCart('wallet-001', 'Travel Wallet', 650)"
+                                    class="absolute bottom-4 right-4 bg-white text-black p-3 rounded-full opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all shadow-lg hover:bg-primary">
+                                    <span class="material-symbols-outlined block text-[20px]">add_shopping_cart</span>
+                                </button>
+                            </div>
+                            <div>
+                                <h3
+                                    class="text-gray-900 dark:text-white font-bold text-lg group-hover:text-primary transition-colors">
+                                    Travel Wallet</h3>
+                                <p class="text-gray-500 dark:text-[#b9b29d] mt-1">R 650.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-[#0a0907] pt-20 pb-10 border-t border-white/5">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                    <!-- Brand -->
+                    <div class="col-span-1 md:col-span-1">
+                        <div class="flex items-center gap-2 text-white mb-6">
+                            <span class="material-symbols-outlined text-primary">landscape</span>
+                            <span class="font-bold text-xl">Donkieskraal</span>
+                        </div>
+                        <p class="text-white/50 text-sm leading-relaxed mb-6">
+                            Where the horizon meets heritage. Experience the untamed beauty of Africa with unparalleled
+                            comfort.
+                        </p>
+                        <div class="flex gap-4">
+                            <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-primary hover:text-background-dark transition-all"
+                                href="#">
+                                <!-- Facebook Icon Placeholder using Material Icon for demo -->
+                                <span class="material-symbols-outlined text-sm">public</span>
+                            </a>
+                            <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-primary hover:text-background-dark transition-all"
+                                href="#">
+                                <!-- Instagram Icon Placeholder using Material Icon for demo -->
+                                <span class="material-symbols-outlined text-sm">photo_camera</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Quick Links -->
+                    <div>
+                        <h4 class="text-white font-bold mb-6">Explore</h4>
+                        <ul class="space-y-4 text-white/60 text-sm">
+                            <li><a class="hover:text-primary transition-colors" href="about.html">Our Story</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="accommodation.html">The Lodge</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors" href="activities.html">Experiences</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors" href="shop.html">Shop</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="bookings.html">Bookings</a></li>
+                        </ul>
+                    </div>
+                    <!-- Contact -->
+                    <div>
+                        <h4 class="text-white font-bold mb-6">Contact</h4>
+                        <ul class="space-y-4 text-white/60 text-sm">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-lg">location_on</span>
+                                <span>Western Cape, South Africa</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary text-lg">call</span>
+                                <span>+27 (0) 21 123 4567</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary text-lg">mail</span>
+                                <span>stay@donkieskraal.co.za</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Legal -->
+                    <div>
+                        <h4 class="text-white font-bold mb-6">Legal</h4>
+                        <ul class="space-y-4 text-white/60 text-sm">
+                            <li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Terms &amp; Conditions</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Cookie Policy</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Sitemap</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-white/30 text-xs">© 2024 Donkieskraal Lodge. All rights reserved.</p>
+                    <div class="flex gap-6">
+                        <span class="text-white/30 text-xs uppercase tracking-widest">Designed with <span
+                                class="text-primary">♥</span> in Africa</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-[60] bg-background-dark/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-center gap-8">
+        <button id="close-menu-btn" class="absolute top-8 right-8 text-white hover:text-primary">
+            <span class="material-symbols-outlined text-4xl">close</span>
+        </button>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="index.html">Home</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="about.html">Our Story</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="accommodation.html">The Lodge</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="activities.html">Experiences</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="events.html">Weddings</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="shop.html">Shop</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="contact.html">Contact</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="bookings.html">Book Now</a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

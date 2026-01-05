@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Weddings & Events - Donkieskraal Lodge</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Material Icons -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Tailwind Configuration -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eebd2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#181611",
+                        "surface-dark": "#221d10",
+                        "surface-lighter": "#2a261a",
+                        "border-dark": "#393528",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "2xl": "2rem",
+                        "3xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for better aesthetic */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #181611;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #393528;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #eebd2b;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased selection:bg-primary selection:text-background-dark overflow-x-hidden">
+    <!-- Floating Navigation (Pill Shape) -->
+    <nav class="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
+        <div
+            class="pointer-events-auto bg-surface-dark/80 dark:bg-[#181611]/80 backdrop-blur-md border border-white/10 shadow-2xl rounded-full px-4 md:px-6 py-3 flex items-center gap-2 md:gap-6 max-w-5xl w-full justify-between transition-all duration-300 hover:bg-[#181611]/95">
+            <!-- Logo Area -->
+            <a href="index.html" class="flex items-center gap-2 md:gap-3 group shrink-0">
+                <div
+                    class="size-8 text-primary flex items-center justify-center bg-white/5 rounded-full p-1.5 transition-colors group-hover:bg-primary group-hover:text-background-dark">
+                    <span class="material-symbols-outlined text-lg">landscape</span>
+                </div>
+                <h2
+                    class="text-white text-lg font-bold tracking-tight hidden lg:block group-hover:text-primary transition-colors">
+                    Donkieskraal</h2>
+            </a>
+            <!-- Links -->
+            <div class="hidden lg:flex items-center gap-6 xl:gap-8">
+                <a class="text-sm font-medium text-white/80 hover:text-primary transition-colors whitespace-nowrap"
+                    href="about.html">Our
+                    Story</a>
+                <a class="text-sm font-medium text-white/80 hover:text-primary transition-colors whitespace-nowrap"
+                    href="accommodation.html">The Lodge</a>
+                <a class="text-sm font-medium text-white/80 hover:text-primary transition-colors whitespace-nowrap"
+                    href="activities.html">Experiences</a>
+                <a class="text-sm font-medium text-primary transition-colors font-bold underline decoration-2 underline-offset-8 whitespace-nowrap"
+                    href="events.html">Weddings</a>
+                <a class="text-sm font-medium text-white/80 hover:text-primary transition-colors whitespace-nowrap"
+                    href="shop.html">Shop</a>
+                <a class="text-sm font-medium text-white/80 hover:text-primary transition-colors whitespace-nowrap"
+                    href="contact.html">Contact</a>
+            </div>
+            <!-- Actions -->
+            <div class="flex items-center gap-2 md:gap-3">
+                <!-- Cart Icon -->
+                <button id="cart-btn" class="relative group text-white hover:text-primary transition-colors p-2">
+                    <span class="material-symbols-outlined">shopping_bag</span>
+                    <span id="cart-count"
+                        class="absolute top-0 right-0 flex size-4 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-background-dark opacity-0 transition-opacity">0</span>
+                </button>
+                <a href="bookings.html"
+                    class="bg-primary hover:bg-primary/90 text-background-dark text-sm font-bold px-4 md:px-5 py-2.5 rounded-full transition-transform hover:scale-105 active:scale-95 flex items-center gap-2">
+                    <span class="hidden sm:inline">Book Now</span>
+                    <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+                </a>
+                <!-- Mobile Menu Toggle -->
+                <button id="mobile-menu-btn" class="lg:hidden text-white hover:text-primary p-2">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-1 flex flex-col">
+        <!-- Hero Section -->
+        <div
+            class="relative w-full h-screen min-h-[600px] flex items-center justify-center overflow-hidden rounded-b-[3rem] shadow-2xl shadow-black/50">
+            <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                data-alt="Stunning bush wedding setup at sunset with golden lighting"
+                style='background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(20, 18, 10, 0.8) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBmxWpQ8_30JhJXEPyj2b0HNSLnbpVb8jbOHrQHiYtGfjCXwapeH_VtWOMzB-JV-2wwtCkuHa7fUuKAASRDAz6sYdbriONv97d7a1v6PyomSG5HHIGHJAG2cM7F76dRUmP_7C3JL7kUf4RPvUXgRCtb_UnRCtlsM1NckvXzVorTcOMu-D94mfjjqltgxqbGLmjCHwvvKubyIpek7_z8BLPlGL3dgfxj7dcAQYxMbUMYyTrLF-8mwu1US1WpMSRCRTkwtXLUmw__n-fq");'>
+            </div>
+            <div class="relative z-10 flex flex-col items-center text-center px-6 max-w-4xl pt-20">
+                <span
+                    class="inline-block py-1 px-4 mb-6 rounded-full border border-primary/50 bg-primary/10 text-primary text-[10px] md:text-xs font-bold uppercase tracking-widest backdrop-blur-sm">
+                    Exclusive Venue
+                </span>
+                <h1
+                    class="text-white text-4xl sm:text-5xl md:text-7xl font-display font-light leading-[1.1] tracking-tight mb-6">
+                    Unforgettable <br /><span class="font-bold text-primary">Bush Weddings</span>
+                </h1>
+                <p class="text-white/90 text-base md:text-xl font-light leading-relaxed max-w-2xl mb-10">
+                    Experience the romance of the wild. From intimate ceremonies to grand receptions, create memories
+                    that last a lifetime under the African sky.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button
+                        class="h-12 md:h-14 px-8 rounded-full bg-primary text-[#181611] text-sm md:text-base font-bold tracking-wide hover:scale-105 transition-transform duration-300 shadow-[0_0_20px_rgba(238,189,43,0.3)]">
+                        Book a Viewing
+                    </button>
+                    <button
+                        class="h-12 md:h-14 px-8 rounded-full border border-white/30 bg-white/5 backdrop-blur-sm text-white text-sm md:text-base font-bold tracking-wide hover:bg-white/10 transition-colors flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary">play_circle</span>
+                        Watch Video
+                    </button>
+                </div>
+            </div>
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-white/50">
+                <span class="material-symbols-outlined text-4xl">keyboard_arrow_down</span>
+            </div>
+        </div>
+
+        <div
+            class="layout-container flex flex-col items-center w-full max-w-[1280px] mx-auto px-4 sm:px-8 py-16 md:py-24 space-y-24">
+            <!-- Intro Section -->
+            <div class="w-full flex flex-col md:flex-row gap-12 items-center">
+                <div class="flex-1 space-y-6">
+                    <div class="flex items-center gap-3">
+                        <div class="h-[1px] w-12 bg-primary"></div>
+                        <span class="text-primary font-bold tracking-widest text-sm uppercase">Our Venue</span>
+                    </div>
+                    <h2 class="text-3xl md:text-5xl font-bold leading-tight text-white">Rugged Beauty meets
+                        <br class="hidden md:block" />Refined Luxury.
+                    </h2>
+                    <p class="text-white/70 text-base md:text-lg leading-relaxed">
+                        Donkieskraal Lodge offers a unique blend of untamed wilderness and sophisticated comfort. Our
+                        venue adapts to your vision, whether you dream of saying "I do" in a sun-dappled clearing or
+                        hosting a corporate gala in our panoramic reception hall.
+                    </p>
+                    <div class="pt-4">
+                        <a class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all"
+                            href="#">
+                            Download Brochure <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex-none w-full grid grid-cols-2 gap-4 h-[500px] md:h-auto">
+                    <div class="col-span-2 md:col-span-1 space-y-4 md:mt-8">
+                        <div class="aspect-[3/4] w-full bg-cover bg-center rounded-[2rem] overflow-hidden"
+                            data-alt="Elegant table setting with flowers at a wedding reception"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCNx4IVQXp2LQnDRlR7QTlvgEayV8F19bTAN_NkK2jFGBDS_aitamj66GJ-llQOAUFMc6bq08YkT1guNJ2T2dJwpKDbNBGXKhziBnWa9gpN4Fb9DnZla69JxovTqsQifuR15Yryoye7_9tfypw1F6POQxUiLKpxf86gjhTDbNOxg4xnm0jShMCGL3dMDNGK0quEqFK8WZklE3VIu6sM_hy8AkWEf7aF04LvbHjH2G818VdOy_ny919Y5fabS8EuOWkESmLzR4U9x2Np");'>
+                        </div>
+                    </div>
+                    <div class="col-span-2 md:col-span-1 space-y-4">
+                        <div class="aspect-[3/4] w-full bg-cover bg-center rounded-[2rem] overflow-hidden"
+                            data-alt="Outdoor wedding ceremony arch with floral decorations"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC2U5T-I0M48NKwwYFLnqkL01w-tJ1qX-MUA9sut4-2fBbCkX9v3QEdZ7WhYRfJ28mn5YIu3x5BEXlzl2AYUs1DraZApiHsJyafn_BqaLPxMns7m_mGDmcdvGbjhmFaq05u-91CyK7sINBqeRO_NVNxES4tmhFlp7tWpV3SnkAajX2AnhcvzN3-zCQ5oNDpK2EjnZvnBj-7ENqxqhIwhsS2vTFl6QROuOd-mMd6OGN1QHu4NQFH3JOBpuyfGWmhm3iGmgge1Nw96t3o");'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Grid (Rounded Cards) -->
+            <div class="w-full">
+                <div class="text-center mb-16 max-w-2xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">World-Class Facilities</h2>
+                    <p class="text-white/60">Everything you need for a seamless event, right here in the heart of
+                        nature.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Feature 1 -->
+                    <div
+                        class="group bg-[#2a251a] p-8 rounded-[2.5rem] hover:bg-[#332d20] transition-colors border border-white/5 hover:border-primary/20">
+                        <div
+                            class="size-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-[#181611] transition-all">
+                            <span class="material-symbols-outlined text-3xl">church</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white">Bush Chapel</h3>
+                        <p class="text-white/60 leading-relaxed">Open-air ceremony spots with dramatic natural
+                            backdrops and seating for up to 150 guests.</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div
+                        class="group bg-[#2a251a] p-8 rounded-[2.5rem] hover:bg-[#332d20] transition-colors border border-white/5 hover:border-primary/20">
+                        <div
+                            class="size-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-[#181611] transition-all">
+                            <span class="material-symbols-outlined text-3xl">restaurant_menu</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white">Exquisite Catering</h3>
+                        <p class="text-white/60 leading-relaxed">From traditional spit braais to plated fine dining, our
+                            chefs curate menus to delight every palate.</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div
+                        class="group bg-[#2a251a] p-8 rounded-[2.5rem] hover:bg-[#332d20] transition-colors border border-white/5 hover:border-primary/20">
+                        <div
+                            class="size-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-[#181611] transition-all">
+                            <span class="material-symbols-outlined text-3xl">wine_bar</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white">Licensed Bar</h3>
+                        <p class="text-white/60 leading-relaxed">A fully stocked bar featuring premium wines, craft
+                            spirits, and refreshments for your celebration.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Section -->
+            <div class="w-full">
+                <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center text-white">Moments Captured</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
+                    <!-- Large item -->
+                    <div class="col-span-2 row-span-2 relative rounded-[2.5rem] overflow-hidden group">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                            data-alt="Bride and Groom walking in the savannah sunset"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCYDTzYxM6sQTdmxymkKlrQeM8SUGB1crTy6d-DY8B16UyU6KQXe0nWchjiXj59MOVyb9Xu9QapdsNTxsC1LgcJ-SFSo8XGAYe5v_QQ5hXj8TRMluca5fQDLFCfs-uhAMJijWe7K9-kVtAJ-mJ9jDm7zmZMGvlANrSzXGIWNP9AOkIf-xVTg4h8zw-ifXSz3fcufHxTQ2Wqg7Ae468ZTHmhqiuA3JK9LROSbmYYmZd4qSDmJFfeajHA_4wWaCSdv-1M2_9Qy8kA8cmE");'>
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                            <p class="text-white font-bold text-lg">Golden Hour Romance</p>
+                        </div>
+                    </div>
+                    <!-- Small items -->
+                    <div class="col-span-1 row-span-1 relative rounded-[2rem] overflow-hidden group">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                            data-alt="Close up of wedding cake with floral details"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCOKyd9FwEDGJzbRATBgsX17Oo_QS8M2LcMMOZPxIAWYIJmDvJIZYda5zJeKlT_qYeYQ3zD5a3wx6NTvGKDnVVITuFswf6LlYBvepBLhTgVS7-Uub5jiIeZ_spE4N4Zb5vzj55_0vHQf9hMLmHrOxjEUPpxFBHZn5JDIDw37J8yhbOzIx26kWGCPERrazR6apmynClSlE6ePDfGPzfMXp3O9-8BwCkVGOVFYQYxec1FD4Gnx5U4WDcE9LVHju1clcT_IoF0T5C1M3C2");'>
+                        </div>
+                    </div>
+                    <div class="col-span-1 row-span-1 relative rounded-[2rem] overflow-hidden group">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                            data-alt="Groom and friends toasting drinks"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDPZDdusgv8FN0HcnRb4LYMFRR71idH_xfiZA4Vp-GH-7RGgJ-YAWIGhMEGW1oI-UDXBNAZgGNEf71QINmLke0hyexTVC4epsTdjwyQbN-sZjt2S8V0Nlo0fpBowWv1o6ZTdmJuM0cFANTLLHdDEj2YeTMpg9cGxlkk-QqdUWLsgnoIxE8Up3QAeB4kTX4-jMyp98W76wPU19D7DDO39xTf2NQTBISG79nPooC139s29z-uTBLVgMhScBZ-9idtelfGZ2K0sP2w6vPj");'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial -->
+            <div class="w-full bg-[#2a251a] rounded-[3rem] p-8 md:p-16 relative overflow-hidden">
+                <div class="relative z-10 max-w-4xl mx-auto text-center">
+                    <span class="material-symbols-outlined text-6xl text-primary/30 mb-6">format_quote</span>
+                    <p class="text-xl md:text-3xl font-light italic leading-relaxed mb-8 text-white">
+                        "Our wedding at Donkieskraal was nothing short of magical. The team went above and beyond to
+                        make our bush fairytale come true. The food, the service, and the setting were impeccable."
+                    </p>
+                    <div class="flex items-center justify-center gap-4">
+                        <div class="size-12 rounded-full bg-cover bg-center" data-alt="Portrait of Sarah and James"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAdQr0xrX0kYggxX7NdV8VtcQRut_UWB_A_li1BdGBLZdYo-X0--0wEEy23NCuPdf-DEovi6-4TPgbq-JBzRpbeJKObAC03ARqC0hkMybuGiYUEYBSd5OreiPGZYq4hXGxUPA5l2Zao2ObftYzy3Eb-KPTMZuLWhCDWtBat70Dec0HBbHxQVPutkA1TkMbyNMVkba_-TmfmdddqUM5SweKPcsMzrQ8U7DXMYs5xRFYYjdyhSjoHtyFxZZuSSl0Spi1YUlbTxd0bGI4W");'>
+                        </div>
+                        <div class="text-left">
+                            <p class="font-bold text-white">Sarah &amp; James</p>
+                            <p class="text-sm text-primary">Married Feb 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inquiry Form Section -->
+            <div class="w-full max-w-5xl mx-auto relative">
+                <div
+                    class="bg-background-dark border border-[#393528] rounded-[3rem] p-8 md:p-12 shadow-2xl relative z-10">
+                    <div class="text-center mb-10">
+                        <h2 class="text-3xl font-bold mb-2 text-white">Enquire Now</h2>
+                        <p class="text-white/60">Let's start planning your special event.</p>
+                    </div>
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-sm font-medium ml-4 text-white/80">Full Name</label>
+                                <input
+                                    class="w-full h-14 px-6 rounded-full bg-[#181611] border border-[#393528] focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-white/20 text-white"
+                                    placeholder="John Doe" type="text" />
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-medium ml-4 text-white/80">Email Address</label>
+                                <input
+                                    class="w-full h-14 px-6 rounded-full bg-[#181611] border border-[#393528] focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-white/20 text-white"
+                                    placeholder="john@example.com" type="email" />
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-medium ml-4 text-white/80">Event Type</label>
+                                <select
+                                    class="w-full h-14 px-6 rounded-full bg-[#181611] border border-[#393528] focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-white appearance-none cursor-pointer">
+                                    <option>Wedding</option>
+                                    <option>Corporate Function</option>
+                                    <option>Private Party</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-medium ml-4 text-white/80">Approx. Date</label>
+                                <input
+                                    class="w-full h-14 px-6 rounded-full bg-[#181611] border border-[#393528] focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-white [color-scheme:dark]"
+                                    type="date" />
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm font-medium ml-4 text-white/80">Message</label>
+                            <textarea
+                                class="w-full p-6 rounded-[2rem] bg-[#181611] border border-[#393528] focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-white/20 resize-none text-white"
+                                placeholder="Tell us about your plans..." rows="4"></textarea>
+                        </div>
+                        <div class="flex justify-center pt-4">
+                            <button
+                                class="h-14 px-12 rounded-full bg-primary text-[#181611] font-bold text-lg hover:bg-white transition-colors shadow-lg shadow-primary/20"
+                                type="button">
+                                Send Enquiry
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-[#0a0907] pt-20 pb-10 border-t border-white/5">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                    <!-- Brand -->
+                    <div class="col-span-1 md:col-span-1">
+                        <div class="flex items-center gap-2 text-white mb-6">
+                            <span class="material-symbols-outlined text-primary">landscape</span>
+                            <span class="font-bold text-xl">Donkieskraal</span>
+                        </div>
+                        <p class="text-white/50 text-sm leading-relaxed mb-6">
+                            Where the horizon meets heritage. Experience the untamed beauty of Africa with unparalleled
+                            comfort.
+                        </p>
+                        <div class="flex gap-4">
+                            <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-primary hover:text-background-dark transition-all"
+                                href="#">
+                                <span class="material-symbols-outlined text-sm">public</span>
+                            </a>
+                            <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-primary hover:text-background-dark transition-all"
+                                href="#">
+                                <span class="material-symbols-outlined text-sm">photo_camera</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Quick Links -->
+                    <div>
+                        <h4 class="text-white font-bold mb-6">Explore</h4>
+                        <ul class="space-y-4 text-white/60 text-sm">
+                            <li><a class="hover:text-primary transition-colors" href="about.html">Our Story</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="accommodation.html">The Lodge</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors" href="activities.html">Experiences</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors font-bold text-primary"
+                                    href="events.html">Weddings</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="shop.html">Shop</a></li>
+                        </ul>
+                    </div>
+                    <!-- Contact -->
+                    <div>
+                        <h4 class="text-white font-bold mb-6">Contact</h4>
+                        <ul class="space-y-4 text-white/60 text-sm">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-lg">location_on</span>
+                                <span>Western Cape, South Africa</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary text-lg">call</span>
+                                <span>+27 (0) 21 123 4567</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary text-lg">mail</span>
+                                <span>stay@donkieskraal.co.za</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Legal -->
+                    <div>
+                        <h4 class="text-white font-bold mb-6">Legal</h4>
+                        <ul class="space-y-4 text-white/60 text-sm">
+                            <li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Terms &amp; Conditions</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Cookie Policy</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Sitemap</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-white/30 text-xs">© 2024 Donkieskraal Lodge. All rights reserved.</p>
+                    <div class="flex gap-6">
+                        <span class="text-white/30 text-xs uppercase tracking-widest">Designed with <span
+                                class="text-primary">♥</span> in Africa</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-[60] bg-background-dark/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-center gap-8">
+        <button id="close-menu-btn" class="absolute top-8 right-8 text-white hover:text-primary">
+            <span class="material-symbols-outlined text-4xl">close</span>
+        </button>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="index.html">Home</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="about.html">Our Story</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="accommodation.html">The Lodge</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="activities.html">Experiences</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="events.html">Weddings</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="shop.html">Shop</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="contact.html">Contact</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="bookings.html">Book Now</a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

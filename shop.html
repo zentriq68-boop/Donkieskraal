@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Donkieskraal Lodge Store</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eebd2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#181611",
+                        "surface-dark": "#27241c",
+                        "surface-highlight": "#2d2920",
+                        "surface-light": "#ffffff",
+                        "border-dark": "#393528",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "2xl": "2rem",
+                        "3xl": "3rem",
+                        "full": "9999px"
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100 font-display antialiased overflow-x-hidden selection:bg-primary selection:text-background-dark">
+    <div class="flex flex-col min-h-screen">
+        <!-- Header -->
+        <!-- Floating Navigation (Pill Shape) -->
+        <nav class="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
+            <div
+                class="pointer-events-auto bg-surface-dark/80 dark:bg-[#181611]/80 backdrop-blur-md border border-white/10 shadow-2xl rounded-full px-4 md:px-6 py-3 flex items-center gap-2 md:gap-6 max-w-5xl w-full justify-between transition-all duration-300 hover:bg-[#181611]/95">
+                <!-- Logo Area -->
+                <a href="index.html" class="flex items-center gap-2 md:gap-3 group shrink-0">
+                    <div
+                        class="size-8 text-primary flex items-center justify-center bg-white/5 rounded-full p-1.5 transition-colors group-hover:bg-primary group-hover:text-background-dark">
+                        <span class="material-symbols-outlined text-lg">landscape</span>
+                    </div>
+                    <h2
+                        class="text-white text-lg font-bold tracking-tight hidden lg:block group-hover:text-primary transition-colors">
+                        Donkieskraal</h2>
+                </a>
+                <!-- Links -->
+                <div class="hidden lg:flex items-center gap-6 xl:gap-8">
+                    <a class="text-sm font-medium text-white/80 hover:text-primary transition-colors whitespace-nowrap"
+                        href="about.html">Our Story</a>
+                    <a class="text-sm font-medium text-white/80 hover:text-primary transition-colors whitespace-nowrap"
+                        href="accommodation.html">The Lodge</a>
+                    <a class="text-sm font-medium text-white/80 hover:text-primary transition-colors whitespace-nowrap"
+                        href="activities.html">Experiences</a>
+                    <a class="text-sm font-medium text-white/80 hover:text-primary transition-colors whitespace-nowrap"
+                        href="events.html">Weddings</a>
+                    <a class="text-sm font-medium text-white/80 hover:text-primary transition-colors whitespace-nowrap"
+                        href="shop.html">Shop</a>
+                    <a class="text-sm font-medium text-white/80 hover:text-primary transition-colors whitespace-nowrap"
+                        href="contact.html">Contact</a>
+                </div>
+                <!-- Actions -->
+                <div class="flex items-center gap-2 md:gap-3">
+                    <!-- Cart Icon -->
+                    <button id="cart-btn" class="relative group text-white hover:text-primary transition-colors p-2">
+                        <span class="material-symbols-outlined">shopping_bag</span>
+                        <span id="cart-count"
+                            class="absolute top-0 right-0 flex size-4 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-background-dark opacity-0 transition-opacity">0</span>
+                    </button>
+                    <a href="bookings.html"
+                        class="bg-primary hover:bg-primary/90 text-background-dark text-sm font-bold px-4 md:px-5 py-2.5 rounded-full transition-transform hover:scale-105 active:scale-95 flex items-center gap-2">
+                        <span class="hidden sm:inline">Book Now</span>
+                        <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+                    </a>
+                    <!-- Mobile Menu Toggle -->
+                    <button id="mobile-menu-btn" class="lg:hidden text-white hover:text-primary p-2">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <main class="min-h-screen pb-20">
+            <!-- Hero Section -->
+            <section class="relative h-[400px] w-full flex items-center justify-center overflow-hidden">
+                <div class="absolute inset-0 z-0 bg-cover bg-center"
+                    data-alt="Dark moody landscape of African savannah at twilight"
+                    style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuAG554Fh1yPuP55OhDmxZJU33FRJLFVr67chDdoOX0jkgxKHl0VJPs7BtHOPYCE7JFCCeiGSs7D8qQMvDEG7xHFC67CEIcOkTBjpAFud8wwBxCFMyKkAXWDXRbNKKdaWtmXkfCAKYk9hhuaoWfupxNmn_s6FUfZSoZp8Ip8aoOT2Qmt1Mlvxw0-Ua6d3b3NMM61QAG5o20zRvNjr0VBA4LlKRlquPwKtsoRE4tJ0DFcONzE0FAaP9Q13-CruKlDr86Ufch1uVE1Sftn');">
+                </div>
+                <div class="relative z-10 text-center px-6 max-w-3xl">
+                    <h1
+                        class="text-white text-3xl sm:text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em] mb-4">
+                        The
+                        Curated Collection</h1>
+                    <p class="text-gray-200 text-lg md:text-xl font-normal opacity-90">Hand-picked goods, fine wines,
+                        and
+                        artisanal crafts from the heart of the reserve.</p>
+                </div>
+            </section>
+            <!-- Main Content Container -->
+            <div class="layout-container max-w-[1440px] mx-auto px-4 md:px-8 py-10">
+                <!-- Mobile Search & Filter Toggle (Visible only on small screens) -->
+                <div class="lg:hidden mb-6 flex flex-col gap-4">
+                    <div class="relative w-full">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">
+                            <span class="material-symbols-outlined">search</span>
+                        </span>
+                        <input id="mobile-search-input"
+                            class="w-full bg-white dark:bg-surface-dark text-gray-900 dark:text-white rounded-xl border-none py-3 pl-10 pr-4 focus:ring-2 focus:ring-primary shadow-sm placeholder:text-gray-500"
+                            placeholder="Search products..." type="text" />
+                    </div>
+                    <button id="mobile-filter-toggle"
+                        class="flex items-center justify-center gap-2 w-full bg-white dark:bg-surface-dark text-gray-900 dark:text-white py-3 rounded-xl font-medium shadow-sm">
+                        <span class="material-symbols-outlined">tune</span> Filters
+                    </button>
+                </div>
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <!-- Sidebar Filters (Desktop) -->
+                    <aside class="hidden lg:block w-[280px] shrink-0">
+                        <div class="sticky top-24 flex flex-col gap-6">
+                            <!-- Search Widget -->
+                            <div
+                                class="bg-white dark:bg-surface-dark p-5 rounded-2xl border border-gray-200 dark:border-border-dark">
+                                <h3 class="text-lg font-bold mb-4 dark:text-white">Search Store</h3>
+                                <div class="relative">
+                                    <input id="desktop-search-input"
+                                        class="w-full bg-gray-50 dark:bg-background-dark text-gray-900 dark:text-white rounded-lg border-none py-3 px-4 focus:ring-1 focus:ring-primary placeholder:text-gray-500 text-sm"
+                                        placeholder="e.g. Merlot, Hats..." type="text" />
+                                    <button id="desktop-search-btn"
+                                        class="absolute right-2 top-1/2 -translate-y-1/2 text-primary">
+                                        <span class="material-symbols-outlined text-[20px]">search</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- Categories Filter -->
+                            <div
+                                class="bg-white dark:bg-surface-dark p-5 rounded-2xl border border-gray-200 dark:border-border-dark">
+                                <h3 class="text-lg font-bold mb-4 dark:text-white flex justify-between items-center">
+                                    Categories
+                                    <span class="material-symbols-outlined text-gray-400 text-sm">expand_less</span>
+                                </h3>
+                                <div id="category-filters" class="flex flex-col gap-3">
+                                    <label class="flex items-center gap-3 cursor-pointer group">
+                                        <div
+                                            class="relative flex items-center justify-center w-5 h-5 rounded border border-gray-400 dark:border-gray-600 group-hover:border-primary transition-colors">
+                                            <input checked="" value="all"
+                                                class="peer appearance-none w-full h-full cursor-pointer absolute inset-0 z-10 opacity-0"
+                                                type="checkbox" />
+                                            <div class="hidden peer-checked:block w-3 h-3 bg-primary rounded-sm"></div>
+                                        </div>
+                                        <span
+                                            class="text-gray-600 dark:text-gray-300 text-sm font-medium group-hover:text-primary transition-colors">All
+                                            Products</span>
+                                        <span class="ml-auto text-xs text-gray-400">(42)</span>
+                                    </label>
+                                    <label class="flex items-center gap-3 cursor-pointer group">
+                                        <div
+                                            class="relative flex items-center justify-center w-5 h-5 rounded border border-gray-400 dark:border-gray-600 group-hover:border-primary transition-colors">
+                                            <input value="apparel"
+                                                class="peer appearance-none w-full h-full cursor-pointer absolute inset-0 z-10 opacity-0"
+                                                type="checkbox" />
+                                            <div class="hidden peer-checked:block w-3 h-3 bg-primary rounded-sm"></div>
+                                        </div>
+                                        <span
+                                            class="text-gray-600 dark:text-gray-300 text-sm font-medium group-hover:text-primary transition-colors">Clothing
+                                            &amp; Apparel</span>
+                                        <span class="ml-auto text-xs text-gray-400">(12)</span>
+                                    </label>
+                                    <label class="flex items-center gap-3 cursor-pointer group">
+                                        <div
+                                            class="relative flex items-center justify-center w-5 h-5 rounded border border-gray-400 dark:border-gray-600 group-hover:border-primary transition-colors">
+                                            <input value="decor"
+                                                class="peer appearance-none w-full h-full cursor-pointer absolute inset-0 z-10 opacity-0"
+                                                type="checkbox" />
+                                            <div class="hidden peer-checked:block w-3 h-3 bg-primary rounded-sm"></div>
+                                        </div>
+                                        <span
+                                            class="text-gray-600 dark:text-gray-300 text-sm font-medium group-hover:text-primary transition-colors">Home
+                                            Decor</span>
+                                        <span class="ml-auto text-xs text-gray-400">(8)</span>
+                                    </label>
+                                    <label class="flex items-center gap-3 cursor-pointer group">
+                                        <div
+                                            class="relative flex items-center justify-center w-5 h-5 rounded border border-gray-400 dark:border-gray-600 group-hover:border-primary transition-colors">
+                                            <input value="crafts"
+                                                class="peer appearance-none w-full h-full cursor-pointer absolute inset-0 z-10 opacity-0"
+                                                type="checkbox" />
+                                            <div class="hidden peer-checked:block w-3 h-3 bg-primary rounded-sm"></div>
+                                        </div>
+                                        <span
+                                            class="text-gray-600 dark:text-gray-300 text-sm font-medium group-hover:text-primary transition-colors">Local
+                                            Crafts</span>
+                                        <span class="ml-auto text-xs text-gray-400">(15)</span>
+                                    </label>
+                                    <label class="flex items-center gap-3 cursor-pointer group">
+                                        <div
+                                            class="relative flex items-center justify-center w-5 h-5 rounded border border-gray-400 dark:border-gray-600 group-hover:border-primary transition-colors">
+                                            <input value="wines"
+                                                class="peer appearance-none w-full h-full cursor-pointer absolute inset-0 z-10 opacity-0"
+                                                type="checkbox" />
+                                            <div class="hidden peer-checked:block w-3 h-3 bg-primary rounded-sm"></div>
+                                        </div>
+                                        <span
+                                            class="text-gray-600 dark:text-gray-300 text-sm font-medium group-hover:text-primary transition-colors">Wines
+                                            &amp; Spirits</span>
+                                        <span class="ml-auto text-xs text-gray-400">(7)</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- Price Filter -->
+                            <div
+                                class="bg-white dark:bg-surface-dark p-5 rounded-2xl border border-gray-200 dark:border-border-dark">
+                                <h3 class="text-lg font-bold mb-6 dark:text-white">Price Range</h3>
+                                <div class="relative h-1 bg-gray-700 rounded-full mb-6 mx-2">
+                                    <div class="absolute left-0 top-0 h-full bg-primary w-2/3 rounded-full"></div>
+                                    <div
+                                        class="absolute top-1/2 -translate-y-1/2 -ml-2 left-0 h-4 w-4 bg-primary rounded-full border-2 border-white dark:border-background-dark cursor-pointer shadow-md">
+                                    </div>
+                                    <div
+                                        class="absolute top-1/2 -translate-y-1/2 -ml-2 left-2/3 h-4 w-4 bg-primary rounded-full border-2 border-white dark:border-background-dark cursor-pointer shadow-md">
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <div
+                                        class="bg-gray-50 dark:bg-background-dark px-3 py-2 rounded-lg border border-gray-200 dark:border-border-dark">
+                                        <span class="text-gray-500 text-xs block">Min Price</span>
+                                        <span class="text-gray-900 dark:text-white text-sm font-bold">R0</span>
+                                    </div>
+                                    <span class="text-gray-400">-</span>
+                                    <div
+                                        class="bg-gray-50 dark:bg-background-dark px-3 py-2 rounded-lg border border-gray-200 dark:border-border-dark">
+                                        <span class="text-gray-500 text-xs block">Max Price</span>
+                                        <span class="text-gray-900 dark:text-white text-sm font-bold">R5000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                    <!-- Product Grid Area -->
+                    <div class="flex-1">
+                        <!-- Sorting & Results Count -->
+                        <div class="flex flex-wrap items-center justify-between mb-6 gap-4">
+                            <p class="text-gray-500 dark:text-gray-400 text-sm font-medium">Showing <span
+                                    id="results-count" class="text-gray-900 dark:text-white font-bold">6</span> results
+                            </p>
+                            <div class="flex items-center gap-3">
+                                <span class="text-gray-500 dark:text-gray-400 text-sm hidden sm:inline">Sort by:</span>
+                                <div class="relative">
+                                    <select id="sort-select"
+                                        class="appearance-none bg-white dark:bg-surface-dark text-gray-900 dark:text-white pl-4 pr-10 py-2 rounded-lg border border-gray-200 dark:border-border-dark text-sm font-medium focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer">
+                                        <option value="popular">Most Popular</option>
+                                        <option value="price-low">Price: Low to High</option>
+                                        <option value="price-high">Price: High to Low</option>
+                                        <option value="newest">Newest Arrivals</option>
+                                    </select>
+                                    <span
+                                        class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500">
+                                        <span class="material-symbols-outlined text-sm">expand_more</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Products Grid -->
+                        <div id="product-grid"
+                            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
+                            <!-- Product Card 1 -->
+                            <div data-name="Classic Safari Hat" data-category="apparel" data-price="450"
+                                class="product-card group relative bg-white dark:bg-surface-dark rounded-2xl overflow-hidden border border-gray-200 dark:border-border-dark hover:shadow-lg dark:hover:shadow-primary/5 transition-all duration-300">
+                                <div
+                                    class="absolute top-3 left-3 z-10 bg-primary text-background-dark text-xs font-bold px-2.5 py-1 rounded-full">
+                                    New</div>
+                                <div class="absolute top-3 right-3 z-10">
+                                    <button
+                                        class="h-8 w-8 rounded-full bg-white/20 backdrop-blur-sm text-white hover:bg-white hover:text-red-500 flex items-center justify-center transition-colors">
+                                        <span class="material-symbols-outlined text-[18px]">favorite</span>
+                                    </button>
+                                </div>
+                                <a href="product.html"
+                                    class="relative aspect-[4/5] overflow-hidden bg-gray-100 dark:bg-gray-800 block">
+                                    <img alt="Wide brim safari hat on wooden table"
+                                        class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAutdykEYg0s0AX3iOlqs9HyzQFRsBIk4lktWvqQ1N5tUj8JoSd83BFzabvRNocABdmw1TN19QZtXkGGCEvy9GaTE_VNiqWJ6CA0Ws7n3hLrLhK5VGmdAWEEikZNuOMcXOZ03C1BRZlLmIMWvBWCS9Gep9pD242lGJFQRtgG984J9T7kaaeEoPDC3uIWpFUrjDJ_x_qqnBE7par4RJeQmEfK-8Xsvgdpu2RNCAnn6dReTRi15FL8skdPIZfNLcLvhaTbUfmLAprTgqM" />
+                                    <!-- Quick Action Overlay -->
+                                    <div
+                                        class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex justify-center pb-6 bg-gradient-to-t from-black/60 to-transparent pointer-events-none">
+                                        <button
+                                            onclick="event.preventDefault(); addToCart('hat-001', 'Classic Safari Hat', 450)"
+                                            class="w-full bg-white text-gray-900 hover:bg-primary hover:text-background-dark font-bold py-3 rounded-xl shadow-lg transition-colors flex items-center justify-center gap-2 text-sm pointer-events-auto">
+                                            <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                                            Add to Cart
+                                        </button>
+                                    </div>
+                                </a>
+                                <div class="p-4">
+                                    <p class="text-xs text-primary font-bold mb-1 uppercase tracking-wider">Apparel</p>
+                                    <a href="product.html"
+                                        class="text-gray-900 dark:text-white font-bold text-lg leading-tight mb-2 group-hover:text-primary transition-colors cursor-pointer block">
+                                        Classic Safari Hat</a>
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-gray-900 dark:text-white font-bold text-lg">R 450.00</span>
+                                        <div class="flex items-center gap-0.5">
+                                            <span
+                                                class="material-symbols-outlined text-primary text-[16px] fill-current">star</span>
+                                            <span
+                                                class="text-xs text-gray-500 dark:text-gray-400 font-medium ml-1">4.8</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product Card 2 -->
+                            <div data-name="Hand-Carved Giraffe" data-category="crafts" data-price="1200"
+                                class="product-card group relative bg-white dark:bg-surface-dark rounded-2xl overflow-hidden border border-gray-200 dark:border-border-dark hover:shadow-lg dark:hover:shadow-primary/5 transition-all duration-300">
+                                <a href="product.html"
+                                    class="relative aspect-[4/5] overflow-hidden bg-gray-100 dark:bg-gray-800 block">
+                                    <img alt="Wooden giraffe carving on dark background"
+                                        class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5ZGxPS9odvB1iO7I7-hHlOEMYLIwQNHj3c5D5hBzodv7WWXfwmiXM5Y4i-pHLTfknTlUjA8SyysEhGqR3L-sdxCNr4gGdxUpXrcnTBEaeh-xOYLRSPPKVvv8ibfcOuHviTgzwUydMX8-n2GTnsJ1RTZrUE2dEUR4NBhN2lljqglC13k-Nnlu_JgUp1wO7fdU_Ek1AVXCxQUUMp8Yuk7qklfOFShBxcL63uUE-x9dMYSWRqFK0TITbRbGxdpM6E_C-sygDr8ot-wpy" />
+                                    <div
+                                        class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex justify-center pb-6 bg-gradient-to-t from-black/60 to-transparent pointer-events-none">
+                                        <button
+                                            onclick="event.preventDefault(); addToCart('giraffe-001', 'Hand-Carved Giraffe', 1200)"
+                                            class="w-full bg-white text-gray-900 hover:bg-primary hover:text-background-dark font-bold py-3 rounded-xl shadow-lg transition-colors flex items-center justify-center gap-2 text-sm pointer-events-auto">
+                                            <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                                            Add to Cart
+                                        </button>
+                                    </div>
+                                </a>
+                                <div class="p-4">
+                                    <p class="text-xs text-primary font-bold mb-1 uppercase tracking-wider">Local Crafts
+                                    </p>
+                                    <a href="product.html"
+                                        class="text-gray-900 dark:text-white font-bold text-lg leading-tight mb-2 group-hover:text-primary transition-colors cursor-pointer block">
+                                        Hand-Carved Giraffe</a>
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-gray-900 dark:text-white font-bold text-lg">R 1,200.00</span>
+                                        <div class="flex items-center gap-0.5">
+                                            <span class="material-symbols-outlined text-primary text-[16px]">star</span>
+                                            <span
+                                                class="text-xs text-gray-500 dark:text-gray-400 font-medium ml-1">5.0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product Card 3 -->
+                            <div data-name="Reserve Merlot 2018" data-category="wines" data-price="350"
+                                class="product-card group relative bg-white dark:bg-surface-dark rounded-2xl overflow-hidden border border-gray-200 dark:border-border-dark hover:shadow-lg dark:hover:shadow-primary/5 transition-all duration-300">
+                                <a href="product.html"
+                                    class="relative aspect-[4/5] overflow-hidden bg-gray-100 dark:bg-gray-800 block">
+                                    <img alt="Bottle of red wine with glass on wooden table"
+                                        class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkMJGdDjtDtA91n1V2rBs7FPCWHQF_qhqm8ByrTxjx9hUN-JID4pW5NnQoB68hH_QDrvaXVjZcOuakSjDLmfP_DHiair8VPohmnVffbIu48KgxsPx_IT1rz1Yshn-QSzy4othIf2hR6JeILwA03l6J59SKykxuC5okTD1_QHfcx4nqqkMKspaRB3RQ0Jb6G17VzgiCaToVqehAWME-jfOQqw5d0_tzSetAUj1cLvblKUYl4Fj0lVFeiw0nYJqL0ypUQslvU-Jfjzm5" />
+                                    <div
+                                        class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex justify-center pb-6 bg-gradient-to-t from-black/60 to-transparent pointer-events-none">
+                                        <button
+                                            onclick="event.preventDefault(); addToCart('wine-001', 'Reserve Merlot 2018', 350)"
+                                            class="w-full bg-white text-gray-900 hover:bg-primary hover:text-background-dark font-bold py-3 rounded-xl shadow-lg transition-colors flex items-center justify-center gap-2 text-sm pointer-events-auto">
+                                            <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                                            Add to Cart
+                                        </button>
+                                    </div>
+                                </a>
+                                <div class="p-4">
+                                    <p class="text-xs text-primary font-bold mb-1 uppercase tracking-wider">Wines</p>
+                                    <a href="product.html"
+                                        class="text-gray-900 dark:text-white font-bold text-lg leading-tight mb-2 group-hover:text-primary transition-colors cursor-pointer block">
+                                        Reserve Merlot 2018</a>
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-gray-900 dark:text-white font-bold text-lg">R 350.00</span>
+                                        <div class="flex items-center gap-0.5">
+                                            <span class="material-symbols-outlined text-primary text-[16px]">star</span>
+                                            <span
+                                                class="text-xs text-gray-500 dark:text-gray-400 font-medium ml-1">4.9</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product Card 4 -->
+                            <div data-name="Explorer's Field Journal" data-category="stationery" data-price="280"
+                                class="product-card group relative bg-white dark:bg-surface-dark rounded-2xl overflow-hidden border border-gray-200 dark:border-border-dark hover:shadow-lg dark:hover:shadow-primary/5 transition-all duration-300">
+                                <div
+                                    class="absolute top-3 left-3 z-10 bg-red-500 text-white text-xs font-bold px-2.5 py-1 rounded-full">
+                                    -20%</div>
+                                <a href="product.html"
+                                    class="relative aspect-[4/5] overflow-hidden bg-gray-100 dark:bg-gray-800 block">
+                                    <img alt="Leather bound journal on desk"
+                                        class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhmB-aBYsSsZvvP5Q9kv39TiJCs-a_O1TCny27FRerUcwELZCNaf1n5PNpQQuRqvEdSkCYu8RHMf-MxK6BgBIaPY1TcIBN4tEZkctNl5ssAb0aHEzUB_WhkejeuJ1J15offwf9CcYC-hqy1wIj310m4CQ-CV94KYBfl45bpUa0yh_H1kEZEDuLiMLEsNUpzxcfJkZ688f-ExftPCMhSAtrAajJr6zIPVFHklJfPeE5_ualQbtNcYbmQFReXntChIM_pbaYgCwA4SrO" />
+                                    <div
+                                        class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex justify-center pb-6 bg-gradient-to-t from-black/60 to-transparent pointer-events-none">
+                                        <button
+                                            onclick="event.preventDefault(); addToCart('journal-001', 'Explorer\'s Field Journal', 280)"
+                                            class="w-full bg-white text-gray-900 hover:bg-primary hover:text-background-dark font-bold py-3 rounded-xl shadow-lg transition-colors flex items-center justify-center gap-2 text-sm pointer-events-auto">
+                                            <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                                            Add to Cart
+                                        </button>
+                                    </div>
+                                </a>
+                                <div class="p-4">
+                                    <p class="text-xs text-primary font-bold mb-1 uppercase tracking-wider">Stationery
+                                    </p>
+                                    <a href="product.html"
+                                        class="text-gray-900 dark:text-white font-bold text-lg leading-tight mb-2 group-hover:text-primary transition-colors cursor-pointer block">
+                                        Explorer's Field Journal</a>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-gray-900 dark:text-white font-bold text-lg">R
+                                                280.00</span>
+                                            <span class="text-gray-400 text-sm line-through">R 350.00</span>
+                                        </div>
+                                        <div class="flex items-center gap-0.5">
+                                            <span class="material-symbols-outlined text-primary text-[16px]">star</span>
+                                            <span
+                                                class="text-xs text-gray-500 dark:text-gray-400 font-medium ml-1">4.6</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product Card 5 -->
+                            <div data-name="Artisan Clay Pot" data-category="decor" data-price="650"
+                                class="product-card group relative bg-white dark:bg-surface-dark rounded-2xl overflow-hidden border border-gray-200 dark:border-border-dark hover:shadow-lg dark:hover:shadow-primary/5 transition-all duration-300">
+                                <a href="product.html"
+                                    class="relative aspect-[4/5] overflow-hidden bg-gray-100 dark:bg-gray-800 block">
+                                    <img alt="Ceramic pot with intricate patterns"
+                                        class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkMqHj6EtBfzMxvlbNI0nGvrqXmrq28yigRKv4gbvUDqtmHJaVNddmELk6XkUFtH5FmkXQ8n36ohGX0p2h3ydZOurLQHwANGmIbXVRnH2jEfF7zQCmXVDXbnDG_mi2QLR6Te2MLIL93etiwcZ8VrWr6brugsgWbYQ4PPADFfCr2UCKiyO30OdvKoRNNf7yqLKZ2SmKFkMDEBbzYx75-6A9QCsutmJQxiSDTpTTjQrJbM6GjhAknFCbmVqzLysec61F4dapIx5Mi8EZ" />
+                                    <div
+                                        class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex justify-center pb-6 bg-gradient-to-t from-black/60 to-transparent pointer-events-none">
+                                        <button
+                                            onclick="event.preventDefault(); addToCart('pot-001', 'Artisan Clay Pot', 650)"
+                                            class="w-full bg-white text-gray-900 hover:bg-primary hover:text-background-dark font-bold py-3 rounded-xl shadow-lg transition-colors flex items-center justify-center gap-2 text-sm pointer-events-auto">
+                                            <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                                            Add to Cart
+                                        </button>
+                                    </div>
+                                </a>
+                                <div class="p-4">
+                                    <p class="text-xs text-primary font-bold mb-1 uppercase tracking-wider">Decor</p>
+                                    <a href="product.html"
+                                        class="text-gray-900 dark:text-white font-bold text-lg leading-tight mb-2 group-hover:text-primary transition-colors cursor-pointer block">
+                                        Artisan Clay Pot</a>
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-gray-900 dark:text-white font-bold text-lg">R 650.00</span>
+                                        <div class="flex items-center gap-0.5">
+                                            <span
+                                                class="material-symbols-outlined text-gray-400 text-[16px]">star</span>
+                                            <span class="text-xs text-gray-500 dark:text-gray-400 font-medium ml-1">No
+                                                ratings</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product Card 6 -->
+                            <div data-name="Handwoven Grass Basket" data-category="crafts" data-price="850"
+                                class="product-card group relative bg-white dark:bg-surface-dark rounded-2xl overflow-hidden border border-gray-200 dark:border-border-dark hover:shadow-lg dark:hover:shadow-primary/5 transition-all duration-300">
+                                <div
+                                    class="absolute top-3 left-3 z-10 bg-primary text-background-dark text-xs font-bold px-2.5 py-1 rounded-full">
+                                    New</div>
+                                <a href="product.html"
+                                    class="relative aspect-[4/5] overflow-hidden bg-gray-100 dark:bg-gray-800 block">
+                                    <img alt="Woven basket on white background"
+                                        class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvbi0-gOpyVle6rK6b0qoqhLDmv-zndBDgVZEsGONJOBFD4RP5DtB3mYd2uoBr2OyNbP6NHnuxM3MXrhur3LmjddvuJrceQqG4VcwNqPb77lSmvr5imAsnya-0_j8ej4sLb6W4ICWlI5pG-3er170pnFP4VBzL3rPFln8Da2NhLnzNT0_j8yRDJIpNzK-E7_R0iS8I7jpuf_BzUZEZBjT2oWdMOwBAZ3WTXIc41sn9BvgUeQyvVYILYxrhJvgXIj5TJpdV3GXylrmH" />
+                                    <div
+                                        class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex justify-center pb-6 bg-gradient-to-t from-black/60 to-transparent pointer-events-none">
+                                        <button
+                                            onclick="event.preventDefault(); addToCart('basket-001', 'Handwoven Grass Basket', 850)"
+                                            class="w-full bg-white text-gray-900 hover:bg-primary hover:text-background-dark font-bold py-3 rounded-xl shadow-lg transition-colors flex items-center justify-center gap-2 text-sm pointer-events-auto">
+                                            <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                                            Add to Cart
+                                        </button>
+                                    </div>
+                                </a>
+                                <div class="p-4">
+                                    <p class="text-xs text-primary font-bold mb-1 uppercase tracking-wider">Local Crafts
+                                    </p>
+                                    <a href="product.html"
+                                        class="text-gray-900 dark:text-white font-bold text-lg leading-tight mb-2 group-hover:text-primary transition-colors cursor-pointer block">
+                                        Handwoven Grass Basket</a>
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-gray-900 dark:text-white font-bold text-lg">R 850.00</span>
+                                        <div class="flex items-center gap-0.5">
+                                            <span class="material-symbols-outlined text-primary text-[16px]">star</span>
+                                            <span
+                                                class="text-xs text-gray-500 dark:text-gray-400 font-medium ml-1">5.0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Pagination -->
+                        <div class="flex justify-center mt-12">
+                            <nav class="flex items-center gap-2">
+                                <button
+                                    class="w-10 h-10 flex items-center justify-center rounded-xl border border-gray-200 dark:border-border-dark bg-white dark:bg-surface-dark text-gray-500 hover:text-primary hover:border-primary transition-colors disabled:opacity-50"
+                                    disabled="">
+                                    <span class="material-symbols-outlined text-sm">arrow_back_ios_new</span>
+                                </button>
+                                <button
+                                    class="w-10 h-10 flex items-center justify-center rounded-xl bg-primary text-background-dark font-bold">1</button>
+                                <button
+                                    class="w-10 h-10 flex items-center justify-center rounded-xl border border-gray-200 dark:border-border-dark bg-white dark:bg-surface-dark text-gray-900 dark:text-white hover:text-primary hover:border-primary transition-colors">2</button>
+                                <button
+                                    class="w-10 h-10 flex items-center justify-center rounded-xl border border-gray-200 dark:border-border-dark bg-white dark:bg-surface-dark text-gray-900 dark:text-white hover:text-primary hover:border-primary transition-colors">3</button>
+                                <span class="px-2 text-gray-500">...</span>
+                                <button
+                                    class="w-10 h-10 flex items-center justify-center rounded-xl border border-gray-200 dark:border-border-dark bg-white dark:bg-surface-dark text-gray-900 dark:text-white hover:text-primary hover:border-primary transition-colors">
+                                    <span class="material-symbols-outlined text-sm">arrow_forward_ios</span>
+                                </button>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer class="bg-[#0a0907] pt-20 pb-10 border-t border-white/5">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                    <!-- Brand -->
+                    <div class="col-span-1 md:col-span-1">
+                        <div class="flex items-center gap-2 text-white mb-6">
+                            <span class="material-symbols-outlined text-primary">landscape</span>
+                            <span class="font-bold text-xl">Donkieskraal</span>
+                        </div>
+                        <p class="text-white/50 text-sm leading-relaxed mb-6">
+                            Where the horizon meets heritage. Experience the untamed beauty of Africa with unparalleled
+                            comfort.
+                        </p>
+                        <div class="flex gap-4">
+                            <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-primary hover:text-background-dark transition-all"
+                                href="#">
+                                <!-- Facebook Icon Placeholder using Material Icon for demo -->
+                                <span class="material-symbols-outlined text-sm">public</span>
+                            </a>
+                            <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-primary hover:text-background-dark transition-all"
+                                href="#">
+                                <!-- Instagram Icon Placeholder using Material Icon for demo -->
+                                <span class="material-symbols-outlined text-sm">photo_camera</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Quick Links -->
+                    <div>
+                        <h4 class="text-white font-bold mb-6">Explore</h4>
+                        <ul class="space-y-4 text-white/60 text-sm">
+                            <li><a class="hover:text-primary transition-colors" href="about.html">Our Story</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="accommodation.html">The Lodge</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors" href="activities.html">Experiences</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors" href="shop.html">Shop</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="bookings.html">Bookings</a></li>
+                        </ul>
+                    </div>
+                    <!-- Contact -->
+                    <div>
+                        <h4 class="text-white font-bold mb-6">Contact</h4>
+                        <ul class="space-y-4 text-white/60 text-sm">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-lg">location_on</span>
+                                <span>Western Cape, South Africa</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary text-lg">call</span>
+                                <span>+27 (0) 21 123 4567</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary text-lg">mail</span>
+                                <span>stay@donkieskraal.co.za</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Legal -->
+                    <div>
+                        <h4 class="text-white font-bold mb-6">Legal</h4>
+                        <ul class="space-y-4 text-white/60 text-sm">
+                            <li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Terms &amp; Conditions</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Cookie Policy</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Sitemap</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-white/30 text-xs">© 2024 Donkieskraal Lodge. All rights reserved.</p>
+                    <div class="flex gap-6">
+                        <span class="text-white/30 text-xs uppercase tracking-widest">Designed with <span
+                                class="text-primary">♥</span> in Africa</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-[60] bg-background-dark/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-center gap-8">
+        <button id="close-menu-btn" class="absolute top-8 right-8 text-white hover:text-primary">
+            <span class="material-symbols-outlined text-4xl">close</span>
+        </button>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="index.html">Home</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="about.html">Our Story</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="accommodation.html">The Lodge</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="activities.html">Experiences</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="events.html">Weddings</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="shop.html">Shop</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="contact.html">Contact</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="bookings.html">Book Now</a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/shop.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

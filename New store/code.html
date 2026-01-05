@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Donkieskraal Lodge Store</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#eebd2b",
+              "background-light": "#f8f7f6",
+              "background-dark": "#181611",
+              "surface-dark": "#27241c",
+              "surface-light": "#ffffff",
+              "border-dark": "#393528",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-gray-100 antialiased overflow-x-hidden">
+<!-- Top Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 dark:border-border-dark px-10 py-4 bg-white dark:bg-background-dark relative z-20">
+<div class="flex items-center gap-4 text-gray-900 dark:text-white">
+<div class="size-8 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold leading-tight tracking-[-0.015em]">Donkieskraal Lodge</h2>
+</div>
+<div class="hidden lg:flex flex-1 justify-end gap-8">
+<nav class="flex items-center gap-9">
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Home</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Accommodations</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Experiences</a>
+<a class="text-primary text-sm font-medium leading-normal" href="#">Shop</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Contact</a>
+</nav>
+<button class="flex items-center justify-center overflow-hidden rounded-xl h-10 w-10 bg-gray-100 dark:bg-surface-dark text-gray-900 dark:text-white hover:bg-primary hover:text-background-dark transition-all relative">
+<span class="material-symbols-outlined text-[20px]">shopping_cart</span>
+<span class="absolute top-1 right-1 h-2 w-2 rounded-full bg-primary"></span>
+</button>
+</div>
+<button class="lg:hidden text-gray-900 dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<main class="min-h-screen pb-20">
+<!-- Hero Section -->
+<section class="relative h-[300px] w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0 bg-cover bg-center" data-alt="Dark moody landscape of African savannah at twilight" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuAG554Fh1yPuP55OhDmxZJU33FRJLFVr67chDdoOX0jkgxKHl0VJPs7BtHOPYCE7JFCCeiGSs7D8qQMvDEG7xHFC67CEIcOkTBjpAFud8wwBxCFMyKkAXWDXRbNKKdaWtmXkfCAKYk9hhuaoWfupxNmn_s6FUfZSoZp8Ip8aoOT2Qmt1Mlvxw0-Ua6d3b3NMM61QAG5o20zRvNjr0VBA4LlKRlquPwKtsoRE4tJ0DFcONzE0FAaP9Q13-CruKlDr86Ufch1uVE1Sftn');"></div>
+<div class="relative z-10 text-center px-4 max-w-3xl">
+<h1 class="text-white text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em] mb-4">The Curated Collection</h1>
+<p class="text-gray-200 text-lg md:text-xl font-normal opacity-90">Hand-picked goods, fine wines, and artisanal crafts from the heart of the reserve.</p>
+</div>
+</section>
+<!-- Main Content Container -->
+<div class="layout-container max-w-[1440px] mx-auto px-4 md:px-8 py-10">
+<!-- Mobile Search & Filter Toggle (Visible only on small screens) -->
+<div class="lg:hidden mb-6 flex flex-col gap-4">
+<div class="relative w-full">
+<span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">
+<span class="material-symbols-outlined">search</span>
+</span>
+<input class="w-full bg-white dark:bg-surface-dark text-gray-900 dark:text-white rounded-xl border-none py-3 pl-10 pr-4 focus:ring-2 focus:ring-primary shadow-sm placeholder:text-gray-500" placeholder="Search products..." type="text"/>
+</div>
+<button class="flex items-center justify-center gap-2 w-full bg-white dark:bg-surface-dark text-gray-900 dark:text-white py-3 rounded-xl font-medium shadow-sm">
+<span class="material-symbols-outlined">tune</span> Filters
+                </button>
+</div>
+<div class="flex flex-col lg:flex-row gap-8">
+<!-- Sidebar Filters (Desktop) -->
+<aside class="hidden lg:block w-[280px] shrink-0">
+<div class="sticky top-6 flex flex-col gap-6">
+<!-- Search Widget -->
+<div class="bg-white dark:bg-surface-dark p-5 rounded-2xl border border-gray-200 dark:border-border-dark">
+<h3 class="text-lg font-bold mb-4 dark:text-white">Search Store</h3>
+<div class="relative">
+<input class="w-full bg-gray-50 dark:bg-background-dark text-gray-900 dark:text-white rounded-lg border-none py-3 px-4 focus:ring-1 focus:ring-primary placeholder:text-gray-500 text-sm" placeholder="e.g. Merlot, Hats..." type="text"/>
+<button class="absolute right-2 top-1/2 -translate-y-1/2 text-primary">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</button>
+</div>
+</div>
+<!-- Categories Filter -->
+<div class="bg-white dark:bg-surface-dark p-5 rounded-2xl border border-gray-200 dark:border-border-dark">
+<h3 class="text-lg font-bold mb-4 dark:text-white flex justify-between items-center">
+                                Categories
+                                <span class="material-symbols-outlined text-gray-400 text-sm">expand_less</span>
+</h3>
+<div class="flex flex-col gap-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="relative flex items-center justify-center w-5 h-5 rounded border border-gray-400 dark:border-gray-600 group-hover:border-primary transition-colors">
+<input checked="" class="peer appearance-none w-full h-full cursor-pointer absolute inset-0 z-10 opacity-0" type="checkbox"/>
+<div class="hidden peer-checked:block w-3 h-3 bg-primary rounded-sm"></div>
+</div>
+<span class="text-gray-600 dark:text-gray-300 text-sm font-medium group-hover:text-primary transition-colors">All Products</span>
+<span class="ml-auto text-xs text-gray-400">(42)</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="relative flex items-center justify-center w-5 h-5 rounded border border-gray-400 dark:border-gray-600 group-hover:border-primary transition-colors">
+<input class="peer appearance-none w-full h-full cursor-pointer absolute inset-0 z-10 opacity-0" type="checkbox"/>
+<div class="hidden peer-checked:block w-3 h-3 bg-primary rounded-sm"></div>
+</div>
+<span class="text-gray-600 dark:text-gray-300 text-sm font-medium group-hover:text-primary transition-colors">Clothing &amp; Apparel</span>
+<span class="ml-auto text-xs text-gray-400">(12)</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="relative flex items-center justify-center w-5 h-5 rounded border border-gray-400 dark:border-gray-600 group-hover:border-primary transition-colors">
+<input class="peer appearance-none w-full h-full cursor-pointer absolute inset-0 z-10 opacity-0" type="checkbox"/>
+<div class="hidden peer-checked:block w-3 h-3 bg-primary rounded-sm"></div>
+</div>
+<span class="text-gray-600 dark:text-gray-300 text-sm font-medium group-hover:text-primary transition-colors">Home Decor</span>
+<span class="ml-auto text-xs text-gray-400">(8)</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="relative flex items-center justify-center w-5 h-5 rounded border border-gray-400 dark:border-gray-600 group-hover:border-primary transition-colors">
+<input class="peer appearance-none w-full h-full cursor-pointer absolute inset-0 z-10 opacity-0" type="checkbox"/>
+<div class="hidden peer-checked:block w-3 h-3 bg-primary rounded-sm"></div>
+</div>
+<span class="text-gray-600 dark:text-gray-300 text-sm font-medium group-hover:text-primary transition-colors">Local Crafts</span>
+<span class="ml-auto text-xs text-gray-400">(15)</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="relative flex items-center justify-center w-5 h-5 rounded border border-gray-400 dark:border-gray-600 group-hover:border-primary transition-colors">
+<input class="peer appearance-none w-full h-full cursor-pointer absolute inset-0 z-10 opacity-0" type="checkbox"/>
+<div class="hidden peer-checked:block w-3 h-3 bg-primary rounded-sm"></div>
+</div>
+<span class="text-gray-600 dark:text-gray-300 text-sm font-medium group-hover:text-primary transition-colors">Wines &amp; Spirits</span>
+<span class="ml-auto text-xs text-gray-400">(7)</span>
+</label>
+</div>
+</div>
+<!-- Price Filter -->
+<div class="bg-white dark:bg-surface-dark p-5 rounded-2xl border border-gray-200 dark:border-border-dark">
+<h3 class="text-lg font-bold mb-6 dark:text-white">Price Range</h3>
+<div class="relative h-1 bg-gray-700 rounded-full mb-6 mx-2">
+<div class="absolute left-0 top-0 h-full bg-primary w-2/3 rounded-full"></div>
+<div class="absolute top-1/2 -translate-y-1/2 -ml-2 left-0 h-4 w-4 bg-primary rounded-full border-2 border-white dark:border-background-dark cursor-pointer shadow-md"></div>
+<div class="absolute top-1/2 -translate-y-1/2 -ml-2 left-2/3 h-4 w-4 bg-primary rounded-full border-2 border-white dark:border-background-dark cursor-pointer shadow-md"></div>
+</div>
+<div class="flex items-center justify-between">
+<div class="bg-gray-50 dark:bg-background-dark px-3 py-2 rounded-lg border border-gray-200 dark:border-border-dark">
+<span class="text-gray-500 text-xs block">Min Price</span>
+<span class="text-gray-900 dark:text-white text-sm font-bold">$0</span>
+</div>
+<span class="text-gray-400">-</span>
+<div class="bg-gray-50 dark:bg-background-dark px-3 py-2 rounded-lg border border-gray-200 dark:border-border-dark">
+<span class="text-gray-500 text-xs block">Max Price</span>
+<span class="text-gray-900 dark:text-white text-sm font-bold">$500</span>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- Product Grid Area -->
+<div class="flex-1">
+<!-- Sorting & Results Count -->
+<div class="flex flex-wrap items-center justify-between mb-6 gap-4">
+<p class="text-gray-500 dark:text-gray-400 text-sm font-medium">Showing <span class="text-gray-900 dark:text-white font-bold">42</span> results</p>
+<div class="flex items-center gap-3">
+<span class="text-gray-500 dark:text-gray-400 text-sm hidden sm:inline">Sort by:</span>
+<div class="relative">
+<select class="appearance-none bg-white dark:bg-surface-dark text-gray-900 dark:text-white pl-4 pr-10 py-2 rounded-lg border border-gray-200 dark:border-border-dark text-sm font-medium focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer">
+<option>Most Popular</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+<option>Newest Arrivals</option>
+</select>
+<span class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500">
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Products Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
+<!-- Product Card 1 -->
+<div class="group relative bg-white dark:bg-surface-dark rounded-2xl overflow-hidden border border-gray-200 dark:border-border-dark hover:shadow-lg dark:hover:shadow-primary/5 transition-all duration-300">
+<div class="absolute top-3 left-3 z-10 bg-primary text-background-dark text-xs font-bold px-2.5 py-1 rounded-full">New</div>
+<div class="absolute top-3 right-3 z-10">
+<button class="h-8 w-8 rounded-full bg-white/20 backdrop-blur-sm text-white hover:bg-white hover:text-red-500 flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="relative aspect-[4/5] overflow-hidden bg-gray-100 dark:bg-gray-800">
+<img alt="Wide brim safari hat on wooden table" class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAutdykEYg0s0AX3iOlqs9HyzQFRsBIk4lktWvqQ1N5tUj8JoSd83BFzabvRNocABdmw1TN19QZtXkGGCEvy9GaTE_VNiqWJ6CA0Ws7n3hLrLhK5VGmdAWEEikZNuOMcXOZ03C1BRZlLmIMWvBWCS9Gep9pD242lGJFQRtgG984J9T7kaaeEoPDC3uIWpFUrjDJ_x_qqnBE7par4RJeQmEfK-8Xsvgdpu2RNCAnn6dReTRi15FL8skdPIZfNLcLvhaTbUfmLAprTgqM"/>
+<!-- Quick Action Overlay -->
+<div class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex justify-center pb-6 bg-gradient-to-t from-black/60 to-transparent">
+<button class="w-full bg-white text-gray-900 hover:bg-primary hover:text-background-dark font-bold py-3 rounded-xl shadow-lg transition-colors flex items-center justify-center gap-2 text-sm">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                                        Add to Cart
+                                    </button>
+</div>
+</div>
+<div class="p-4">
+<p class="text-xs text-primary font-bold mb-1 uppercase tracking-wider">Apparel</p>
+<h3 class="text-gray-900 dark:text-white font-bold text-lg leading-tight mb-2 group-hover:text-primary transition-colors cursor-pointer">Classic Safari Hat</h3>
+<div class="flex items-center justify-between">
+<span class="text-gray-900 dark:text-white font-bold text-lg">$45.00</span>
+<div class="flex items-center gap-0.5">
+<span class="material-symbols-outlined text-primary text-[16px] fill-current">star</span>
+<span class="text-xs text-gray-500 dark:text-gray-400 font-medium ml-1">4.8</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group relative bg-white dark:bg-surface-dark rounded-2xl overflow-hidden border border-gray-200 dark:border-border-dark hover:shadow-lg dark:hover:shadow-primary/5 transition-all duration-300">
+<div class="relative aspect-[4/5] overflow-hidden bg-gray-100 dark:bg-gray-800">
+<img alt="Wooden giraffe carving on dark background" class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5ZGxPS9odvB1iO7I7-hHlOEMYLIwQNHj3c5D5hBzodv7WWXfwmiXM5Y4i-pHLTfknTlUjA8SyysEhGqR3L-sdxCNr4gGdxUpXrcnTBEaeh-xOYLRSPPKVvv8ibfcOuHviTgzwUydMX8-n2GTnsJ1RTZrUE2dEUR4NBhN2lljqglC13k-Nnlu_JgUp1wO7fdU_Ek1AVXCxQUUMp8Yuk7qklfOFShBxcL63uUE-x9dMYSWRqFK0TITbRbGxdpM6E_C-sygDr8ot-wpy"/>
+<div class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex justify-center pb-6 bg-gradient-to-t from-black/60 to-transparent">
+<button class="w-full bg-white text-gray-900 hover:bg-primary hover:text-background-dark font-bold py-3 rounded-xl shadow-lg transition-colors flex items-center justify-center gap-2 text-sm">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+                                        Quick View
+                                    </button>
+</div>
+</div>
+<div class="p-4">
+<p class="text-xs text-primary font-bold mb-1 uppercase tracking-wider">Local Crafts</p>
+<h3 class="text-gray-900 dark:text-white font-bold text-lg leading-tight mb-2 group-hover:text-primary transition-colors cursor-pointer">Hand-Carved Giraffe</h3>
+<div class="flex items-center justify-between">
+<span class="text-gray-900 dark:text-white font-bold text-lg">$120.00</span>
+<div class="flex items-center gap-0.5">
+<span class="material-symbols-outlined text-primary text-[16px]">star</span>
+<span class="text-xs text-gray-500 dark:text-gray-400 font-medium ml-1">5.0</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group relative bg-white dark:bg-surface-dark rounded-2xl overflow-hidden border border-gray-200 dark:border-border-dark hover:shadow-lg dark:hover:shadow-primary/5 transition-all duration-300">
+<div class="relative aspect-[4/5] overflow-hidden bg-gray-100 dark:bg-gray-800">
+<img alt="Bottle of red wine with glass on wooden table" class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkMJGdDjtDtA91n1V2rBs7FPCWHQF_qhqm8ByrTxjx9hUN-JID4pW5NnQoB68hH_QDrvaXVjZcOuakSjDLmfP_DHiair8VPohmnVffbIu48KgxsPx_IT1rz1Yshn-QSzy4othIf2hR6JeILwA03l6J59SKykxuC5okTD1_QHfcx4nqqkMKspaRB3RQ0Jb6G17VzgiCaToVqehAWME-jfOQqw5d0_tzSetAUj1cLvblKUYl4Fj0lVFeiw0nYJqL0ypUQslvU-Jfjzm5"/>
+<div class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex justify-center pb-6 bg-gradient-to-t from-black/60 to-transparent">
+<button class="w-full bg-white text-gray-900 hover:bg-primary hover:text-background-dark font-bold py-3 rounded-xl shadow-lg transition-colors flex items-center justify-center gap-2 text-sm">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                                        Add to Cart
+                                    </button>
+</div>
+</div>
+<div class="p-4">
+<p class="text-xs text-primary font-bold mb-1 uppercase tracking-wider">Wines</p>
+<h3 class="text-gray-900 dark:text-white font-bold text-lg leading-tight mb-2 group-hover:text-primary transition-colors cursor-pointer">Reserve Merlot 2018</h3>
+<div class="flex items-center justify-between">
+<span class="text-gray-900 dark:text-white font-bold text-lg">$35.00</span>
+<div class="flex items-center gap-0.5">
+<span class="material-symbols-outlined text-primary text-[16px]">star</span>
+<span class="text-xs text-gray-500 dark:text-gray-400 font-medium ml-1">4.9</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group relative bg-white dark:bg-surface-dark rounded-2xl overflow-hidden border border-gray-200 dark:border-border-dark hover:shadow-lg dark:hover:shadow-primary/5 transition-all duration-300">
+<div class="absolute top-3 left-3 z-10 bg-red-500 text-white text-xs font-bold px-2.5 py-1 rounded-full">-20%</div>
+<div class="relative aspect-[4/5] overflow-hidden bg-gray-100 dark:bg-gray-800">
+<img alt="Leather bound journal on desk" class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhmB-aBYsSsZvvP5Q9kv39TiJCs-a_O1TCny27FRerUcwELZCNaf1n5PNpQQuRqvEdSkCYu8RHMf-MxK6BgBIaPY1TcIBN4tEZkctNl5ssAb0aHEzUB_WhkejeuJ1J15offwf9CcYC-hqy1wIj310m4CQ-CV94KYBfl45bpUa0yh_H1kEZEDuLiMLEsNUpzxcfJkZ688f-ExftPCMhSAtrAajJr6zIPVFHklJfPeE5_ualQbtNcYbmQFReXntChIM_pbaYgCwA4SrO"/>
+<div class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex justify-center pb-6 bg-gradient-to-t from-black/60 to-transparent">
+<button class="w-full bg-white text-gray-900 hover:bg-primary hover:text-background-dark font-bold py-3 rounded-xl shadow-lg transition-colors flex items-center justify-center gap-2 text-sm">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                                        Add to Cart
+                                    </button>
+</div>
+</div>
+<div class="p-4">
+<p class="text-xs text-primary font-bold mb-1 uppercase tracking-wider">Stationery</p>
+<h3 class="text-gray-900 dark:text-white font-bold text-lg leading-tight mb-2 group-hover:text-primary transition-colors cursor-pointer">Explorer's Field Journal</h3>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="text-gray-900 dark:text-white font-bold text-lg">$28.00</span>
+<span class="text-gray-400 text-sm line-through">$35.00</span>
+</div>
+<div class="flex items-center gap-0.5">
+<span class="material-symbols-outlined text-primary text-[16px]">star</span>
+<span class="text-xs text-gray-500 dark:text-gray-400 font-medium ml-1">4.6</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="group relative bg-white dark:bg-surface-dark rounded-2xl overflow-hidden border border-gray-200 dark:border-border-dark hover:shadow-lg dark:hover:shadow-primary/5 transition-all duration-300">
+<div class="relative aspect-[4/5] overflow-hidden bg-gray-100 dark:bg-gray-800">
+<img alt="Ceramic pot with intricate patterns" class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkMqHj6EtBfzMxvlbNI0nGvrqXmrq28yigRKv4gbvUDqtmHJaVNddmELk6XkUFtH5FmkXQ8n36ohGX0p2h3ydZOurLQHwANGmIbXVRnH2jEfF7zQCmXVDXbnDG_mi2QLR6Te2MLIL93etiwcZ8VrWr6brugsgWbYQ4PPADFfCr2UCKiyO30OdvKoRNNf7yqLKZ2SmKFkMDEBbzYx75-6A9QCsutmJQxiSDTpTTjQrJbM6GjhAknFCbmVqzLysec61F4dapIx5Mi8EZ"/>
+<div class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex justify-center pb-6 bg-gradient-to-t from-black/60 to-transparent">
+<button class="w-full bg-white text-gray-900 hover:bg-primary hover:text-background-dark font-bold py-3 rounded-xl shadow-lg transition-colors flex items-center justify-center gap-2 text-sm">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+                                        Quick View
+                                    </button>
+</div>
+</div>
+<div class="p-4">
+<p class="text-xs text-primary font-bold mb-1 uppercase tracking-wider">Decor</p>
+<h3 class="text-gray-900 dark:text-white font-bold text-lg leading-tight mb-2 group-hover:text-primary transition-colors cursor-pointer">Artisan Clay Pot</h3>
+<div class="flex items-center justify-between">
+<span class="text-gray-900 dark:text-white font-bold text-lg">$65.00</span>
+<div class="flex items-center gap-0.5">
+<span class="material-symbols-outlined text-gray-400 text-[16px]">star</span>
+<span class="text-xs text-gray-500 dark:text-gray-400 font-medium ml-1">No ratings</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="group relative bg-white dark:bg-surface-dark rounded-2xl overflow-hidden border border-gray-200 dark:border-border-dark hover:shadow-lg dark:hover:shadow-primary/5 transition-all duration-300">
+<div class="absolute top-3 left-3 z-10 bg-primary text-background-dark text-xs font-bold px-2.5 py-1 rounded-full">New</div>
+<div class="relative aspect-[4/5] overflow-hidden bg-gray-100 dark:bg-gray-800">
+<img alt="Woven basket on white background" class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvbi0-gOpyVle6rK6b0qoqhLDmv-zndBDgVZEsGONJOBFD4RP5DtB3mYd2uoBr2OyNbP6NHnuxM3MXrhur3LmjddvuJrceQqG4VcwNqPb77lSmvr5imAsnya-0_j8ej4sLb6W4ICWlI5pG-3er170pnFP4VBzL3rPFln8Da2NhLnzNT0_j8yRDJIpNzK-E7_R0iS8I7jpuf_BzUZEZBjT2oWdMOwBAZ3WTXIc41sn9BvgUeQyvVYILYxrhJvgXIj5TJpdV3GXylrmH"/>
+<div class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex justify-center pb-6 bg-gradient-to-t from-black/60 to-transparent">
+<button class="w-full bg-white text-gray-900 hover:bg-primary hover:text-background-dark font-bold py-3 rounded-xl shadow-lg transition-colors flex items-center justify-center gap-2 text-sm">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                                        Add to Cart
+                                    </button>
+</div>
+</div>
+<div class="p-4">
+<p class="text-xs text-primary font-bold mb-1 uppercase tracking-wider">Local Crafts</p>
+<h3 class="text-gray-900 dark:text-white font-bold text-lg leading-tight mb-2 group-hover:text-primary transition-colors cursor-pointer">Handwoven Grass Basket</h3>
+<div class="flex items-center justify-between">
+<span class="text-gray-900 dark:text-white font-bold text-lg">$85.00</span>
+<div class="flex items-center gap-0.5">
+<span class="material-symbols-outlined text-primary text-[16px]">star</span>
+<span class="text-xs text-gray-500 dark:text-gray-400 font-medium ml-1">5.0</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex justify-center mt-12">
+<nav class="flex items-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-xl border border-gray-200 dark:border-border-dark bg-white dark:bg-surface-dark text-gray-500 hover:text-primary hover:border-primary transition-colors disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-sm">arrow_back_ios_new</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-xl bg-primary text-background-dark font-bold">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-xl border border-gray-200 dark:border-border-dark bg-white dark:bg-surface-dark text-gray-900 dark:text-white hover:text-primary hover:border-primary transition-colors">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-xl border border-gray-200 dark:border-border-dark bg-white dark:bg-surface-dark text-gray-900 dark:text-white hover:text-primary hover:border-primary transition-colors">3</button>
+<span class="px-2 text-gray-500">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-xl border border-gray-200 dark:border-border-dark bg-white dark:bg-surface-dark text-gray-900 dark:text-white hover:text-primary hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-sm">arrow_forward_ios</span>
+</button>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

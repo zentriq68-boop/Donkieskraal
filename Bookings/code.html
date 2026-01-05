@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Donkieskraal Lodge - Booking</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eebd2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221d10",
+                        "surface-dark": "#2a2415",
+                        "surface-light": "#ffffff"
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "2xl": "2rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for webkit browsers */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #221d10; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #393528; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #eebd2b; 
+        }
+        .rounded-super {
+            border-radius: 2rem;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen flex flex-col selection:bg-primary/30 selection:text-primary text-gray-900 dark:text-gray-100">
+<!-- Top Navigation -->
+<nav class="sticky top-0 z-50 w-full border-b border-gray-200 dark:border-[#393528] bg-background-light/80 dark:bg-[#181611]/80 backdrop-blur-md">
+<div class="px-4 md:px-10 py-3 max-w-[1440px] mx-auto flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="size-8 text-primary">
+<span class="material-symbols-outlined text-3xl">landscape</span>
+</div>
+<h2 class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] hidden sm:block">Donkieskraal Lodge</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-center gap-8">
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Accommodation</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Activities</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Events</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Gallery</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="md:hidden text-gray-600 dark:text-gray-300" href="#">
+<span class="material-symbols-outlined">menu</span>
+</a>
+<button class="hidden md:flex cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-primary text-[#181611] text-sm font-bold shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all hover:scale-105">
+<span class="truncate">Book Now</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-grow w-full max-w-[1440px] mx-auto p-4 md:p-6 lg:p-10">
+<div class="flex flex-col lg:flex-row gap-6 lg:gap-10 min-h-[calc(100vh-140px)]">
+<!-- Left Side: Visual Hero (Sticky on Desktop) -->
+<div class="lg:w-[40%] relative">
+<div class="lg:sticky lg:top-24 h-[300px] lg:h-[calc(100vh-140px)] w-full rounded-3xl overflow-hidden shadow-2xl relative group">
+<div class="absolute inset-0 bg-black/20 z-10"></div>
+<!-- Background Image -->
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Scenic landscape of African lodge at sunset with mountains in background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAKAKcyZAo5EbPuA3uMl4UM-ZsnKJc4z3W_aSoxpq0ED219TPoNbNN9ClPXxJmTu9UH422JyNFzOBPwT6NdLGk-QB4w6M1ayOsDvxxeVo9baXLFZooeAY3PPtswNZlM9_bn2uY2qP1_R4LC1cE3-hP1Z6IYsQYwCu3YJyhH-BZaFFgeXFP_RNVNR-yba7ZkVDCNM8UqAt8kalMcRl_75Tunlpy0-0_-E8Xu-5fP_y9cj4H8JfEEk7saboGIqAGxwQ4cD9DnmRkV1ofM");'>
+</div>
+<div class="absolute inset-0 z-20 flex flex-col justify-end p-8 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+<div class="space-y-4">
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider border border-primary/30 backdrop-blur-sm">
+                                Private Game Reserve
+                            </span>
+<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-black leading-tight tracking-tight">
+                                Start Your Adventure
+                            </h1>
+<p class="text-gray-200 text-sm md:text-base max-w-md">
+                                Experience the tranquility of Donkieskraal. Surrounded by nature, comfort, and luxury.
+                            </p>
+<div class="pt-4 flex items-center gap-3 text-white/80 text-sm">
+<div class="flex -space-x-2">
+<div class="size-8 rounded-full border-2 border-[#221d10] bg-gray-300 bg-cover" data-alt="Avatar of previous guest" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCLJjFsuj0lYPmiFsSkwLJrsfRWxDdrYZeM7UNT9540PJZyyLNGPn6Hzogr3bcxhAT7IyYEcLpGEXOuabYdSkxRSmuxWCdWVI1OIel2dU6f-np6V5BFzGLm7VNgBvkAwI-rvo-LnVrHchsYErXYnB6616Jxmnyax33mLhqJ7S861JG4GJSLmO553h88WzOBPx0UZ-5Mcqz2Zm4iGS1RO68OiDrTEVVgaguwcixcijtGoqt3ldHsIAeUgCJ_pgYqon-mmHLwe9XEB-NY")'></div>
+<div class="size-8 rounded-full border-2 border-[#221d10] bg-gray-300 bg-cover" data-alt="Avatar of previous guest" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC-Jejibne1T_aP7FX2Ufs2V-8vnpO4aiawARw8buVcwL-fev4Wd8dg4O5HQ-bdxl-cbTqwgHgyHddCrNJI6olmvkZhl_10_X--wSnWAxVsA6oKS59Quk0ZXWpySl1Bjhhz5IBmZ71vd3lqEmGW9ORwWEHVvLhftZnqxY73yPMDQCh1QN4czCN4kHrzuA_Bk_k5LJoXWF--qtXsk0GGlS2u6WKA3EcrSNUXF7N2NUcCdPusomQRtdhoftBdxACEWMj9PPZUkpCIVNqt")'></div>
+<div class="size-8 rounded-full border-2 border-[#221d10] bg-gray-300 bg-cover" data-alt="Avatar of previous guest" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD62uPT3U1cxO8PPip_JzDIRVzp_llfO4agRgRjwYwXw6yoRwUa_Kr15WV_-rG5M4J_vhCzMNikojBKxGGEUY7r2VSB69HmP4WtFDQX0m85nxVtMreU9ia_uxqUOQ3OZ0aVI3Jx_tI7eexcucvs-k56D5gQRYMWIbY9aQi_Qh4o4FvEh5sF1Urau9ll1VbuK74izZ93OorZVHPbXpzI8Wxf4r2XeXDNIzPlRwEOmaqGvXNeZjaBvOWks5QPaQEXYT1r2BTltE2Qwn-X")'></div>
+</div>
+<span>Join 2,000+ happy guests</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Side: Booking Form -->
+<div class="lg:w-[60%] flex flex-col">
+<div class="bg-surface-light dark:bg-surface-dark rounded-3xl p-6 md:p-8 lg:p-10 shadow-xl border border-gray-200 dark:border-[#393528]">
+<!-- Tabs -->
+<div class="flex justify-center mb-10">
+<div class="inline-flex bg-gray-100 dark:bg-[#181611] p-1.5 rounded-full border border-gray-200 dark:border-[#393528]">
+<button class="px-6 py-2.5 rounded-full text-sm font-bold bg-white dark:bg-[#393528] text-gray-900 dark:text-white shadow-sm transition-all">
+                                Accommodation
+                            </button>
+<button class="px-6 py-2.5 rounded-full text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-all">
+                                Activities
+                            </button>
+<button class="px-6 py-2.5 rounded-full text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-all">
+                                Events
+                            </button>
+</div>
+</div>
+<form class="space-y-8">
+<!-- Dates Section -->
+<div class="space-y-4">
+<h3 class="text-xl font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">calendar_month</span>
+                                Select Dates
+                            </h3>
+<!-- Simplified Calendar View for UI -->
+<div class="bg-gray-50 dark:bg-[#181611] rounded-2xl p-6 border border-gray-200 dark:border-[#393528]">
+<div class="flex items-center justify-between mb-6">
+<button class="size-10 flex items-center justify-center rounded-full hover:bg-gray-200 dark:hover:bg-[#393528] transition-colors" type="button">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<span class="text-lg font-bold">October 2023</span>
+<button class="size-10 flex items-center justify-center rounded-full hover:bg-gray-200 dark:hover:bg-[#393528] transition-colors" type="button">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-7 gap-y-2 mb-2">
+<div class="text-center text-xs font-bold text-gray-400 uppercase">Su</div>
+<div class="text-center text-xs font-bold text-gray-400 uppercase">Mo</div>
+<div class="text-center text-xs font-bold text-gray-400 uppercase">Tu</div>
+<div class="text-center text-xs font-bold text-gray-400 uppercase">We</div>
+<div class="text-center text-xs font-bold text-gray-400 uppercase">Th</div>
+<div class="text-center text-xs font-bold text-gray-400 uppercase">Fr</div>
+<div class="text-center text-xs font-bold text-gray-400 uppercase">Sa</div>
+</div>
+<div class="grid grid-cols-7 gap-y-2 gap-x-1">
+<!-- Offset Days -->
+<div class="h-10"></div><div class="h-10"></div><div class="h-10"></div>
+<!-- Days -->
+<button class="h-10 w-full flex items-center justify-center rounded-full text-sm hover:bg-gray-200 dark:hover:bg-[#393528] text-gray-400" type="button">1</button>
+<button class="h-10 w-full flex items-center justify-center rounded-full text-sm hover:bg-gray-200 dark:hover:bg-[#393528] text-gray-400" type="button">2</button>
+<button class="h-10 w-full flex items-center justify-center rounded-full text-sm hover:bg-gray-200 dark:hover:bg-[#393528] text-gray-400" type="button">3</button>
+<button class="h-10 w-full flex items-center justify-center rounded-full text-sm hover:bg-gray-200 dark:hover:bg-[#393528] text-gray-400" type="button">4</button>
+<!-- Selected Range Start -->
+<button class="h-10 w-full flex items-center justify-center rounded-full text-sm font-bold bg-primary text-[#181611] shadow-lg shadow-primary/20" type="button">5</button>
+<!-- In Range -->
+<button class="h-10 w-full flex items-center justify-center rounded-full text-sm bg-primary/20 dark:bg-primary/10 text-primary" type="button">6</button>
+<button class="h-10 w-full flex items-center justify-center rounded-full text-sm bg-primary/20 dark:bg-primary/10 text-primary" type="button">7</button>
+<!-- Selected Range End -->
+<button class="h-10 w-full flex items-center justify-center rounded-full text-sm font-bold bg-primary text-[#181611] shadow-lg shadow-primary/20" type="button">8</button>
+<button class="h-10 w-full flex items-center justify-center rounded-full text-sm hover:bg-gray-200 dark:hover:bg-[#393528] font-medium" type="button">9</button>
+<button class="h-10 w-full flex items-center justify-center rounded-full text-sm hover:bg-gray-200 dark:hover:bg-[#393528] font-medium" type="button">10</button>
+<button class="h-10 w-full flex items-center justify-center rounded-full text-sm hover:bg-gray-200 dark:hover:bg-[#393528] font-medium" type="button">11</button>
+<button class="h-10 w-full flex items-center justify-center rounded-full text-sm hover:bg-gray-200 dark:hover:bg-[#393528] font-medium" type="button">12</button>
+<button class="h-10 w-full flex items-center justify-center rounded-full text-sm hover:bg-gray-200 dark:hover:bg-[#393528] font-medium" type="button">13</button>
+<button class="h-10 w-full flex items-center justify-center rounded-full text-sm hover:bg-gray-200 dark:hover:bg-[#393528] font-medium" type="button">14</button>
+<button class="h-10 w-full flex items-center justify-center rounded-full text-sm hover:bg-gray-200 dark:hover:bg-[#393528] font-medium" type="button">15</button>
+</div>
+</div>
+</div>
+<!-- Details Section -->
+<div class="grid md:grid-cols-2 gap-6">
+<!-- Accommodation Type -->
+<div class="space-y-3">
+<label class="block text-sm font-bold ml-3 text-gray-500 dark:text-gray-400">Accommodation Type</label>
+<div class="relative">
+<select class="w-full h-14 pl-6 pr-10 appearance-none bg-gray-50 dark:bg-[#181611] border border-gray-200 dark:border-[#393528] rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow text-gray-900 dark:text-white font-medium">
+<option>Luxury Chalet</option>
+<option>Standard Tent</option>
+<option>Family Suite</option>
+<option>Honeymoon Suite</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Guests -->
+<div class="space-y-3">
+<label class="block text-sm font-bold ml-3 text-gray-500 dark:text-gray-400">Guests</label>
+<div class="relative">
+<select class="w-full h-14 pl-6 pr-10 appearance-none bg-gray-50 dark:bg-[#181611] border border-gray-200 dark:border-[#393528] rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow text-gray-900 dark:text-white font-medium">
+<option>2 Adults, 0 Children</option>
+<option>1 Adult, 0 Children</option>
+<option>2 Adults, 1 Child</option>
+<option>2 Adults, 2 Children</option>
+<option>4 Adults, 0 Children</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
+<span class="material-symbols-outlined">group</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Personal Info -->
+<div class="space-y-4">
+<h3 class="text-xl font-bold flex items-center gap-2 pt-4">
+<span class="material-symbols-outlined text-primary">person</span>
+                                Your Details
+                            </h3>
+<div class="grid md:grid-cols-2 gap-6">
+<input class="w-full h-14 px-6 bg-gray-50 dark:bg-[#181611] border border-gray-200 dark:border-[#393528] rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow placeholder-gray-500 dark:placeholder-gray-500 text-gray-900 dark:text-white" placeholder="Full Name" type="text"/>
+<input class="w-full h-14 px-6 bg-gray-50 dark:bg-[#181611] border border-gray-200 dark:border-[#393528] rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow placeholder-gray-500 dark:placeholder-gray-500 text-gray-900 dark:text-white" placeholder="Email Address" type="email"/>
+</div>
+<textarea class="w-full p-6 bg-gray-50 dark:bg-[#181611] border border-gray-200 dark:border-[#393528] rounded-3xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow min-h-[120px] resize-none placeholder-gray-500 dark:placeholder-gray-500 text-gray-900 dark:text-white" placeholder="Special Requests or Dietary Requirements..."></textarea>
+</div>
+<!-- Summary Card -->
+<div class="bg-primary/10 border border-primary/20 rounded-3xl p-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+<div>
+<p class="text-sm font-bold text-primary uppercase tracking-wider mb-1">Total Estimate</p>
+<p class="text-2xl font-black text-gray-900 dark:text-white">R 4,500 <span class="text-sm font-medium text-gray-500 dark:text-gray-400 font-normal">/ night</span></p>
+</div>
+<button class="w-full sm:w-auto px-8 h-14 bg-primary hover:bg-[#d9ab25] text-[#181611] text-lg font-bold rounded-full shadow-lg shadow-primary/30 hover:shadow-primary/50 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2" type="button">
+                                Check Availability
+                                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<p class="text-center text-sm text-gray-500 dark:text-gray-400">
+                            By clicking Check Availability, you agree to our Terms &amp; Conditions.
+                        </p>
+</form>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Action Button for WhatsApp -->
+<div class="fixed bottom-6 right-6 z-40">
+<a class="flex items-center gap-3 group" href="#">
+<span class="bg-white dark:bg-[#221d10] text-gray-900 dark:text-white px-4 py-2 rounded-full shadow-lg text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto border border-gray-200 dark:border-[#393528]">
+                Chat with us
+            </span>
+<button class="size-16 bg-[#25D366] text-white rounded-full shadow-xl shadow-[#25D366]/30 flex items-center justify-center hover:scale-110 transition-transform duration-300">
+<!-- WhatsApp SVG Icon since it's specific brand -->
+<svg fill="currentColor" height="32" viewbox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path></svg>
+</button>
+</a>
+</div>
+<!-- Footer Simple -->
+<footer class="mt-auto border-t border-gray-200 dark:border-[#393528] py-8 bg-background-light dark:bg-[#181611]">
+<div class="max-w-[1440px] mx-auto px-10 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-sm text-gray-500 dark:text-gray-400">© 2023 Donkieskraal Lodge. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-sm text-gray-500 dark:text-gray-400 hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-sm text-gray-500 dark:text-gray-400 hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</body></html>

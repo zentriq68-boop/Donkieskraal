@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Donkieskraal Lodge - Business Details</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Theme Configuration -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eebd2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221d10",
+                        "surface-dark": "#2c2618", // Slightly lighter for cards
+                        "surface-border": "#423b2b",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "2xl": "2rem",
+                        "3xl": "2.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for clean look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #221d10;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #423b2b;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #eebd2b;
+        }
+
+        /* Summary marker hide */
+        details>summary {
+            list-style: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased overflow-x-hidden selection:bg-primary selection:text-background-dark">
+    <div class="flex flex-col min-h-screen">
+        <!-- Top Navigation -->
+        <!-- Floating Navigation (Pill Shape) -->
+        <nav class="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
+            <div
+                class="pointer-events-auto bg-surface-dark/80 dark:bg-[#181611]/80 backdrop-blur-md border border-white/10 shadow-2xl rounded-full px-6 py-3 flex items-center gap-6 max-w-5xl w-full justify-between transition-all duration-300 hover:bg-[#181611]/95">
+                <!-- Logo Area -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div
+                        class="size-8 text-primary flex items-center justify-center bg-white/5 rounded-full p-1.5 transition-colors group-hover:bg-primary group-hover:text-background-dark">
+                        <span class="material-symbols-outlined text-lg">landscape</span>
+                    </div>
+                    <h2
+                        class="text-white text-lg font-bold tracking-tight hidden md:block group-hover:text-primary transition-colors">
+                        Donkieskraal</h2>
+                </a>
+                <!-- Links -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-medium text-white/80 hover:text-primary transition-colors"
+                        href="about.html">Our Story</a>
+                    <a class="text-sm font-medium text-white/80 hover:text-primary transition-colors"
+                        href="accommodation.html">The Lodge</a>
+                    <a class="text-sm font-medium text-white/80 hover:text-primary transition-colors"
+                        href="activities.html">Experiences</a>
+                    <a class="text-sm font-medium text-white/80 hover:text-primary transition-colors"
+                        href="events.html">Weddings</a>
+                    <a class="text-sm font-medium text-white/80 hover:text-primary transition-colors"
+                        href="shop.html">Shop</a>
+                    <a class="text-sm font-medium text-white/80 hover:text-primary transition-colors"
+                        href="contact.html">Contact</a>
+                </div>
+                <!-- Actions -->
+                <div class="flex items-center gap-3">
+                    <!-- Cart Icon -->
+                    <button id="cart-btn" class="relative group text-white hover:text-primary transition-colors p-2">
+                        <span class="material-symbols-outlined">shopping_bag</span>
+                        <span id="cart-count"
+                            class="absolute top-0 right-0 flex size-4 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-background-dark opacity-0 transition-opacity">0</span>
+                    </button>
+                    <a href="bookings.html"
+                        class="bg-primary hover:bg-primary/90 text-background-dark text-sm font-bold px-5 py-2.5 rounded-full transition-transform hover:scale-105 active:scale-95 flex items-center gap-2">
+                        <span>Book Now</span>
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
+                    <!-- Mobile Menu Toggle -->
+                    <button id="mobile-menu-btn" class="md:hidden text-white hover:text-primary p-2">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <main class="flex-grow flex flex-col items-center w-full">
+            <!-- Hero Section -->
+            <section class="w-full max-w-7xl px-4 lg:px-8 py-6">
+                <div class="relative w-full rounded-3xl overflow-hidden min-h-[480px] flex flex-col items-center justify-center p-8 text-center bg-cover bg-center"
+                    data-alt="Scenic view of a luxury lodge deck overlooking a vast African savannah at sunset"
+                    style='background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBD87COUqGbXiGzkB8T4WiqXkX3ExVbLK2-GLfVVHRT7eoXpwNeA99tnFlZwsOBYl-xz5uYZGDnK7bMCprs6D8mZqhlI7vydJ-647IcDzRL25fciUfJHp2y85XD6xeX6xhFzVkV4gqn8QPLUOTQrIfb6c4c0c2Bgflm9epDvZCjlaXul6XHZpvhDQp6fGpMtV8jpWX5Uq7WKyfGDa4cMzBkREjFSDwfPK-MANCEaonih3QrqQVuYUJktRzRnXUA225S7Wg286HrfRDT");'>
+                    <div class="max-w-2xl flex flex-col gap-6 items-center z-10">
+                        <span
+                            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-xs font-bold uppercase tracking-wider text-white">
+                            <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                            Guest Portal
+                        </span>
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
+                            Essential Guest Information
+                        </h1>
+                        <p class="text-lg md:text-xl text-gray-200 font-medium max-w-lg">
+                            Everything you need to know for your upcoming stay at Donkieskraal Private Game Reserve.
+                        </p>
+                        <div class="flex flex-wrap gap-4 justify-center mt-4">
+                            <button
+                                class="flex items-center justify-center rounded-full h-12 px-8 bg-primary hover:bg-yellow-400 text-background-dark text-base font-bold transition-transform hover:scale-105 shadow-xl shadow-primary/25">
+                                Plan Your Trip
+                            </button>
+                            <button
+                                class="flex items-center justify-center rounded-full h-12 px-8 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/20 text-base font-bold transition-all">
+                                Download Guide
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Quick Links (Chips) -->
+            <section class="w-full max-w-7xl px-4 lg:px-8 py-4">
+                <div class="flex flex-wrap justify-center gap-3">
+                    <a class="flex items-center gap-2 h-10 px-6 rounded-full bg-surface-dark border border-surface-border hover:border-primary/50 hover:bg-surface-border transition-all cursor-pointer group"
+                        href="#essentials">
+                        <span
+                            class="material-symbols-outlined text-primary text-lg group-hover:scale-110 transition-transform">info</span>
+                        <span class="text-sm font-medium">Essentials</span>
+                    </a>
+                    <a class="flex items-center gap-2 h-10 px-6 rounded-full bg-surface-dark border border-surface-border hover:border-primary/50 hover:bg-surface-border transition-all cursor-pointer group"
+                        href="#policies">
+                        <span
+                            class="material-symbols-outlined text-primary text-lg group-hover:scale-110 transition-transform">policy</span>
+                        <span class="text-sm font-medium">Policies</span>
+                    </a>
+                    <a class="flex items-center gap-2 h-10 px-6 rounded-full bg-surface-dark border border-surface-border hover:border-primary/50 hover:bg-surface-border transition-all cursor-pointer group"
+                        href="#location">
+                        <span
+                            class="material-symbols-outlined text-primary text-lg group-hover:scale-110 transition-transform">map</span>
+                        <span class="text-sm font-medium">Getting Here</span>
+                    </a>
+                    <a class="flex items-center gap-2 h-10 px-6 rounded-full bg-surface-dark border border-surface-border hover:border-primary/50 hover:bg-surface-border transition-all cursor-pointer group"
+                        href="#faqs">
+                        <span
+                            class="material-symbols-outlined text-primary text-lg group-hover:scale-110 transition-transform">help</span>
+                        <span class="text-sm font-medium">FAQs</span>
+                    </a>
+                </div>
+            </section>
+            <div class="w-full max-w-7xl flex flex-col lg:flex-row gap-8 px-4 lg:px-8 py-8">
+                <!-- Left Column (Main Content) -->
+                <div class="flex-1 flex flex-col gap-10">
+                    <!-- Essentials Section -->
+                    <section class="scroll-mt-24" id="essentials">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div
+                                class="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined">schedule</span>
+                            </div>
+                            <h2 class="text-2xl font-bold">The Essentials</h2>
+                        </div>
+                        <div
+                            class="bg-surface-dark rounded-3xl p-1 shadow-sm border border-surface-border overflow-hidden">
+                            <div
+                                class="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-surface-border">
+                                <div class="p-6 space-y-6">
+                                    <div>
+                                        <p class="text-[#b9b29d] text-xs uppercase tracking-wider font-bold mb-1">
+                                            Check-in Time</p>
+                                        <p class="text-white text-lg font-medium">14:00 - 19:00</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[#b9b29d] text-xs uppercase tracking-wider font-bold mb-1">
+                                            Breakfast Served</p>
+                                        <p class="text-white text-lg font-medium">07:00 - 10:00</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[#b9b29d] text-xs uppercase tracking-wider font-bold mb-1">Gate
+                                            Access</p>
+                                        <div class="flex items-center gap-2">
+                                            <span class="material-symbols-outlined text-primary text-sm">lock</span>
+                                            <p class="text-white text-base">Code provided 24h before arrival</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-6 space-y-6">
+                                    <div>
+                                        <p class="text-[#b9b29d] text-xs uppercase tracking-wider font-bold mb-1">
+                                            Check-out Time</p>
+                                        <p class="text-white text-lg font-medium">10:00</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[#b9b29d] text-xs uppercase tracking-wider font-bold mb-1">Dinner
+                                            Served</p>
+                                        <p class="text-white text-lg font-medium">18:30 - 20:30</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[#b9b29d] text-xs uppercase tracking-wider font-bold mb-1">
+                                            Connectivity</p>
+                                        <div class="flex items-center gap-2">
+                                            <span class="material-symbols-outlined text-primary text-sm">wifi</span>
+                                            <p class="text-white text-base">Free Starlink Wi-Fi in Main Lodge</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Lodge Policies Grid -->
+                    <section class="scroll-mt-24" id="policies">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div
+                                class="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined">gavel</span>
+                            </div>
+                            <h2 class="text-2xl font-bold">Lodge Policies</h2>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div
+                                class="bg-surface-dark border border-surface-border rounded-3xl p-6 hover:border-primary/30 transition-colors">
+                                <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center mb-4">
+                                    <span class="material-symbols-outlined text-white">pets</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-white mb-2">No Pets Allowed</h3>
+                                <p class="text-[#b9b29d] text-sm leading-relaxed">
+                                    For the safety of our wildlife and your pets, we strictly do not allow domestic
+                                    animals on the reserve.
+                                </p>
+                            </div>
+                            <div
+                                class="bg-surface-dark border border-surface-border rounded-3xl p-6 hover:border-primary/30 transition-colors">
+                                <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center mb-4">
+                                    <span class="material-symbols-outlined text-white">smoke_free</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-white mb-2">Smoke-Free Zones</h3>
+                                <p class="text-[#b9b29d] text-sm leading-relaxed">
+                                    Smoking is prohibited in all rooms and main lodge areas. Designated smoking areas
+                                    are available outdoors.
+                                </p>
+                            </div>
+                            <div
+                                class="bg-surface-dark border border-surface-border rounded-3xl p-6 hover:border-primary/30 transition-colors">
+                                <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center mb-4">
+                                    <span class="material-symbols-outlined text-white">child_care</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-white mb-2">Child Policy</h3>
+                                <p class="text-[#b9b29d] text-sm leading-relaxed">
+                                    Children of all ages are welcome. Kids under 12 must be supervised during game
+                                    drives.
+                                </p>
+                            </div>
+                            <div
+                                class="bg-surface-dark border border-surface-border rounded-3xl p-6 hover:border-primary/30 transition-colors">
+                                <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center mb-4">
+                                    <span class="material-symbols-outlined text-white">credit_card</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-white mb-2">Payments</h3>
+                                <p class="text-[#b9b29d] text-sm leading-relaxed">
+                                    We are a cashless facility. We accept Visa, MasterCard, and American Express.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Location Section -->
+                    <section class="scroll-mt-24" id="location">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div
+                                class="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined">explore</span>
+                            </div>
+                            <h2 class="text-2xl font-bold">Location &amp; Directions</h2>
+                        </div>
+                        <div class="bg-surface-dark border border-surface-border rounded-3xl overflow-hidden p-2">
+                            <div class="relative w-full h-80 rounded-2xl overflow-hidden bg-gray-800">
+                                <!-- Map Placeholder using Abstract Gradient as per constraints -->
+                                <div class="w-full h-full bg-cover bg-center"
+                                    data-alt="Stylized map view of the reserve location with topographical lines"
+                                    data-location="South Africa Map"
+                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBGRlKBHzorYSbGlxpaXGvq83XrXAG9R31pDwj4r18oUGc2_oHTQfOAxiz6PCaIN_8ZDnrhnUMnIf3kKMPOkhu5dQVUv6H6h6eS97oAbbBT-L5YnSwpVjW79pNOA-NHLrysZYqTBAtNgpwzU12hxsO4w5RCDDJh8n5CnPbWFlwuocteH1PZj0AacZcwvw3nFinipPfV0k07uTrioWmE4AGB6IZlVStLzvg3q06lRAViCE1KPq7frv3ZJvMLMwGX3wVfNNMSp_0hg69a')">
+                                    <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+                                        <button
+                                            class="bg-white text-black px-6 py-3 rounded-full font-bold shadow-lg flex items-center gap-2 hover:scale-105 transition-transform">
+                                            <span class="material-symbols-outlined">map</span>
+                                            Open in Google Maps
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-lg font-bold text-white mb-4">Driving Directions</h3>
+                                <ol class="relative border-l border-surface-border ml-3 space-y-6">
+                                    <li class="mb-2 ml-6">
+                                        <span
+                                            class="absolute flex items-center justify-center w-8 h-8 bg-surface-dark border border-primary rounded-full -left-4 ring-4 ring-surface-dark text-primary font-bold text-sm">1</span>
+                                        <h3 class="font-medium leading-tight text-white">From Cape Town International
+                                            Airport</h3>
+                                        <p class="text-sm text-[#b9b29d] mt-1">Take the N2 towards Somerset West.
+                                            Continue for approximately 45km.</p>
+                                    </li>
+                                    <li class="mb-2 ml-6">
+                                        <span
+                                            class="absolute flex items-center justify-center w-8 h-8 bg-surface-dark border border-primary rounded-full -left-4 ring-4 ring-surface-dark text-primary font-bold text-sm">2</span>
+                                        <h3 class="font-medium leading-tight text-white">Houwhoek Pass</h3>
+                                        <p class="text-sm text-[#b9b29d] mt-1">After Sir Lowry's Pass, take the R43 exit
+                                            toward Hermanus/Botrivier.</p>
+                                    </li>
+                                    <li class="ml-6">
+                                        <span
+                                            class="absolute flex items-center justify-center w-8 h-8 bg-surface-dark border border-primary rounded-full -left-4 ring-4 ring-surface-dark text-primary font-bold text-sm">3</span>
+                                        <h3 class="font-medium leading-tight text-white">Arrival</h3>
+                                        <p class="text-sm text-[#b9b29d] mt-1">Look for the Donkieskraal Lodge sign on
+                                            your left after 12km. Enter gate code.</p>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!-- Right Column (Sidebar - FAQs) -->
+                <aside class="lg:w-1/3 flex flex-col gap-8">
+                    <section class="sticky top-24" id="faqs">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div
+                                class="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined">help_center</span>
+                            </div>
+                            <h2 class="text-2xl font-bold">FAQs</h2>
+                        </div>
+                        <div class="flex flex-col gap-3">
+                            <!-- Accordion Item 1 -->
+                            <details
+                                class="group bg-surface-dark border border-surface-border rounded-3xl overflow-hidden open:bg-surface-border/50 transition-colors">
+                                <summary class="flex items-center justify-between p-5 cursor-pointer select-none">
+                                    <span class="font-bold text-white">Do you cater for dietary needs?</span>
+                                    <span
+                                        class="material-symbols-outlined text-primary transition-transform group-open:rotate-180">expand_more</span>
+                                </summary>
+                                <div class="px-5 pb-5 pt-0 text-[#b9b29d] text-sm leading-relaxed">
+                                    Yes, our chefs are happy to cater to vegetarian, vegan, gluten-free, and other
+                                    dietary requirements. Please inform us at least 48 hours before arrival.
+                                </div>
+                            </details>
+                            <!-- Accordion Item 2 -->
+                            <details
+                                class="group bg-surface-dark border border-surface-border rounded-3xl overflow-hidden open:bg-surface-border/50 transition-colors">
+                                <summary class="flex items-center justify-between p-5 cursor-pointer select-none">
+                                    <span class="font-bold text-white">Is there malaria in the area?</span>
+                                    <span
+                                        class="material-symbols-outlined text-primary transition-transform group-open:rotate-180">expand_more</span>
+                                </summary>
+                                <div class="px-5 pb-5 pt-0 text-[#b9b29d] text-sm leading-relaxed">
+                                    Donkieskraal is located in a malaria-free zone, making it safe for families and
+                                    travelers who prefer not to take prophylaxis.
+                                </div>
+                            </details>
+                            <!-- Accordion Item 3 -->
+                            <details
+                                class="group bg-surface-dark border border-surface-border rounded-3xl overflow-hidden open:bg-surface-border/50 transition-colors">
+                                <summary class="flex items-center justify-between p-5 cursor-pointer select-none">
+                                    <span class="font-bold text-white">What should I pack?</span>
+                                    <span
+                                        class="material-symbols-outlined text-primary transition-transform group-open:rotate-180">expand_more</span>
+                                </summary>
+                                <div class="px-5 pb-5 pt-0 text-[#b9b29d] text-sm leading-relaxed">
+                                    We recommend comfortable clothing in neutral colors for game drives, a warm jacket
+                                    for evenings, sunscreen, a hat, and good walking shoes.
+                                </div>
+                            </details>
+                            <!-- Accordion Item 4 -->
+                            <details
+                                class="group bg-surface-dark border border-surface-border rounded-3xl overflow-hidden open:bg-surface-border/50 transition-colors">
+                                <summary class="flex items-center justify-between p-5 cursor-pointer select-none">
+                                    <span class="font-bold text-white">Are game drives included?</span>
+                                    <span
+                                        class="material-symbols-outlined text-primary transition-transform group-open:rotate-180">expand_more</span>
+                                </summary>
+                                <div class="px-5 pb-5 pt-0 text-[#b9b29d] text-sm leading-relaxed">
+                                    Rates typically include two game drives per day (morning and evening). Please check
+                                    your specific booking package for confirmation.
+                                </div>
+                            </details>
+                        </div>
+                        <!-- Contact Card -->
+                        <div
+                            class="mt-8 bg-gradient-to-br from-primary to-yellow-600 rounded-3xl p-6 text-background-dark shadow-lg shadow-primary/10">
+                            <h3 class="text-xl font-black mb-2">Still have questions?</h3>
+                            <p class="text-sm font-medium opacity-80 mb-6">Our concierge team is available 24/7 to
+                                assist with your booking.</p>
+                            <div class="flex flex-col gap-3">
+                                <a class="flex items-center gap-3 bg-background-dark/10 hover:bg-background-dark/20 p-3 rounded-full transition-colors"
+                                    href="tel:+27123456789">
+                                    <div
+                                        class="bg-background-dark text-white p-1.5 rounded-full flex items-center justify-center">
+                                        <span class="material-symbols-outlined text-sm">call</span>
+                                    </div>
+                                    <span class="font-bold text-sm">+27 (0) 12 345 6789</span>
+                                </a>
+                                <a class="flex items-center gap-3 bg-background-dark/10 hover:bg-background-dark/20 p-3 rounded-full transition-colors"
+                                    href="mailto:info@donkieskraal.com">
+                                    <div
+                                        class="bg-background-dark text-white p-1.5 rounded-full flex items-center justify-center">
+                                        <span class="material-symbols-outlined text-sm">mail</span>
+                                    </div>
+                                    <span class="font-bold text-sm">info@donkieskraal.com</span>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                </aside>
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer class="bg-[#0a0907] pt-20 pb-10 border-t border-white/5">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                    <!-- Brand -->
+                    <div class="col-span-1 md:col-span-1">
+                        <div class="flex items-center gap-2 text-white mb-6">
+                            <span class="material-symbols-outlined text-primary">landscape</span>
+                            <span class="font-bold text-xl">Donkieskraal</span>
+                        </div>
+                        <p class="text-white/50 text-sm leading-relaxed mb-6">
+                            Where the horizon meets heritage. Experience the untamed beauty of Africa with unparalleled
+                            comfort.
+                        </p>
+                        <div class="flex gap-4">
+                            <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-primary hover:text-background-dark transition-all"
+                                href="#">
+                                <!-- Facebook Icon Placeholder using Material Icon for demo -->
+                                <span class="material-symbols-outlined text-sm">public</span>
+                            </a>
+                            <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-primary hover:text-background-dark transition-all"
+                                href="#">
+                                <!-- Instagram Icon Placeholder using Material Icon for demo -->
+                                <span class="material-symbols-outlined text-sm">photo_camera</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Quick Links -->
+                    <div>
+                        <h4 class="text-white font-bold mb-6">Explore</h4>
+                        <ul class="space-y-4 text-white/60 text-sm">
+                            <li><a class="hover:text-primary transition-colors" href="about.html">Our Story</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="accommodation.html">The Lodge</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors" href="activities.html">Experiences</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors" href="shop.html">Shop</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="bookings.html">Bookings</a></li>
+                        </ul>
+                    </div>
+                    <!-- Contact -->
+                    <div>
+                        <h4 class="text-white font-bold mb-6">Contact</h4>
+                        <ul class="space-y-4 text-white/60 text-sm">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-lg">location_on</span>
+                                <span>Western Cape, South Africa</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary text-lg">call</span>
+                                <span>+27 (0) 21 123 4567</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary text-lg">mail</span>
+                                <span>stay@donkieskraal.co.za</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Legal -->
+                    <div>
+                        <h4 class="text-white font-bold mb-6">Legal</h4>
+                        <ul class="space-y-4 text-white/60 text-sm">
+                            <li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Terms &amp; Conditions</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Cookie Policy</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Sitemap</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-white/30 text-xs">© 2024 Donkieskraal Lodge. All rights reserved.</p>
+                    <div class="flex gap-6">
+                        <span class="text-white/30 text-xs uppercase tracking-widest">Designed with <span
+                                class="text-primary">♥</span> in Africa</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-[60] bg-background-dark/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-center gap-8">
+        <button id="close-menu-btn" class="absolute top-8 right-8 text-white hover:text-primary">
+            <span class="material-symbols-outlined text-4xl">close</span>
+        </button>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="index.html">Home</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="about.html">Our Story</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="accommodation.html">The Lodge</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="activities.html">Experiences</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="events.html">Weddings</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="shop.html">Shop</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="contact.html">Contact</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="bookings.html">Book Now</a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

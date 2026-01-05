@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Activities &amp; Experiences | Donkieskraal Lodge</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eebd2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#181611",
+                        "surface-dark": "#27241c",
+                        "text-light": "#181611",
+                        "text-dark": "#ffffff",
+                        "text-muted": "#b9b29d",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "4xl": "2rem",
+                        "5xl": "2.5rem",
+                        "6xl": "3rem",
+                        "7xl": "4rem",
+                    }
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            }
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-display antialiased selection:bg-primary selection:text-black">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+        <!-- Floating Navigation (Pill Shape) -->
+        <nav class="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
+            <div
+                class="pointer-events-auto bg-surface-dark/80 dark:bg-[#181611]/80 backdrop-blur-md border border-white/10 shadow-2xl rounded-full px-6 py-3 flex items-center gap-6 max-w-5xl w-full justify-between transition-all duration-300 hover:bg-[#181611]/95">
+                <!-- Logo Area -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div
+                        class="size-8 text-primary flex items-center justify-center bg-white/5 rounded-full p-1.5 transition-colors group-hover:bg-primary group-hover:text-background-dark">
+                        <span class="material-symbols-outlined text-lg">landscape</span>
+                    </div>
+                    <h2
+                        class="text-white text-lg font-bold tracking-tight hidden md:block group-hover:text-primary transition-colors">
+                        Donkieskraal</h2>
+                </a>
+                <!-- Links -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-medium text-white/80 hover:text-primary transition-colors"
+                        href="about.html">Our Story</a>
+                    <a class="text-sm font-medium text-white/80 hover:text-primary transition-colors"
+                        href="accommodation.html">The Lodge</a>
+                    <a class="text-sm font-medium text-white/80 hover:text-primary transition-colors"
+                        href="activities.html">Experiences</a>
+                    <a class="text-sm font-medium text-white/80 hover:text-primary transition-colors"
+                        href="events.html">Weddings</a>
+                    <a class="text-sm font-medium text-white/80 hover:text-primary transition-colors"
+                        href="shop.html">Shop</a>
+                    <a class="text-sm font-medium text-white/80 hover:text-primary transition-colors"
+                        href="contact.html">Contact</a>
+                </div>
+                <!-- Actions -->
+                <div class="flex items-center gap-3">
+                    <!-- Cart Icon -->
+                    <button id="cart-btn" class="relative group text-white hover:text-primary transition-colors p-2">
+                        <span class="material-symbols-outlined">shopping_bag</span>
+                        <span id="cart-count"
+                            class="absolute top-0 right-0 flex size-4 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-background-dark opacity-0 transition-opacity">0</span>
+                    </button>
+                    <a href="bookings.html"
+                        class="bg-primary hover:bg-primary/90 text-background-dark text-sm font-bold px-5 py-2.5 rounded-full transition-transform hover:scale-105 active:scale-95 flex items-center gap-2">
+                        <span>Book Now</span>
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
+                    <!-- Mobile Menu Toggle -->
+                    <button id="mobile-menu-btn" class="md:hidden text-white hover:text-primary p-2">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <section class="relative px-4 py-8 md:py-12 flex justify-center">
+            <div
+                class="w-full max-w-7xl relative overflow-hidden rounded-[3.5rem] min-h-[550px] md:min-h-[650px] flex items-center justify-center p-8 text-center group shadow-2xl">
+                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105"
+                    data-alt="Wide shot of African wilderness landscape at sunset"
+                    style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuCEi0yRyo-xb3lx5NMQ-luFD4vD5v42v-S-bN3BTimSwgkEAkQtyklqpZHTZoFp0_GqeQRgzeNE0bre97ewScVIcEr2el1mN_dQjJAQNPcaU6FAC1FvkAcrrsVas29n02q2cQsc_CM0oR_ZOhmEtmvpDqVg0uiNixjA8nHvBBnK3FS1u8zlS1MY5x2DCYjY1qZyYV3LUsss10fGwddE1xeled6SSQm31COo0D8ZWXY5mNXN9pP-czFTzxDe8GX2mWOK0Mo-aowU8r53');">
+                </div>
+                <div class="relative z-10 flex flex-col items-center gap-8 max-w-4xl">
+                    <span
+                        class="bg-white/10 backdrop-blur-md border border-white/20 px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest text-white shadow-lg">
+                        Donkieskraal Experiences
+                    </span>
+                    <h1 class="text-5xl md:text-7xl font-black text-white leading-tight tracking-tight text-shadow">
+                        Curated <span class="text-primary">Adventures</span>
+                    </h1>
+                    <p class="text-lg md:text-2xl text-gray-200 max-w-2xl font-body leading-relaxed text-shadow">
+                        Discover the pulse of the Cederberg. From adrenaline-filled trails to the quiet whispers of
+                        ancient rock art.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 mt-6">
+                        <button
+                            class="bg-primary hover:bg-yellow-500 text-black px-10 py-4 rounded-full text-base font-bold transition-all shadow-[0_10px_30px_-10px_rgba(238,189,43,0.5)] hover:shadow-primary/40 flex items-center gap-2 hover:-translate-y-1">
+                            <span>Explore Activities</span>
+                            <span class="material-symbols-outlined text-xl">arrow_downward</span>
+                        </button>
+                        <button
+                            class="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white px-10 py-4 rounded-full text-base font-bold transition-all flex items-center gap-2 hover:-translate-y-1">
+                            <span>Watch Film</span>
+                            <span class="material-symbols-outlined text-xl fill-1">play_circle</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <main class="flex-1 flex flex-col items-center w-full max-w-7xl mx-auto px-4 py-16 gap-20 md:gap-32">
+            <div class="w-full flex flex-col gap-6 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight">The Big Adventures</h2>
+                <div class="h-1.5 w-24 bg-primary rounded-full mx-auto"></div>
+                <p class="text-text-muted max-w-2xl mx-auto text-lg">Immerse yourself in the untamed beauty of our
+                    reserve with our signature guided experiences.</p>
+            </div>
+            <div class="group relative grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
+                <div class="order-2 lg:order-1 relative h-[450px] md:h-[550px] w-full">
+                    <div class="absolute inset-0 bg-cover bg-center rounded-[3rem] shadow-2xl transition-transform duration-500 hover:rotate-1 border border-white/5"
+                        data-alt="Open game viewing vehicle on a dirt road in Africa"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBHvHgEXLbTlS9a5JPWWhotLK0ELM4juNv328MNx76wDVrDJA23a0buBLGbEqxV2Ytm9HynipScW5iqKE8M7p8JcBQV7uTgmW9zjMvkLpIiEk56ljEB-KrlvhKFLkEefiumDSuflB9XqY-v68nkO7jHVjFf3dzPyTVrcbN_2V5BItYKHFSxs689x-kIgCDcc3g3rjKt5U2m86qE806etlmHbe_rty5ablkYGyKJYsDR8v_Ox5OgQvxoj6UdNWLR53WgjRFLt1HfHyuo');">
+                        <div
+                            class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors rounded-[3rem]">
+                        </div>
+                        <div
+                            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div
+                                class="bg-white/20 backdrop-blur-md p-4 rounded-full border border-white/40 shadow-lg cursor-pointer hover:bg-primary hover:border-primary transition-colors group/play">
+                                <span
+                                    class="material-symbols-outlined text-5xl text-white group-hover/play:text-black fill-1">play_arrow</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute -bottom-8 -right-4 md:right-12 bg-surface-dark border border-[#393528] p-5 rounded-[2rem] shadow-2xl flex items-center gap-4 max-w-[240px] z-10">
+                        <div class="bg-primary/20 p-3 rounded-full text-primary shrink-0">
+                            <span class="material-symbols-outlined text-2xl">schedule</span>
+                        </div>
+                        <div>
+                            <p class="text-xs text-text-muted uppercase font-bold tracking-wider">Duration</p>
+                            <p class="text-base font-bold text-white">2-3 Hours</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 flex flex-col gap-8">
+                    <div class="flex items-center gap-3 text-primary">
+                        <span class="material-symbols-outlined text-4xl">photo_camera</span>
+                        <span class="uppercase tracking-widest font-bold text-sm">Wildlife</span>
+                    </div>
+                    <h3 class="text-4xl md:text-6xl font-bold leading-tight">Guided Game Drives</h3>
+                    <p class="text-text-muted text-lg font-body leading-relaxed">
+                        Experience the thrill of the wild from the safety of our open game viewing vehicles. Our
+                        experienced guides will take you close to nature's wonders, offering unparalleled photography
+                        opportunities and insights into the local ecosystem.
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <span
+                            class="px-5 py-2.5 rounded-full bg-surface-dark border border-[#393528] text-sm font-medium text-white hover:border-primary/50 transition-colors">Big
+                            5 Spotting</span>
+                        <span
+                            class="px-5 py-2.5 rounded-full bg-surface-dark border border-[#393528] text-sm font-medium text-white hover:border-primary/50 transition-colors">Morning
+                            &amp; Sunset</span>
+                        <span
+                            class="px-5 py-2.5 rounded-full bg-surface-dark border border-[#393528] text-sm font-medium text-white hover:border-primary/50 transition-colors">Drinks
+                            Included</span>
+                    </div>
+                    <div class="pt-2">
+                        <button
+                            class="bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-black px-8 py-3 rounded-full font-bold flex items-center gap-2 group/btn transition-all">
+                            Book This Experience
+                            <span
+                                class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="group relative grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
+                <div class="flex flex-col gap-8 order-1">
+                    <div class="flex items-center gap-3 text-primary">
+                        <span class="material-symbols-outlined text-4xl">directions_car</span>
+                        <span class="uppercase tracking-widest font-bold text-sm">Adrenaline</span>
+                    </div>
+                    <h3 class="text-4xl md:text-6xl font-bold leading-tight">Challenging 4x4 Trails</h3>
+                    <p class="text-text-muted text-lg font-body leading-relaxed">
+                        Test your driving skills on our rugged terrain. Navigate through rocky passes, sandy drifts, and
+                        steep inclines while enjoying breathtaking views from the mountain peaks. A true test for man
+                        and machine.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div
+                            class="flex items-start gap-4 p-5 rounded-[2rem] bg-surface-dark border border-[#393528] hover:border-primary/30 transition-colors">
+                            <span class="material-symbols-outlined text-primary text-3xl">terrain</span>
+                            <div>
+                                <h4 class="font-bold text-base text-white">Terrain</h4>
+                                <p class="text-sm text-text-muted mt-1">Rocky &amp; Sand</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-start gap-4 p-5 rounded-[2rem] bg-surface-dark border border-[#393528] hover:border-primary/30 transition-colors">
+                            <span class="material-symbols-outlined text-primary text-3xl">settings_applications</span>
+                            <div>
+                                <h4 class="font-bold text-base text-white">Gear</h4>
+                                <p class="text-sm text-text-muted mt-1">Low Range</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-2">
+                        <button
+                            class="bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-black px-8 py-3 rounded-full font-bold flex items-center gap-2 group/btn transition-all">
+                            View Trail Map
+                            <span
+                                class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1">map</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="relative h-[450px] md:h-[550px] w-full order-2">
+                    <div class="absolute inset-0 bg-cover bg-center rounded-[3rem] shadow-2xl transition-transform duration-500 hover:-rotate-1 border border-white/5"
+                        data-alt="4x4 vehicle climbing a steep rocky hill"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAFjPRDheFDfTXY7gdvRb39EtfT0tee5PRJthhpploQA2scZ2z0Z8A9qdORof2O20oRyHFrtPlITCXWenHQzRUlgR8w-92RZewrDfkIsyCBwRF8b7OkaGQku45A9dSe10vWQ4hZHjQYM1u7sewe9ztQhej1t--Ngys7zNuYQqjmA35CbygMD2QOFEmMyBZjBMaK3VZVM0BLgOlA2tj78ZIEdqRvnLKCQddOcktzZLxGoTn2YURf4B6N4VgefPLGajazT52w6mXW_xZo');">
+                        <div
+                            class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors rounded-[3rem]">
+                        </div>
+                    </div>
+                    <div
+                        class="absolute -top-8 -left-4 md:left-12 bg-surface-dark border border-[#393528] p-5 rounded-[2rem] shadow-2xl flex items-center gap-4 max-w-[240px] z-10">
+                        <div class="bg-primary/20 p-3 rounded-full text-primary shrink-0">
+                            <span class="material-symbols-outlined text-2xl">signal_cellular_alt</span>
+                        </div>
+                        <div>
+                            <p class="text-xs text-text-muted uppercase font-bold tracking-wider">Difficulty</p>
+                            <p class="text-base font-bold text-white">Intermediate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full pt-10">
+                <div class="flex flex-col gap-6 text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold tracking-tight">Heritage &amp; Nature</h2>
+                    <p class="text-text-muted max-w-2xl mx-auto text-lg">Connect with the ancient history of the land
+                        and the serene beauty of our untouched ecosystems.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div
+                        class="group relative flex flex-col h-full bg-surface-dark rounded-[2.5rem] border border-[#393528] overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-2">
+                        <div class="h-80 w-full overflow-hidden relative">
+                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                                data-alt="Close up of ancient rock art painting on cave wall"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDshKLFDqTezRWXBI9vnhBb7cfkeOTZPOMcrd9pBb_BoIlN5wQqJX6Jgs7ywHRVZyZqX5BfvZL3enxlw-bkQWaqqbMlcK5znRLh__GlITwzuTLJV6Pdp6F-IoGtX1TfyS5IT7IoM_08N2kZVX5xzraotZF4UhYGG0985SD5ySygTxs5-oSOrfoDw5UTdiG1JBeCooobCn8uwq44BBIZv1JexveylOALqda_LI5ZAKiase4DwxMgRdiYnUP3d2uhJG-CeN9iHmpcXKpu');">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent opacity-80">
+                            </div>
+                            <div
+                                class="absolute bottom-6 left-6 text-primary bg-black/40 backdrop-blur-md p-3 rounded-full border border-white/10">
+                                <span class="material-symbols-outlined">history_edu</span>
+                            </div>
+                        </div>
+                        <div class="p-8 pt-2 flex flex-col flex-grow relative">
+                            <h3 class="text-2xl font-bold mb-3 text-white">Ancient Rock Art</h3>
+                            <p class="text-text-muted text-sm font-body leading-relaxed mb-6">
+                                Walk in the footsteps of the San people. Discover ancient paintings hidden in the caves
+                                and overhangs of Donkieskraal.
+                            </p>
+                            <div class="mt-auto">
+                                <a class="inline-flex items-center text-sm font-bold text-primary hover:text-white transition-colors bg-white/5 px-4 py-2 rounded-full"
+                                    href="#">
+                                    Read History <span
+                                        class="material-symbols-outlined text-sm ml-2">arrow_outward</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="group relative flex flex-col h-full bg-surface-dark rounded-[2.5rem] border border-[#393528] overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-2">
+                        <div class="h-80 w-full overflow-hidden relative">
+                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                                data-alt="Clear natural rock pool water with stones visible at bottom"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAK_GQgJ9EqFsQMNt2TgcVc1Y8OJCFun7ag97J8E7DyLT51LcdDOPDMF0dZMtMjzDlkp2ShO1fIQfcTJxY7qvyh_0OyH8zyYJepoWR27LwjUOdReZ79rRw1NNxme6209Su1d8PsI63KriZw_1WlLIfT60snSAbtZiJLTwNQzdp_DO10hsJvhFmPOMXTMJOK3KTzOoIisYFP26dhxgL7I3UjMhEe40czObGXiNrX0qJ7VXsLI7gNkDtlrxNzDNqeWykWOCM31tLANes0');">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent opacity-80">
+                            </div>
+                            <div
+                                class="absolute bottom-6 left-6 text-primary bg-black/40 backdrop-blur-md p-3 rounded-full border border-white/10">
+                                <span class="material-symbols-outlined">water_drop</span>
+                            </div>
+                        </div>
+                        <div class="p-8 pt-2 flex flex-col flex-grow relative">
+                            <h3 class="text-2xl font-bold mb-3 text-white">Natural Pools</h3>
+                            <p class="text-text-muted text-sm font-body leading-relaxed mb-6">
+                                Cool off in our pristine natural rock pools. Fed by mountain springs, the water is
+                                crystal clear and refreshing after a hike.
+                            </p>
+                            <div class="mt-auto">
+                                <a class="inline-flex items-center text-sm font-bold text-primary hover:text-white transition-colors bg-white/5 px-4 py-2 rounded-full"
+                                    href="#">
+                                    View Location <span
+                                        class="material-symbols-outlined text-sm ml-2">arrow_outward</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="group relative flex flex-col h-full bg-surface-dark rounded-[2.5rem] border border-[#393528] overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-2">
+                        <div class="h-80 w-full overflow-hidden relative">
+                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                                data-alt="Hiker walking on a mountain trail with backpack"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA14XjunP9WLHKFaxw_U8eCE-pclCeG1J9ZwM4ut0M9O7Rxl2de4JYUFrXwxmlPB4vELr6ZFWWamV7FkVOuO09ir5Jimx_UF5KFz1vZ0FFQM9yYsYZo2AMnv5JX93cWMXm5EFRm7fadZhUu0S39lBgDJKbiPXfo4i5kKetsm4-sGI2JVMTy-A4KfryuQ_QL6t9AEJYk-ZXzUwN7KyI7KasBg7O3DZMGdprsfPN03Wyc7lFoOAWkbiNBBIya1IquFTfp7YK1J31uxPHJ');">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent opacity-80">
+                            </div>
+                            <div
+                                class="absolute bottom-6 left-6 text-primary bg-black/40 backdrop-blur-md p-3 rounded-full border border-white/10">
+                                <span class="material-symbols-outlined">hiking</span>
+                            </div>
+                        </div>
+                        <div class="p-8 pt-2 flex flex-col flex-grow relative">
+                            <h3 class="text-2xl font-bold mb-3 text-white">Hiking Trails</h3>
+                            <p class="text-text-muted text-sm font-body leading-relaxed mb-6">
+                                Explore on foot. From gentle nature walks to challenging mountain climbs, we have trails
+                                suitable for all fitness levels.
+                            </p>
+                            <div class="mt-auto">
+                                <a class="inline-flex items-center text-sm font-bold text-primary hover:text-white transition-colors bg-white/5 px-4 py-2 rounded-full"
+                                    href="#">
+                                    Download Map <span
+                                        class="material-symbols-outlined text-sm ml-2">arrow_outward</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="w-full bg-[#27241c] rounded-[4rem] p-8 md:p-20 relative overflow-hidden mt-8 border border-[#393528]">
+                <div
+                    class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent">
+                </div>
+                <div class="flex flex-col lg:flex-row items-center gap-16 relative z-10">
+                    <div class="flex-1 space-y-8">
+                        <div class="flex items-center gap-3 text-primary">
+                            <div class="bg-primary/10 p-2 rounded-full">
+                                <span class="material-symbols-outlined">flutter_dash</span>
+                            </div>
+                            <span class="text-sm font-bold uppercase tracking-wider">Ornithology</span>
+                        </div>
+                        <h2 class="text-4xl md:text-6xl font-bold text-white">A Birdwatcher's Paradise</h2>
+                        <p class="text-text-muted text-xl font-body leading-relaxed">
+                            With over 200 recorded species, Donkieskraal is a haven for bird enthusiasts. Look out for
+                            the rare Black Eagle nesting in the cliffs or the colorful sunbirds in the fynbos.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                            <div class="bg-black/20 p-4 rounded-3xl border border-white/5 flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                                <span class="text-sm font-medium text-gray-200">Specialized Guides</span>
+                            </div>
+                            <div class="bg-black/20 p-4 rounded-3xl border border-white/5 flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                                <span class="text-sm font-medium text-gray-200">Photography Hides</span>
+                            </div>
+                            <div
+                                class="bg-black/20 p-4 rounded-3xl border border-white/5 flex items-center gap-3 sm:col-span-2 w-fit">
+                                <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                                <span class="text-sm font-medium text-gray-200">Full Species Checklist Provided</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-1 relative w-full">
+                        <div
+                            class="aspect-square md:aspect-[4/3] rounded-[3rem] overflow-hidden border-8 border-surface-dark shadow-2xl relative group">
+                            <img alt="Colorful bird perched on a branch"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                data-alt="Colorful bird perched on a branch"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuASvFIuGqmKvT7afvLz1AAjSqUBmIDv2ZW8zSh7z1uyq5mH63oksLgiPz4Rw1cn2uQ-wGuZJ6X0YwVyzFSsNAwSF36dkExXf4K9uFS9xYnBLSXM7lW0-BJoSBLR2448WcV11NAGcIXL4XV9zQUfQ27KXHOaxMXD4gx1lDkIKd2HDdxZktX7zHOEmh2s07TQhi1HAkTjj-_HtAvKDoqYRDrcKHQhzt3NvbnV-BaoSGbYjtsRRmeLHPLts9gE_-SRMqXHUmqIoZbaYoOO" />
+                            <div
+                                class="absolute bottom-6 right-6 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full text-white text-xs font-bold border border-white/10">
+                                Malachite Sunbird
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full py-10">
+                <h2 class="text-3xl font-bold mb-12 text-center">Guest Experiences</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div
+                        class="bg-background-light dark:bg-[#1f1d16] p-10 rounded-[3rem] border border-gray-200 dark:border-[#393528] relative hover:border-primary/30 transition-colors">
+                        <span
+                            class="material-symbols-outlined absolute top-10 right-10 text-6xl text-primary/10">format_quote</span>
+                        <div class="flex gap-1 text-primary mb-6">
+                            <span class="material-symbols-outlined text-sm fill-1">star</span>
+                            <span class="material-symbols-outlined text-sm fill-1">star</span>
+                            <span class="material-symbols-outlined text-sm fill-1">star</span>
+                            <span class="material-symbols-outlined text-sm fill-1">star</span>
+                            <span class="material-symbols-outlined text-sm fill-1">star</span>
+                        </div>
+                        <p class="italic text-text-muted mb-8 font-body text-lg leading-relaxed relative z-10">"The 4x4
+                            trail was absolutely exhilarating! The guide was knowledgeable and the views from the top
+                            were worth every bump in the road."</p>
+                        <div class="flex items-center gap-5">
+                            <div class="w-14 h-14 rounded-full bg-gray-300 bg-cover bg-center border-2 border-primary"
+                                data-alt="Portrait of a smiling man"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBRuhxVpGlTgWjqRTCJuhlWmXifVqRWwREcWcD8Kbrmqb4Yv8VLJZ32naFa9chVKf5Mi1MYBLI2F1QGuMtXJJSl8xYjEs1kn9wIKGpQkLpnQsUVbb7nAuaIJg4HK4yUeDTIIgOPAY_MOuMrLmP6f6FIjnb86gTEWCZ4SIJCMgQMz442NpTFh3weyKN_KR2K5GoCE9KdU2GOiQZzvfnFuL5_bT5siz0l-aPlNy99NLWXHhRe4ZuHW7gMw95mFcALw0VdY9Ws4a0_oztN');">
+                            </div>
+                            <div>
+                                <p class="font-bold text-base text-white">David M.</p>
+                                <p class="text-xs text-text-muted uppercase tracking-wider">Cape Town</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-background-light dark:bg-[#1f1d16] p-10 rounded-[3rem] border border-gray-200 dark:border-[#393528] relative hover:border-primary/30 transition-colors">
+                        <span
+                            class="material-symbols-outlined absolute top-10 right-10 text-6xl text-primary/10">format_quote</span>
+                        <div class="flex gap-1 text-primary mb-6">
+                            <span class="material-symbols-outlined text-sm fill-1">star</span>
+                            <span class="material-symbols-outlined text-sm fill-1">star</span>
+                            <span class="material-symbols-outlined text-sm fill-1">star</span>
+                            <span class="material-symbols-outlined text-sm fill-1">star</span>
+                            <span class="material-symbols-outlined text-sm fill-1">star</span>
+                        </div>
+                        <p class="italic text-text-muted mb-8 font-body text-lg leading-relaxed relative z-10">"Seeing
+                            the ancient rock art was a spiritual experience. It's amazing to think people lived here
+                            thousands of years ago. Highly recommended."</p>
+                        <div class="flex items-center gap-5">
+                            <div class="w-14 h-14 rounded-full bg-gray-300 bg-cover bg-center border-2 border-primary"
+                                data-alt="Portrait of a smiling woman"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAr99Pssn1VhqcWYLS-xEqTEjI-AJWtKbIwpiX819PZvt5_64aMhEL8RDH311-tbUnllsMSL6k3sv1J1jKyIt_tioWKzxixRy29FDdDT02Pr7VSuf4zTj62o7ISFAVM0uo77T2ndYFC-gZpugiqXIysOwqFlYmbziOdnfw6X4K7-btEqP7YY7Lsh1NW2GQr1FgGaNF-TXlZiUOCVmFZYzob2GbVn4KY3G84oKloweIClVXygyxMOTWmV8H1nkMHi_SkC80b4KDDO8lg');">
+                            </div>
+                            <div>
+                                <p class="font-bold text-base text-white">Sarah J.</p>
+                                <p class="text-xs text-text-muted uppercase tracking-wider">Johannesburg</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <section class="px-4 pb-12">
+            <div
+                class="max-w-7xl mx-auto bg-primary rounded-[4rem] p-12 md:p-24 text-center relative overflow-hidden group">
+                <div
+                    class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] transition-opacity duration-500 group-hover:opacity-15">
+                </div>
+                <div class="absolute -top-20 -right-20 w-64 h-64 bg-white/20 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-black/10 rounded-full blur-3xl"></div>
+                <div class="relative z-10 flex flex-col items-center gap-8">
+                    <h2 class="text-4xl md:text-6xl font-black text-[#181611] tracking-tight">Ready for your adventure?
+                    </h2>
+                    <p class="text-[#181611]/80 text-xl md:text-2xl max-w-2xl font-medium">
+                        Book your stay at Donkieskraal Lodge today and get access to all these incredible experiences.
+                    </p>
+                    <button
+                        class="mt-4 bg-[#181611] hover:bg-black text-white px-12 py-5 rounded-full text-lg font-bold transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 border border-white/10 flex items-center gap-3">
+                        Book Accommodation
+                        <span class="material-symbols-outlined">calendar_month</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <footer class="bg-[#0a0907] pt-20 pb-10 border-t border-white/5">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                    <!-- Brand -->
+                    <div class="col-span-1 md:col-span-1">
+                        <div class="flex items-center gap-2 text-white mb-6">
+                            <span class="material-symbols-outlined text-primary">landscape</span>
+                            <span class="font-bold text-xl">Donkieskraal</span>
+                        </div>
+                        <p class="text-white/50 text-sm leading-relaxed mb-6">
+                            Where the horizon meets heritage. Experience the untamed beauty of Africa with unparalleled
+                            comfort.
+                        </p>
+                        <div class="flex gap-4">
+                            <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-primary hover:text-background-dark transition-all"
+                                href="#">
+                                <!-- Facebook Icon Placeholder using Material Icon for demo -->
+                                <span class="material-symbols-outlined text-sm">public</span>
+                            </a>
+                            <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-primary hover:text-background-dark transition-all"
+                                href="#">
+                                <!-- Instagram Icon Placeholder using Material Icon for demo -->
+                                <span class="material-symbols-outlined text-sm">photo_camera</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Quick Links -->
+                    <div>
+                        <h4 class="text-white font-bold mb-6">Explore</h4>
+                        <ul class="space-y-4 text-white/60 text-sm">
+                            <li><a class="hover:text-primary transition-colors" href="about.html">Our Story</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="accommodation.html">The Lodge</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors" href="activities.html">Experiences</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors" href="shop.html">Shop</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="bookings.html">Bookings</a></li>
+                        </ul>
+                    </div>
+                    <!-- Contact -->
+                    <div>
+                        <h4 class="text-white font-bold mb-6">Contact</h4>
+                        <ul class="space-y-4 text-white/60 text-sm">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-lg">location_on</span>
+                                <span>Western Cape, South Africa</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary text-lg">call</span>
+                                <span>+27 (0) 21 123 4567</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary text-lg">mail</span>
+                                <span>stay@donkieskraal.co.za</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Legal -->
+                    <div>
+                        <h4 class="text-white font-bold mb-6">Legal</h4>
+                        <ul class="space-y-4 text-white/60 text-sm">
+                            <li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Terms &amp; Conditions</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Cookie Policy</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Sitemap</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-white/30 text-xs">© 2024 Donkieskraal Lodge. All rights reserved.</p>
+                    <div class="flex gap-6">
+                        <span class="text-white/30 text-xs uppercase tracking-widest">Designed with <span
+                                class="text-primary">♥</span> in Africa</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-[60] bg-background-dark/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-center gap-8">
+        <button id="close-menu-btn" class="absolute top-8 right-8 text-white hover:text-primary">
+            <span class="material-symbols-outlined text-4xl">close</span>
+        </button>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="index.html">Home</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="about.html">Our Story</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="accommodation.html">The Lodge</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="activities.html">Experiences</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="events.html">Weddings</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="shop.html">Shop</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="contact.html">Contact</a>
+        <a class="text-2xl font-bold text-white hover:text-primary" href="bookings.html">Book Now</a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
