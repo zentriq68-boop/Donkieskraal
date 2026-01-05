@@ -1,0 +1,5 @@
+# Ignore build artifacts and config files that Vercel shouldn't use
+dist/
+vite.config.js
+node_modules/
+*.backup
