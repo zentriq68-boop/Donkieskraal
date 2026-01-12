@@ -16,13 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Close menu when clicking links
-    const mobileLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
+    if (mobileMenu) {
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === closeMenuBtn) return;
+            const actionable = e.target.closest('a, button, .nav-link, [data-route]');
+            if (!actionable) return;
             mobileMenu.classList.add('translate-x-full');
         });
-    });
+    }
 
     console.log('Main JS Loaded');
 });
